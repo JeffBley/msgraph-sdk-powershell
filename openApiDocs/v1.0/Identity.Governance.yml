@@ -13,7 +13,34 @@ paths:
       summary: Get entities from agreements
       operationId: agreements.agreement_ListAgreement
       parameters:
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
         - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - displayName
+                - displayName desc
+                - isPerDeviceAcceptanceRequired
+                - isPerDeviceAcceptanceRequired desc
+                - isViewingBeforeAcceptanceRequired
+                - isViewingBeforeAcceptanceRequired desc
+                - termsExpiration
+                - termsExpiration desc
+                - userReacceptRequiredFrequency
+                - userReacceptRequiredFrequency desc
+              type: string
         - name: $select
           in: query
           description: Select properties to be returned
@@ -34,23 +61,24 @@ paths:
                 - file
                 - files
               type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - acceptances
+                - file
+                - files
+              type: string
       responses:
         '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Collection of agreement
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.agreement'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.agreementCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -109,6 +137,21 @@ paths:
                 - isViewingBeforeAcceptanceRequired
                 - termsExpiration
                 - userReacceptRequiredFrequency
+                - acceptances
+                - file
+                - files
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
                 - acceptances
                 - file
                 - files
@@ -284,21 +327,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of agreementAcceptance
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.agreementAcceptance'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.agreementAcceptanceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -668,21 +697,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of agreementFileLocalization
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.agreementFileLocalizationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -944,21 +959,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of agreementFileVersion
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.agreementFileVersion'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.agreementFileVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1235,21 +1236,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of agreementFileLocalization
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.agreementFileLocalizationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1511,21 +1498,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of agreementFileVersion
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.agreementFileVersion'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.agreementFileVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1969,21 +1942,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of accessReviewScheduleDefinition
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.accessReviewScheduleDefinition'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.accessReviewScheduleDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -2215,21 +2174,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of accessReviewInstance
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.accessReviewInstance'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.accessReviewInstanceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -2485,21 +2430,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of accessReviewReviewer
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.accessReviewReviewer'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.accessReviewReviewerCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -2795,21 +2726,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of accessReviewInstanceDecisionItem
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.accessReviewInstanceDecisionItem'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.accessReviewInstanceDecisionItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3043,9 +2960,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.accessReviewInstanceDecisionItem'
+                title: Collection of accessReviewInstanceDecisionItem
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.accessReviewInstanceDecisionItem'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -3259,9 +3182,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.accessReviewInstance'
+                title: Collection of accessReviewInstance
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.accessReviewInstance'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -3304,9 +3233,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.accessReviewScheduleDefinition'
+                title: Collection of accessReviewScheduleDefinition
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.accessReviewScheduleDefinition'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -3454,21 +3389,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of appConsentRequest
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.appConsentRequest'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.appConsentRequestCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3691,21 +3612,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of userConsentRequest
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.userConsentRequest'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.userConsentRequestCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4097,21 +4004,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of approvalStage
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.approvalStage'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.approvalStageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4332,9 +4225,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.userConsentRequest'
+                title: Collection of userConsentRequest
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.userConsentRequest'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -4357,9 +4256,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.appConsentRequest'
+                title: Collection of appConsentRequest
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.appConsentRequest'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -4521,21 +4426,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of approval
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.approval'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.approvalCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4749,21 +4640,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of approvalStage
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.approvalStage'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.approvalStageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4949,9 +4826,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.approval'
+                title: Collection of approval
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.approval'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -5024,21 +4907,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of accessPackage
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.accessPackage'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.accessPackageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5348,9 +5217,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequestRequirements'
+                title: Collection of accessPackage
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequestRequirements'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: action
@@ -5373,9 +5248,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.accessPackage'
+                title: Collection of accessPackage
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.accessPackage'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -5455,21 +5336,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of accessPackageAssignmentRequest
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequest'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.accessPackageAssignmentRequestCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5770,32 +5637,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/assignmentRequests/{accessPackageAssignmentRequest-id}/accessPackage/microsoft.graph.getApplicablePolicyRequirements':
-    post:
-      tags:
-        - identityGovernance.Actions
-      summary: Invoke action getApplicablePolicyRequirements
-      operationId: identityGovernance.entitlementManagement.assignmentRequests.accessPackage_getApplicablePolicyRequirements
-      parameters:
-        - name: accessPackageAssignmentRequest-id
-          in: path
-          description: 'key: id of accessPackageAssignmentRequest'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignmentRequest
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequestRequirements'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: action
   '/identityGovernance/entitlementManagement/assignmentRequests/{accessPackageAssignmentRequest-id}/assignment':
     get:
       tags:
@@ -6135,9 +5976,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequest'
+                title: Collection of accessPackageAssignmentRequest
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequest'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -6209,21 +6056,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of accessPackageAssignment
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.accessPackageAssignment'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.accessPackageAssignmentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6516,32 +6349,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/assignments/{accessPackageAssignment-id}/accessPackage/microsoft.graph.getApplicablePolicyRequirements':
-    post:
-      tags:
-        - identityGovernance.Actions
-      summary: Invoke action getApplicablePolicyRequirements
-      operationId: identityGovernance.entitlementManagement.assignments.accessPackage_getApplicablePolicyRequirements
-      parameters:
-        - name: accessPackageAssignment-id
-          in: path
-          description: 'key: id of accessPackageAssignment'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignment
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequestRequirements'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: action
   '/identityGovernance/entitlementManagement/assignments/{accessPackageAssignment-id}/target':
     get:
       tags:
@@ -6707,9 +6514,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.accessPackageAssignment'
+                title: Collection of accessPackageAssignment
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.accessPackageAssignment'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -6788,21 +6601,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of accessPackageCatalog
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.accessPackageCatalog'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.accessPackageCatalogCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7023,21 +6822,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of accessPackage
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.accessPackage'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.accessPackageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7414,9 +7199,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequestRequirements'
+                title: Collection of accessPackage
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequestRequirements'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: action
@@ -7446,9 +7237,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.accessPackage'
+                title: Collection of accessPackage
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.accessPackage'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -7526,21 +7323,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of connectedOrganization
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.connectedOrganization'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.connectedOrganizationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7752,21 +7535,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.directoryObject'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7989,21 +7758,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.directoryObject'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -8421,21 +8176,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of agreementAcceptance
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.agreementAcceptance'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.agreementAcceptanceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -8652,21 +8393,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of agreement
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.agreement'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.agreementCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -8821,6 +8548,1470 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/identityGovernance/termsOfUse/agreements/{agreement-id}/acceptances':
+    get:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Get acceptances from identityGovernance
+      description: Read-only. Information about acceptances of this agreement.
+      operationId: identityGovernance.termsOfUse.agreements_ListAcceptances
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - agreementFileId
+                - agreementFileId desc
+                - agreementId
+                - agreementId desc
+                - deviceDisplayName
+                - deviceDisplayName desc
+                - deviceId
+                - deviceId desc
+                - deviceOSType
+                - deviceOSType desc
+                - deviceOSVersion
+                - deviceOSVersion desc
+                - expirationDateTime
+                - expirationDateTime desc
+                - recordedDateTime
+                - recordedDateTime desc
+                - state
+                - state desc
+                - userDisplayName
+                - userDisplayName desc
+                - userEmail
+                - userEmail desc
+                - userId
+                - userId desc
+                - userPrincipalName
+                - userPrincipalName desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - agreementFileId
+                - agreementId
+                - deviceDisplayName
+                - deviceId
+                - deviceOSType
+                - deviceOSVersion
+                - expirationDateTime
+                - recordedDateTime
+                - state
+                - userDisplayName
+                - userEmail
+                - userId
+                - userPrincipalName
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.agreementAcceptanceCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+    post:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Create new navigation property to acceptances for identityGovernance
+      description: Read-only. Information about acceptances of this agreement.
+      operationId: identityGovernance.termsOfUse.agreements_CreateAcceptances
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+      requestBody:
+        description: New navigation property
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.agreementAcceptance'
+        required: true
+      responses:
+        '201':
+          description: Created navigation property.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.agreementAcceptance'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/identityGovernance/termsOfUse/agreements/{agreement-id}/acceptances/{agreementAcceptance-id}':
+    get:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Get acceptances from identityGovernance
+      description: Read-only. Information about acceptances of this agreement.
+      operationId: identityGovernance.termsOfUse.agreements_GetAcceptances
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementAcceptance-id
+          in: path
+          description: 'key: id of agreementAcceptance'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementAcceptance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - agreementFileId
+                - agreementId
+                - deviceDisplayName
+                - deviceId
+                - deviceOSType
+                - deviceOSVersion
+                - expirationDateTime
+                - recordedDateTime
+                - state
+                - userDisplayName
+                - userEmail
+                - userId
+                - userPrincipalName
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.agreementAcceptance'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Update the navigation property acceptances in identityGovernance
+      description: Read-only. Information about acceptances of this agreement.
+      operationId: identityGovernance.termsOfUse.agreements_UpdateAcceptances
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementAcceptance-id
+          in: path
+          description: 'key: id of agreementAcceptance'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementAcceptance
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.agreementAcceptance'
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Delete navigation property acceptances for identityGovernance
+      description: Read-only. Information about acceptances of this agreement.
+      operationId: identityGovernance.termsOfUse.agreements_DeleteAcceptances
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementAcceptance-id
+          in: path
+          description: 'key: id of agreementAcceptance'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementAcceptance
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/identityGovernance/termsOfUse/agreements/{agreement-id}/file':
+    get:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Get file from identityGovernance
+      description: Default PDF linked to this agreement.
+      operationId: identityGovernance.termsOfUse.agreements_GetFile
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - createdDateTime
+                - displayName
+                - fileData
+                - fileName
+                - isDefault
+                - isMajorVersion
+                - language
+                - localizations
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - localizations
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.agreementFile'
+          links:
+            localizations:
+              operationId: identityGovernance.termsOfUse.agreements.File.ListLocalizations
+              parameters:
+                agreement-id: $request.path.agreement-id
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Update the navigation property file in identityGovernance
+      description: Default PDF linked to this agreement.
+      operationId: identityGovernance.termsOfUse.agreements_UpdateFile
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.agreementFile'
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Delete navigation property file for identityGovernance
+      description: Default PDF linked to this agreement.
+      operationId: identityGovernance.termsOfUse.agreements_DeleteFile
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/identityGovernance/termsOfUse/agreements/{agreement-id}/file/localizations':
+    get:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Get localizations from identityGovernance
+      description: The localized version of the terms of use agreement files attached to the agreement.
+      operationId: identityGovernance.termsOfUse.agreements.file_ListLocalizations
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - createdDateTime
+                - createdDateTime desc
+                - displayName
+                - displayName desc
+                - fileData
+                - fileData desc
+                - fileName
+                - fileName desc
+                - isDefault
+                - isDefault desc
+                - isMajorVersion
+                - isMajorVersion desc
+                - language
+                - language desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - createdDateTime
+                - displayName
+                - fileData
+                - fileName
+                - isDefault
+                - isMajorVersion
+                - language
+                - versions
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - versions
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.agreementFileLocalizationCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+    post:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Create new navigation property to localizations for identityGovernance
+      description: The localized version of the terms of use agreement files attached to the agreement.
+      operationId: identityGovernance.termsOfUse.agreements.file_CreateLocalizations
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+      requestBody:
+        description: New navigation property
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
+        required: true
+      responses:
+        '201':
+          description: Created navigation property.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/identityGovernance/termsOfUse/agreements/{agreement-id}/file/localizations/{agreementFileLocalization-id}':
+    get:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Get localizations from identityGovernance
+      description: The localized version of the terms of use agreement files attached to the agreement.
+      operationId: identityGovernance.termsOfUse.agreements.file_GetLocalizations
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - createdDateTime
+                - displayName
+                - fileData
+                - fileName
+                - isDefault
+                - isMajorVersion
+                - language
+                - versions
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - versions
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
+          links:
+            versions:
+              operationId: identityGovernance.termsOfUse.agreements.file.Localizations.ListVersions
+              parameters:
+                agreement-id: $request.path.agreement-id
+                agreementFileLocalization-id: $request.path.agreementFileLocalization-id
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Update the navigation property localizations in identityGovernance
+      description: The localized version of the terms of use agreement files attached to the agreement.
+      operationId: identityGovernance.termsOfUse.agreements.file_UpdateLocalizations
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Delete navigation property localizations for identityGovernance
+      description: The localized version of the terms of use agreement files attached to the agreement.
+      operationId: identityGovernance.termsOfUse.agreements.file_DeleteLocalizations
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/identityGovernance/termsOfUse/agreements/{agreement-id}/file/localizations/{agreementFileLocalization-id}/versions':
+    get:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Get versions from identityGovernance
+      description: Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+      operationId: identityGovernance.termsOfUse.agreements.file.localizations_ListVersions
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - createdDateTime
+                - createdDateTime desc
+                - displayName
+                - displayName desc
+                - fileData
+                - fileData desc
+                - fileName
+                - fileName desc
+                - isDefault
+                - isDefault desc
+                - isMajorVersion
+                - isMajorVersion desc
+                - language
+                - language desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - createdDateTime
+                - displayName
+                - fileData
+                - fileName
+                - isDefault
+                - isMajorVersion
+                - language
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.agreementFileVersionCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+    post:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Create new navigation property to versions for identityGovernance
+      description: Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+      operationId: identityGovernance.termsOfUse.agreements.file.localizations_CreateVersions
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+      requestBody:
+        description: New navigation property
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.agreementFileVersion'
+        required: true
+      responses:
+        '201':
+          description: Created navigation property.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.agreementFileVersion'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/identityGovernance/termsOfUse/agreements/{agreement-id}/file/localizations/{agreementFileLocalization-id}/versions/{agreementFileVersion-id}':
+    get:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Get versions from identityGovernance
+      description: Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+      operationId: identityGovernance.termsOfUse.agreements.file.localizations_GetVersions
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - name: agreementFileVersion-id
+          in: path
+          description: 'key: id of agreementFileVersion'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileVersion
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - createdDateTime
+                - displayName
+                - fileData
+                - fileName
+                - isDefault
+                - isMajorVersion
+                - language
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.agreementFileVersion'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Update the navigation property versions in identityGovernance
+      description: Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+      operationId: identityGovernance.termsOfUse.agreements.file.localizations_UpdateVersions
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - name: agreementFileVersion-id
+          in: path
+          description: 'key: id of agreementFileVersion'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileVersion
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.agreementFileVersion'
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Delete navigation property versions for identityGovernance
+      description: Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+      operationId: identityGovernance.termsOfUse.agreements.file.localizations_DeleteVersions
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - name: agreementFileVersion-id
+          in: path
+          description: 'key: id of agreementFileVersion'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileVersion
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/identityGovernance/termsOfUse/agreements/{agreement-id}/files':
+    get:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Get files from identityGovernance
+      description: PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead.
+      operationId: identityGovernance.termsOfUse.agreements_ListFiles
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - createdDateTime
+                - createdDateTime desc
+                - displayName
+                - displayName desc
+                - fileData
+                - fileData desc
+                - fileName
+                - fileName desc
+                - isDefault
+                - isDefault desc
+                - isMajorVersion
+                - isMajorVersion desc
+                - language
+                - language desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - createdDateTime
+                - displayName
+                - fileData
+                - fileName
+                - isDefault
+                - isMajorVersion
+                - language
+                - versions
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - versions
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.agreementFileLocalizationCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+    post:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Create new navigation property to files for identityGovernance
+      description: PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead.
+      operationId: identityGovernance.termsOfUse.agreements_CreateFiles
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+      requestBody:
+        description: New navigation property
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
+        required: true
+      responses:
+        '201':
+          description: Created navigation property.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/identityGovernance/termsOfUse/agreements/{agreement-id}/files/{agreementFileLocalization-id}':
+    get:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Get files from identityGovernance
+      description: PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead.
+      operationId: identityGovernance.termsOfUse.agreements_GetFiles
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - createdDateTime
+                - displayName
+                - fileData
+                - fileName
+                - isDefault
+                - isMajorVersion
+                - language
+                - versions
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - versions
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
+          links:
+            versions:
+              operationId: identityGovernance.termsOfUse.agreements.Files.ListVersions
+              parameters:
+                agreement-id: $request.path.agreement-id
+                agreementFileLocalization-id: $request.path.agreementFileLocalization-id
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Update the navigation property files in identityGovernance
+      description: PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead.
+      operationId: identityGovernance.termsOfUse.agreements_UpdateFiles
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Delete navigation property files for identityGovernance
+      description: PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead.
+      operationId: identityGovernance.termsOfUse.agreements_DeleteFiles
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/identityGovernance/termsOfUse/agreements/{agreement-id}/files/{agreementFileLocalization-id}/versions':
+    get:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Get versions from identityGovernance
+      description: Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+      operationId: identityGovernance.termsOfUse.agreements.files_ListVersions
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - createdDateTime
+                - createdDateTime desc
+                - displayName
+                - displayName desc
+                - fileData
+                - fileData desc
+                - fileName
+                - fileName desc
+                - isDefault
+                - isDefault desc
+                - isMajorVersion
+                - isMajorVersion desc
+                - language
+                - language desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - createdDateTime
+                - displayName
+                - fileData
+                - fileName
+                - isDefault
+                - isMajorVersion
+                - language
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.agreementFileVersionCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+    post:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Create new navigation property to versions for identityGovernance
+      description: Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+      operationId: identityGovernance.termsOfUse.agreements.files_CreateVersions
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+      requestBody:
+        description: New navigation property
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.agreementFileVersion'
+        required: true
+      responses:
+        '201':
+          description: Created navigation property.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.agreementFileVersion'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/identityGovernance/termsOfUse/agreements/{agreement-id}/files/{agreementFileLocalization-id}/versions/{agreementFileVersion-id}':
+    get:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Get versions from identityGovernance
+      description: Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+      operationId: identityGovernance.termsOfUse.agreements.files_GetVersions
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - name: agreementFileVersion-id
+          in: path
+          description: 'key: id of agreementFileVersion'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileVersion
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - createdDateTime
+                - displayName
+                - fileData
+                - fileName
+                - isDefault
+                - isMajorVersion
+                - language
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.agreementFileVersion'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Update the navigation property versions in identityGovernance
+      description: Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+      operationId: identityGovernance.termsOfUse.agreements.files_UpdateVersions
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - name: agreementFileVersion-id
+          in: path
+          description: 'key: id of agreementFileVersion'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileVersion
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.agreementFileVersion'
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - identityGovernance.termsOfUseContainer
+      summary: Delete navigation property versions for identityGovernance
+      description: Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+      operationId: identityGovernance.termsOfUse.agreements.files_DeleteVersions
+      parameters:
+        - name: agreement-id
+          in: path
+          description: 'key: id of agreement'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreement
+        - name: agreementFileLocalization-id
+          in: path
+          description: 'key: id of agreementFileLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileLocalization
+        - name: agreementFileVersion-id
+          in: path
+          description: 'key: id of agreementFileVersion'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementFileVersion
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/users/{user-id}/agreementAcceptances':
     get:
       tags:
@@ -8919,26 +10110,50 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of agreementAcceptance
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.agreementAcceptance'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.agreementAcceptanceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/agreementAcceptances/{agreementAcceptance-id}/$ref':
+    delete:
+      tags:
+        - users.agreementAcceptance
+      summary: Delete ref of navigation property agreementAcceptances for users
+      description: The user's terms of use acceptance statuses. Read-only. Nullable.
+      operationId: users_DeleteGraphRefAgreementAcceptances
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: agreementAcceptance-id
+          in: path
+          description: 'key: id of agreementAcceptance'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: agreementAcceptance
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/agreementAcceptances/$ref':
     get:
@@ -9001,21 +10216,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of agreementAcceptance
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -10229,6 +11430,18 @@ components:
         - blockSignInAndDelete
         - unknownFutureValue
       type: string
+    microsoft.graph.agreementCollectionResponse:
+      title: Collection of agreement
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.agreement'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
     odata.error:
       required:
         - error
@@ -10236,6 +11449,222 @@ components:
       properties:
         error:
           $ref: '#/components/schemas/odata.error.main'
+      additionalProperties:
+        type: object
+    microsoft.graph.agreementAcceptanceCollectionResponse:
+      title: Collection of agreementAcceptance
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.agreementAcceptance'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.agreementFileLocalizationCollectionResponse:
+      title: Collection of agreementFileLocalization
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.agreementFileVersionCollectionResponse:
+      title: Collection of agreementFileVersion
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.agreementFileVersion'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.accessReviewScheduleDefinitionCollectionResponse:
+      title: Collection of accessReviewScheduleDefinition
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.accessReviewScheduleDefinition'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.accessReviewInstanceCollectionResponse:
+      title: Collection of accessReviewInstance
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.accessReviewInstance'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.accessReviewReviewerCollectionResponse:
+      title: Collection of accessReviewReviewer
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.accessReviewReviewer'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.accessReviewInstanceDecisionItemCollectionResponse:
+      title: Collection of accessReviewInstanceDecisionItem
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.accessReviewInstanceDecisionItem'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.appConsentRequestCollectionResponse:
+      title: Collection of appConsentRequest
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.appConsentRequest'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.userConsentRequestCollectionResponse:
+      title: Collection of userConsentRequest
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.userConsentRequest'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.approvalStageCollectionResponse:
+      title: Collection of approvalStage
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.approvalStage'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.approvalCollectionResponse:
+      title: Collection of approval
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.approval'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.accessPackageCollectionResponse:
+      title: Collection of accessPackage
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.accessPackage'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.accessPackageAssignmentRequestCollectionResponse:
+      title: Collection of accessPackageAssignmentRequest
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequest'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.accessPackageAssignmentCollectionResponse:
+      title: Collection of accessPackageAssignment
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.accessPackageAssignment'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.accessPackageCatalogCollectionResponse:
+      title: Collection of accessPackageCatalog
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.accessPackageCatalog'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.connectedOrganizationCollectionResponse:
+      title: Collection of connectedOrganization
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.connectedOrganization'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.directoryObjectCollectionResponse:
+      title: Collection of directoryObject
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    StringCollectionResponse:
+      title: Collection of string
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+        '@odata.nextLink':
+          type: string
       additionalProperties:
         type: object
     microsoft.graph.agreementFileData:
@@ -10448,19 +11877,127 @@ components:
         - numbered
       type: string
   responses:
+    microsoft.graph.agreementCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.agreementCollectionResponse'
     error:
       description: error
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/odata.error'
+    microsoft.graph.agreementAcceptanceCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.agreementAcceptanceCollectionResponse'
+    microsoft.graph.agreementFileLocalizationCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.agreementFileLocalizationCollectionResponse'
+    microsoft.graph.agreementFileVersionCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.agreementFileVersionCollectionResponse'
+    microsoft.graph.accessReviewScheduleDefinitionCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.accessReviewScheduleDefinitionCollectionResponse'
+    microsoft.graph.accessReviewInstanceCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.accessReviewInstanceCollectionResponse'
+    microsoft.graph.accessReviewReviewerCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.accessReviewReviewerCollectionResponse'
+    microsoft.graph.accessReviewInstanceDecisionItemCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.accessReviewInstanceDecisionItemCollectionResponse'
+    microsoft.graph.appConsentRequestCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.appConsentRequestCollectionResponse'
+    microsoft.graph.userConsentRequestCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.userConsentRequestCollectionResponse'
+    microsoft.graph.approvalStageCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.approvalStageCollectionResponse'
+    microsoft.graph.approvalCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.approvalCollectionResponse'
+    microsoft.graph.accessPackageCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.accessPackageCollectionResponse'
+    microsoft.graph.accessPackageAssignmentRequestCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequestCollectionResponse'
+    microsoft.graph.accessPackageAssignmentCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentCollectionResponse'
+    microsoft.graph.accessPackageCatalogCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.accessPackageCatalogCollectionResponse'
+    microsoft.graph.connectedOrganizationCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.connectedOrganizationCollectionResponse'
+    microsoft.graph.directoryObjectCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.directoryObjectCollectionResponse'
+    StringCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/StringCollectionResponse'
   parameters:
-    search:
-      name: $search
-      in: query
-      description: Search items by search phrases
-      schema:
-        type: string
     top:
       name: $top
       in: query
@@ -10476,6 +12013,12 @@ components:
       schema:
         minimum: 0
         type: integer
+    search:
+      name: $search
+      in: query
+      description: Search items by search phrases
+      schema:
+        type: string
     filter:
       name: $filter
       in: query

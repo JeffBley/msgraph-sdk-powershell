@@ -184,21 +184,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationClass
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationClass'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationClassCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -447,21 +433,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationCategory
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationCategory'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationCategoryCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -850,21 +822,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationAssignment
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationAssignment'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationAssignmentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1143,21 +1101,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationCategory
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationCategory'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationCategoryCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1480,21 +1424,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationAssignmentResource
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationAssignmentResource'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationAssignmentResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1920,21 +1850,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSubmission
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSubmission'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSubmissionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -2427,21 +2343,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationOutcome
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationOutcome'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationOutcomeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -2738,21 +2640,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSubmissionResource
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSubmissionResource'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSubmissionResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3049,21 +2937,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSubmissionResource
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSubmissionResource'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSubmissionResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3986,26 +3860,50 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationUser
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationUser'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationUserCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/education/classes/{educationClass-id}/members/{educationUser-id}/$ref':
+    delete:
+      tags:
+        - education.educationClass
+      summary: Delete ref of navigation property members for education
+      description: All users in the class. Nullable.
+      operationId: education.classes_DeleteGraphRefMembers
+      parameters:
+        - name: educationClass-id
+          in: path
+          description: 'key: id of educationClass'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationClass
+        - name: educationUser-id
+          in: path
+          description: 'key: id of educationUser'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationUser
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/education/classes/{educationClass-id}/members/$ref':
     get:
@@ -4106,21 +4004,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of educationUser
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4162,32 +4046,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/education/classes/{educationClass-id}/members/microsoft.graph.delta()':
-    get:
-      tags:
-        - education.Functions
-      summary: Invoke function delta
-      operationId: education.classes.members_delta
-      parameters:
-        - name: educationClass-id
-          in: path
-          description: 'key: id of educationClass'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: educationClass
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationUser'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
   '/education/classes/{educationClass-id}/schools':
     get:
       tags:
@@ -4298,26 +4156,50 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSchool
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSchool'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSchoolCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/education/classes/{educationClass-id}/schools/{educationSchool-id}/$ref':
+    delete:
+      tags:
+        - education.educationClass
+      summary: Delete ref of navigation property schools for education
+      description: All schools that this class is associated with. Nullable.
+      operationId: education.classes_DeleteGraphRefSchools
+      parameters:
+        - name: educationClass-id
+          in: path
+          description: 'key: id of educationClass'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationClass
+        - name: educationSchool-id
+          in: path
+          description: 'key: id of educationSchool'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationSchool
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/education/classes/{educationClass-id}/schools/$ref':
     get:
@@ -4384,21 +4266,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of educationSchool
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4440,32 +4308,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/education/classes/{educationClass-id}/schools/microsoft.graph.delta()':
-    get:
-      tags:
-        - education.Functions
-      summary: Invoke function delta
-      operationId: education.classes.schools_delta
-      parameters:
-        - name: educationClass-id
-          in: path
-          description: 'key: id of educationClass'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: educationClass
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationSchool'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
   '/education/classes/{educationClass-id}/teachers':
     get:
       tags:
@@ -4633,26 +4475,50 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationUser
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationUser'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationUserCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/education/classes/{educationClass-id}/teachers/{educationUser-id}/$ref':
+    delete:
+      tags:
+        - education.educationClass
+      summary: Delete ref of navigation property teachers for education
+      description: All teachers in the class. Nullable.
+      operationId: education.classes_DeleteGraphRefTeachers
+      parameters:
+        - name: educationClass-id
+          in: path
+          description: 'key: id of educationClass'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationClass
+        - name: educationUser-id
+          in: path
+          description: 'key: id of educationUser'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationUser
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/education/classes/{educationClass-id}/teachers/$ref':
     get:
@@ -4753,21 +4619,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of educationUser
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4809,32 +4661,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/education/classes/{educationClass-id}/teachers/microsoft.graph.delta()':
-    get:
-      tags:
-        - education.Functions
-      summary: Invoke function delta
-      operationId: education.classes.teachers_delta
-      parameters:
-        - name: educationClass-id
-          in: path
-          description: 'key: id of educationClass'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: educationClass
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationUser'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
   /education/classes/microsoft.graph.delta():
     get:
       tags:
@@ -4847,9 +4673,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationClass'
+                title: Collection of educationClass
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.educationClass'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -5109,21 +4941,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationAssignment
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationAssignment'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationAssignmentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5362,21 +5180,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationCategory
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationCategory'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationCategoryCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5650,21 +5454,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationAssignmentResource
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationAssignmentResource'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationAssignmentResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6034,21 +5824,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSubmission
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSubmission'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSubmissionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6468,21 +6244,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationOutcome
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationOutcome'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationOutcomeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6744,21 +6506,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSubmissionResource
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSubmissionResource'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSubmissionResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7020,21 +6768,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSubmissionResource
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSubmissionResource'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSubmissionResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7328,26 +7062,43 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationClass
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationClass'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationClassCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/education/me/classes/{educationClass-id}/$ref':
+    delete:
+      tags:
+        - education.educationUser
+      summary: Delete ref of navigation property classes for education
+      description: Classes to which the user belongs. Nullable.
+      operationId: education.me_DeleteGraphRefClasses
+      parameters:
+        - name: educationClass-id
+          in: path
+          description: 'key: id of educationClass'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationClass
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   /education/me/classes/$ref:
     get:
@@ -7401,21 +7152,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of educationClass
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7449,24 +7186,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  /education/me/classes/microsoft.graph.delta():
-    get:
-      tags:
-        - education.Functions
-      summary: Invoke function delta
-      operationId: education.me.classes_delta
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationClass'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
   /education/me/rubrics:
     get:
       tags:
@@ -7545,21 +7264,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationRubric
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationRubric'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationRubricCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7798,26 +7503,43 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSchool
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSchool'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSchoolCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/education/me/schools/{educationSchool-id}/$ref':
+    delete:
+      tags:
+        - education.educationUser
+      summary: Delete ref of navigation property schools for education
+      description: Schools to which the user belongs. Nullable.
+      operationId: education.me_DeleteGraphRefSchools
+      parameters:
+        - name: educationSchool-id
+          in: path
+          description: 'key: id of educationSchool'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationSchool
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   /education/me/schools/$ref:
     get:
@@ -7877,21 +7599,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of educationSchool
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7925,24 +7633,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  /education/me/schools/microsoft.graph.delta():
-    get:
-      tags:
-        - education.Functions
-      summary: Invoke function delta
-      operationId: education.me.schools_delta
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationSchool'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
   /education/me/taughtClasses:
     get:
       tags:
@@ -8047,26 +7737,43 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationClass
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationClass'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationClassCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/education/me/taughtClasses/{educationClass-id}/$ref':
+    delete:
+      tags:
+        - education.educationUser
+      summary: Delete ref of navigation property taughtClasses for education
+      description: Classes for which the user is a teacher.
+      operationId: education.me_DeleteGraphRefTaughtClasses
+      parameters:
+        - name: educationClass-id
+          in: path
+          description: 'key: id of educationClass'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationClass
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   /education/me/taughtClasses/$ref:
     get:
@@ -8120,21 +7827,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of educationClass
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -8168,24 +7861,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  /education/me/taughtClasses/microsoft.graph.delta():
-    get:
-      tags:
-        - education.Functions
-      summary: Invoke function delta
-      operationId: education.me.taughtClasses_delta
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationClass'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
   /education/me/user:
     get:
       tags:
@@ -8734,21 +8409,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSchool
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSchool'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSchoolCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -9184,26 +8845,50 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationClass
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationClass'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationClassCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/education/schools/{educationSchool-id}/classes/{educationClass-id}/$ref':
+    delete:
+      tags:
+        - education.educationSchool
+      summary: Delete ref of navigation property classes for education
+      description: Classes taught at the school. Nullable.
+      operationId: education.schools_DeleteGraphRefClasses
+      parameters:
+        - name: educationSchool-id
+          in: path
+          description: 'key: id of educationSchool'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationSchool
+        - name: educationClass-id
+          in: path
+          description: 'key: id of educationClass'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationClass
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/education/schools/{educationSchool-id}/classes/$ref':
     get:
@@ -9264,21 +8949,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of educationClass
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -9320,32 +8991,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/education/schools/{educationSchool-id}/classes/microsoft.graph.delta()':
-    get:
-      tags:
-        - education.Functions
-      summary: Invoke function delta
-      operationId: education.schools.classes_delta
-      parameters:
-        - name: educationSchool-id
-          in: path
-          description: 'key: id of educationSchool'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: educationSchool
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationClass'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
   '/education/schools/{educationSchool-id}/users':
     get:
       tags:
@@ -9513,26 +9158,50 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationUser
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationUser'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationUserCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/education/schools/{educationSchool-id}/users/{educationUser-id}/$ref':
+    delete:
+      tags:
+        - education.educationSchool
+      summary: Delete ref of navigation property users for education
+      description: Users in the school. Nullable.
+      operationId: education.schools_DeleteGraphRefUsers
+      parameters:
+        - name: educationSchool-id
+          in: path
+          description: 'key: id of educationSchool'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationSchool
+        - name: educationUser-id
+          in: path
+          description: 'key: id of educationUser'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationUser
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/education/schools/{educationSchool-id}/users/$ref':
     get:
@@ -9633,21 +9302,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of educationUser
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -9689,32 +9344,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/education/schools/{educationSchool-id}/users/microsoft.graph.delta()':
-    get:
-      tags:
-        - education.Functions
-      summary: Invoke function delta
-      operationId: education.schools.users_delta
-      parameters:
-        - name: educationSchool-id
-          in: path
-          description: 'key: id of educationSchool'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: educationSchool
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationUser'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
   /education/schools/microsoft.graph.delta():
     get:
       tags:
@@ -9727,9 +9356,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationSchool'
+                title: Collection of educationSchool
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.educationSchool'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -9892,21 +9527,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationUser
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationUser'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationUserCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -10232,21 +9853,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationAssignment
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationAssignment'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationAssignmentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -10525,21 +10132,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationCategory
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationCategory'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationCategoryCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -10862,21 +10455,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationAssignmentResource
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationAssignmentResource'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationAssignmentResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -11302,21 +10881,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSubmission
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSubmission'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSubmissionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -11809,21 +11374,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationOutcome
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationOutcome'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationOutcomeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -12120,21 +11671,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSubmissionResource
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSubmissionResource'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSubmissionResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -12431,21 +11968,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSubmissionResource
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSubmissionResource'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSubmissionResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -12774,26 +12297,50 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationClass
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationClass'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationClassCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/education/users/{educationUser-id}/classes/{educationClass-id}/$ref':
+    delete:
+      tags:
+        - education.educationUser
+      summary: Delete ref of navigation property classes for education
+      description: Classes to which the user belongs. Nullable.
+      operationId: education.users_DeleteGraphRefClasses
+      parameters:
+        - name: educationUser-id
+          in: path
+          description: 'key: id of educationUser'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationUser
+        - name: educationClass-id
+          in: path
+          description: 'key: id of educationClass'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationClass
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/education/users/{educationUser-id}/classes/$ref':
     get:
@@ -12854,21 +12401,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of educationClass
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -12910,32 +12443,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/education/users/{educationUser-id}/classes/microsoft.graph.delta()':
-    get:
-      tags:
-        - education.Functions
-      summary: Invoke function delta
-      operationId: education.users.classes_delta
-      parameters:
-        - name: educationUser-id
-          in: path
-          description: 'key: id of educationUser'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: educationUser
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationClass'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
   '/education/users/{educationUser-id}/rubrics':
     get:
       tags:
@@ -13021,21 +12528,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationRubric
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationRubric'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationRubricCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -13310,26 +12803,50 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationSchool
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationSchool'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationSchoolCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/education/users/{educationUser-id}/schools/{educationSchool-id}/$ref':
+    delete:
+      tags:
+        - education.educationUser
+      summary: Delete ref of navigation property schools for education
+      description: Schools to which the user belongs. Nullable.
+      operationId: education.users_DeleteGraphRefSchools
+      parameters:
+        - name: educationUser-id
+          in: path
+          description: 'key: id of educationUser'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationUser
+        - name: educationSchool-id
+          in: path
+          description: 'key: id of educationSchool'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationSchool
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/education/users/{educationUser-id}/schools/$ref':
     get:
@@ -13396,21 +12913,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of educationSchool
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -13452,32 +12955,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/education/users/{educationUser-id}/schools/microsoft.graph.delta()':
-    get:
-      tags:
-        - education.Functions
-      summary: Invoke function delta
-      operationId: education.users.schools_delta
-      parameters:
-        - name: educationUser-id
-          in: path
-          description: 'key: id of educationUser'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: educationUser
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationSchool'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
   '/education/users/{educationUser-id}/taughtClasses':
     get:
       tags:
@@ -13589,26 +13066,50 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of educationClass
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.educationClass'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.educationClassCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/education/users/{educationUser-id}/taughtClasses/{educationClass-id}/$ref':
+    delete:
+      tags:
+        - education.educationUser
+      summary: Delete ref of navigation property taughtClasses for education
+      description: Classes for which the user is a teacher.
+      operationId: education.users_DeleteGraphRefTaughtClasses
+      parameters:
+        - name: educationUser-id
+          in: path
+          description: 'key: id of educationUser'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationUser
+        - name: educationClass-id
+          in: path
+          description: 'key: id of educationClass'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: educationClass
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/education/users/{educationUser-id}/taughtClasses/$ref':
     get:
@@ -13669,21 +13170,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
-          content:
-            application/json:
-              schema:
-                title: Collection of links of educationClass
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/StringCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -13725,32 +13212,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/education/users/{educationUser-id}/taughtClasses/microsoft.graph.delta()':
-    get:
-      tags:
-        - education.Functions
-      summary: Invoke function delta
-      operationId: education.users.taughtClasses_delta
-      parameters:
-        - name: educationUser-id
-          in: path
-          description: 'key: id of educationUser'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: educationUser
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationClass'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
   '/education/users/{educationUser-id}/user':
     get:
       tags:
@@ -14423,9 +13884,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.educationUser'
+                title: Collection of educationUser
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.educationUser'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -15261,65 +14728,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.user'
           additionalProperties:
             type: object
-    microsoft.graph.educationSchool:
-      allOf:
-        - $ref: '#/components/schemas/microsoft.graph.educationOrganization'
-        - title: educationSchool
-          type: object
-          properties:
-            address:
-              $ref: '#/components/schemas/microsoft.graph.physicalAddress'
-            createdBy:
-              $ref: '#/components/schemas/microsoft.graph.identitySet'
-            externalId:
-              type: string
-              description: ID of school in syncing system.
-              nullable: true
-            externalPrincipalId:
-              type: string
-              description: ID of principal in syncing system.
-              nullable: true
-            fax:
-              type: string
-              nullable: true
-            highestGrade:
-              type: string
-              description: Highest grade taught.
-              nullable: true
-            lowestGrade:
-              type: string
-              description: Lowest grade taught.
-              nullable: true
-            phone:
-              type: string
-              description: Phone number of school.
-              nullable: true
-            principalEmail:
-              type: string
-              description: Email address of the principal.
-              nullable: true
-            principalName:
-              type: string
-              description: Name of the principal.
-              nullable: true
-            schoolNumber:
-              type: string
-              description: School Number.
-              nullable: true
-            administrativeUnit:
-              $ref: '#/components/schemas/microsoft.graph.administrativeUnit'
-            classes:
-              type: array
-              items:
-                $ref: '#/components/schemas/microsoft.graph.educationClass'
-              description: Classes taught at the school. Nullable.
-            users:
-              type: array
-              items:
-                $ref: '#/components/schemas/microsoft.graph.educationUser'
-              description: Users in the school. Nullable.
-          additionalProperties:
-            type: object
     microsoft.graph.user:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.directoryObject'
@@ -15814,6 +15222,65 @@ components:
               $ref: '#/components/schemas/microsoft.graph.userTeamwork'
             todo:
               $ref: '#/components/schemas/microsoft.graph.todo'
+          additionalProperties:
+            type: object
+    microsoft.graph.educationSchool:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.educationOrganization'
+        - title: educationSchool
+          type: object
+          properties:
+            address:
+              $ref: '#/components/schemas/microsoft.graph.physicalAddress'
+            createdBy:
+              $ref: '#/components/schemas/microsoft.graph.identitySet'
+            externalId:
+              type: string
+              description: ID of school in syncing system.
+              nullable: true
+            externalPrincipalId:
+              type: string
+              description: ID of principal in syncing system.
+              nullable: true
+            fax:
+              type: string
+              nullable: true
+            highestGrade:
+              type: string
+              description: Highest grade taught.
+              nullable: true
+            lowestGrade:
+              type: string
+              description: Lowest grade taught.
+              nullable: true
+            phone:
+              type: string
+              description: Phone number of school.
+              nullable: true
+            principalEmail:
+              type: string
+              description: Email address of the principal.
+              nullable: true
+            principalName:
+              type: string
+              description: Name of the principal.
+              nullable: true
+            schoolNumber:
+              type: string
+              description: School Number.
+              nullable: true
+            administrativeUnit:
+              $ref: '#/components/schemas/microsoft.graph.administrativeUnit'
+            classes:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.educationClass'
+              description: Classes taught at the school. Nullable.
+            users:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.educationUser'
+              description: Users in the school. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.administrativeUnit:
@@ -17002,27 +16469,6 @@ components:
           nullable: true
       additionalProperties:
         type: object
-    microsoft.graph.educationOrganization:
-      allOf:
-        - $ref: '#/components/schemas/microsoft.graph.entity'
-        - title: educationOrganization
-          type: object
-          properties:
-            description:
-              type: string
-              description: Organization description.
-              nullable: true
-            displayName:
-              type: string
-              description: Organization display name.
-            externalSource:
-              $ref: '#/components/schemas/microsoft.graph.educationExternalSource'
-            externalSourceDetail:
-              type: string
-              description: The name of the external source this resources was generated from.
-              nullable: true
-          additionalProperties:
-            type: object
     microsoft.graph.employeeOrgData:
       title: employeeOrgData
       type: object
@@ -18442,6 +17888,27 @@ components:
               description: The task lists in the users mailbox.
           additionalProperties:
             type: object
+    microsoft.graph.educationOrganization:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: educationOrganization
+          type: object
+          properties:
+            description:
+              type: string
+              description: Organization description.
+              nullable: true
+            displayName:
+              type: string
+              description: Organization display name.
+            externalSource:
+              $ref: '#/components/schemas/microsoft.graph.educationExternalSource'
+            externalSourceDetail:
+              type: string
+              description: The name of the external source this resources was generated from.
+              nullable: true
+          additionalProperties:
+            type: object
     odata.error:
       required:
         - error
@@ -18449,6 +17916,138 @@ components:
       properties:
         error:
           $ref: '#/components/schemas/odata.error.main'
+      additionalProperties:
+        type: object
+    microsoft.graph.educationClassCollectionResponse:
+      title: Collection of educationClass
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.educationClass'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.educationCategoryCollectionResponse:
+      title: Collection of educationCategory
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.educationCategory'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.educationAssignmentCollectionResponse:
+      title: Collection of educationAssignment
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.educationAssignment'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.educationAssignmentResourceCollectionResponse:
+      title: Collection of educationAssignmentResource
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.educationAssignmentResource'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.educationSubmissionCollectionResponse:
+      title: Collection of educationSubmission
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.educationSubmission'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.educationOutcomeCollectionResponse:
+      title: Collection of educationOutcome
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.educationOutcome'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.educationSubmissionResourceCollectionResponse:
+      title: Collection of educationSubmissionResource
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.educationSubmissionResource'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.educationUserCollectionResponse:
+      title: Collection of educationUser
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.educationUser'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    StringCollectionResponse:
+      title: Collection of string
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.educationSchoolCollectionResponse:
+      title: Collection of educationSchool
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.educationSchool'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.educationRubricCollectionResponse:
+      title: Collection of educationRubric
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.educationRubric'
+        '@odata.nextLink':
+          type: string
       additionalProperties:
         type: object
     microsoft.graph.identity:
@@ -26127,6 +25726,72 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/odata.error'
+    microsoft.graph.educationClassCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.educationClassCollectionResponse'
+    microsoft.graph.educationCategoryCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.educationCategoryCollectionResponse'
+    microsoft.graph.educationAssignmentCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.educationAssignmentCollectionResponse'
+    microsoft.graph.educationAssignmentResourceCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.educationAssignmentResourceCollectionResponse'
+    microsoft.graph.educationSubmissionCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.educationSubmissionCollectionResponse'
+    microsoft.graph.educationOutcomeCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.educationOutcomeCollectionResponse'
+    microsoft.graph.educationSubmissionResourceCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.educationSubmissionResourceCollectionResponse'
+    microsoft.graph.educationUserCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.educationUserCollectionResponse'
+    StringCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/StringCollectionResponse'
+    microsoft.graph.educationSchoolCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.educationSchoolCollectionResponse'
+    microsoft.graph.educationRubricCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.educationRubricCollectionResponse'
   parameters:
     top:
       name: $top

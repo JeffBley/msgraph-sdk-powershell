@@ -72,21 +72,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Collection of schemaExtension
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.schemaExtension'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.schemaExtensionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -271,6 +257,18 @@ components:
           nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.schemaExtensionCollectionResponse:
+      title: Collection of schemaExtension
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.schemaExtension'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
     odata.error:
       required:
         - error
@@ -318,6 +316,12 @@ components:
       additionalProperties:
         type: object
   responses:
+    microsoft.graph.schemaExtensionCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.schemaExtensionCollectionResponse'
     error:
       description: error
       content:
