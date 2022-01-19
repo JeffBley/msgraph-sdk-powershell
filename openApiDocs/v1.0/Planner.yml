@@ -11,7 +11,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Get planner from groups
-      description: Entry-point to Planner resource that might exist for a Unified Group.
+      description: Selective Planner services available to the group. Read-only. Nullable.
       operationId: groups_GetPlanner
       parameters:
         - name: group-id
@@ -66,7 +66,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Update the navigation property planner in groups
-      description: Entry-point to Planner resource that might exist for a Unified Group.
+      description: Selective Planner services available to the group. Read-only. Nullable.
       operationId: groups_UpdatePlanner
       parameters:
         - name: group-id
@@ -93,7 +93,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Delete navigation property planner for groups
-      description: Entry-point to Planner resource that might exist for a Unified Group.
+      description: Selective Planner services available to the group. Read-only. Nullable.
       operationId: groups_DeletePlanner
       parameters:
         - name: group-id
@@ -382,7 +382,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Get buckets from groups
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: groups.planner.plans_ListBuckets
       parameters:
         - name: group-id
@@ -465,7 +465,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Create new navigation property to buckets for groups
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: groups.planner.plans_CreateBuckets
       parameters:
         - name: group-id
@@ -504,7 +504,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Get buckets from groups
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: groups.planner.plans_GetBuckets
       parameters:
         - name: group-id
@@ -578,7 +578,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Update the navigation property buckets in groups
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: groups.planner.plans_UpdateBuckets
       parameters:
         - name: group-id
@@ -619,7 +619,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Delete navigation property buckets for groups
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: groups.planner.plans_DeleteBuckets
       parameters:
         - name: group-id
@@ -1737,7 +1737,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Get details from groups
-      description: Read-only. Nullable. Additional details about the plan.
+      description: Additional details about the plan. Read-only. Nullable.
       operationId: groups.planner.plans_GetDetails
       parameters:
         - name: group-id
@@ -1794,7 +1794,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Update the navigation property details in groups
-      description: Read-only. Nullable. Additional details about the plan.
+      description: Additional details about the plan. Read-only. Nullable.
       operationId: groups.planner.plans_UpdateDetails
       parameters:
         - name: group-id
@@ -1828,7 +1828,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Delete navigation property details for groups
-      description: Read-only. Nullable. Additional details about the plan.
+      description: Additional details about the plan. Read-only. Nullable.
       operationId: groups.planner.plans_DeleteDetails
       parameters:
         - name: group-id
@@ -1861,7 +1861,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Get tasks from groups
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: groups.planner.plans_ListTasks
       parameters:
         - name: group-id
@@ -2001,7 +2001,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Create new navigation property to tasks for groups
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: groups.planner.plans_CreateTasks
       parameters:
         - name: group-id
@@ -2040,7 +2040,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Get tasks from groups
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: groups.planner.plans_GetTasks
       parameters:
         - name: group-id
@@ -2155,7 +2155,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Update the navigation property tasks in groups
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: groups.planner.plans_UpdateTasks
       parameters:
         - name: group-id
@@ -2196,7 +2196,7 @@ paths:
       tags:
         - groups.plannerGroup
       summary: Delete navigation property tasks for groups
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: groups.planner.plans_DeleteTasks
       parameters:
         - name: group-id
@@ -4148,7 +4148,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Get buckets from planner
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: planner.plans_ListBuckets
       parameters:
         - name: plannerPlan-id
@@ -4224,7 +4224,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Create new navigation property to buckets for planner
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: planner.plans_CreateBuckets
       parameters:
         - name: plannerPlan-id
@@ -4256,7 +4256,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Get buckets from planner
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: planner.plans_GetBuckets
       parameters:
         - name: plannerPlan-id
@@ -4322,7 +4322,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Update the navigation property buckets in planner
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: planner.plans_UpdateBuckets
       parameters:
         - name: plannerPlan-id
@@ -4356,7 +4356,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Delete navigation property buckets for planner
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: planner.plans_DeleteBuckets
       parameters:
         - name: plannerPlan-id
@@ -5344,7 +5344,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Get details from planner
-      description: Read-only. Nullable. Additional details about the plan.
+      description: Additional details about the plan. Read-only. Nullable.
       operationId: planner.plans_GetDetails
       parameters:
         - name: plannerPlan-id
@@ -5394,7 +5394,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Update the navigation property details in planner
-      description: Read-only. Nullable. Additional details about the plan.
+      description: Additional details about the plan. Read-only. Nullable.
       operationId: planner.plans_UpdateDetails
       parameters:
         - name: plannerPlan-id
@@ -5421,7 +5421,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Delete navigation property details for planner
-      description: Read-only. Nullable. Additional details about the plan.
+      description: Additional details about the plan. Read-only. Nullable.
       operationId: planner.plans_DeleteDetails
       parameters:
         - name: plannerPlan-id
@@ -5447,7 +5447,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Get tasks from planner
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: planner.plans_ListTasks
       parameters:
         - name: plannerPlan-id
@@ -5580,7 +5580,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Create new navigation property to tasks for planner
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: planner.plans_CreateTasks
       parameters:
         - name: plannerPlan-id
@@ -5612,7 +5612,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Get tasks from planner
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: planner.plans_GetTasks
       parameters:
         - name: plannerPlan-id
@@ -5716,7 +5716,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Update the navigation property tasks in planner
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: planner.plans_UpdateTasks
       parameters:
         - name: plannerPlan-id
@@ -5750,7 +5750,7 @@ paths:
       tags:
         - planner.plannerPlan
       summary: Delete navigation property tasks for planner
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: planner.plans_DeleteTasks
       parameters:
         - name: plannerPlan-id
@@ -6987,7 +6987,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get planner from users
-      description: Entry-point to the Planner resource that might exist for a user. Read-only.
+      description: Selective Planner services available to the user. Read-only. Nullable.
       operationId: users_GetPlanner
       parameters:
         - name: user-id
@@ -7048,7 +7048,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Update the navigation property planner in users
-      description: Entry-point to the Planner resource that might exist for a user. Read-only.
+      description: Selective Planner services available to the user. Read-only. Nullable.
       operationId: users_UpdatePlanner
       parameters:
         - name: user-id
@@ -7075,7 +7075,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Delete navigation property planner for users
-      description: Entry-point to the Planner resource that might exist for a user. Read-only.
+      description: Selective Planner services available to the user. Read-only. Nullable.
       operationId: users_DeletePlanner
       parameters:
         - name: user-id
@@ -7364,7 +7364,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get buckets from users
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: users.planner.plans_ListBuckets
       parameters:
         - name: user-id
@@ -7447,7 +7447,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Create new navigation property to buckets for users
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: users.planner.plans_CreateBuckets
       parameters:
         - name: user-id
@@ -7486,7 +7486,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get buckets from users
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: users.planner.plans_GetBuckets
       parameters:
         - name: user-id
@@ -7560,7 +7560,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Update the navigation property buckets in users
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: users.planner.plans_UpdateBuckets
       parameters:
         - name: user-id
@@ -7601,7 +7601,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Delete navigation property buckets for users
-      description: Read-only. Nullable. Collection of buckets in the plan.
+      description: Collection of buckets in the plan. Read-only. Nullable.
       operationId: users.planner.plans_DeleteBuckets
       parameters:
         - name: user-id
@@ -8719,7 +8719,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get details from users
-      description: Read-only. Nullable. Additional details about the plan.
+      description: Additional details about the plan. Read-only. Nullable.
       operationId: users.planner.plans_GetDetails
       parameters:
         - name: user-id
@@ -8776,7 +8776,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Update the navigation property details in users
-      description: Read-only. Nullable. Additional details about the plan.
+      description: Additional details about the plan. Read-only. Nullable.
       operationId: users.planner.plans_UpdateDetails
       parameters:
         - name: user-id
@@ -8810,7 +8810,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Delete navigation property details for users
-      description: Read-only. Nullable. Additional details about the plan.
+      description: Additional details about the plan. Read-only. Nullable.
       operationId: users.planner.plans_DeleteDetails
       parameters:
         - name: user-id
@@ -8843,7 +8843,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get tasks from users
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: users.planner.plans_ListTasks
       parameters:
         - name: user-id
@@ -8983,7 +8983,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Create new navigation property to tasks for users
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: users.planner.plans_CreateTasks
       parameters:
         - name: user-id
@@ -9022,7 +9022,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get tasks from users
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: users.planner.plans_GetTasks
       parameters:
         - name: user-id
@@ -9137,7 +9137,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Update the navigation property tasks in users
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: users.planner.plans_UpdateTasks
       parameters:
         - name: user-id
@@ -9178,7 +9178,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Delete navigation property tasks for users
-      description: Read-only. Nullable. Collection of tasks in the plan.
+      description: Collection of tasks in the plan. Read-only. Nullable.
       operationId: users.planner.plans_DeleteTasks
       parameters:
         - name: user-id
@@ -9798,7 +9798,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get tasks from users
-      description: Read-only. Nullable. Returns the plannerPlans shared with the user.
+      description: Read-only. Nullable. Returns the plannerTasks assigned to the user.
       operationId: users.planner_ListTasks
       parameters:
         - name: user-id
@@ -9931,7 +9931,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Create new navigation property to tasks for users
-      description: Read-only. Nullable. Returns the plannerPlans shared with the user.
+      description: Read-only. Nullable. Returns the plannerTasks assigned to the user.
       operationId: users.planner_CreateTasks
       parameters:
         - name: user-id
@@ -9963,7 +9963,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get tasks from users
-      description: Read-only. Nullable. Returns the plannerPlans shared with the user.
+      description: Read-only. Nullable. Returns the plannerTasks assigned to the user.
       operationId: users.planner_GetTasks
       parameters:
         - name: user-id
@@ -10067,7 +10067,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Update the navigation property tasks in users
-      description: Read-only. Nullable. Returns the plannerPlans shared with the user.
+      description: Read-only. Nullable. Returns the plannerTasks assigned to the user.
       operationId: users.planner_UpdateTasks
       parameters:
         - name: user-id
@@ -10101,7 +10101,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Delete navigation property tasks for users
-      description: Read-only. Nullable. Returns the plannerPlans shared with the user.
+      description: Read-only. Nullable. Returns the plannerTasks assigned to the user.
       operationId: users.planner_DeleteTasks
       parameters:
         - name: user-id
@@ -10665,14 +10665,14 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.plannerBucket'
-              description: Read-only. Nullable. Collection of buckets in the plan.
+              description: Collection of buckets in the plan. Read-only. Nullable.
             details:
               $ref: '#/components/schemas/microsoft.graph.plannerPlanDetails'
             tasks:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.plannerTask'
-              description: Read-only. Nullable. Collection of tasks in the plan.
+              description: Collection of tasks in the plan. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.plannerBucket:
@@ -10910,7 +10910,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.plannerTask'
-              description: Read-only. Nullable. Returns the plannerPlans shared with the user.
+              description: Read-only. Nullable. Returns the plannerTasks assigned to the user.
           additionalProperties:
             type: object
     microsoft.graph.entity:
