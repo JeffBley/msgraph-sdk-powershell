@@ -937,75 +937,11 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
     "/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
     "/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
@@ -1046,38 +982,6 @@
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
     "/drives/{drive-id}/list/contentTypes/{contentType-id}/columns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
@@ -2489,75 +2393,11 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
     "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
     "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
@@ -2598,38 +2438,6 @@
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
     "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/columns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/groups/{group-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
@@ -3265,75 +3073,11 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
     "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/baseTypes": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
     "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
@@ -3374,38 +3118,6 @@
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
     "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/columns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/shares/{sharedDriveItem-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
@@ -4433,75 +4145,11 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/base/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
     "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
     "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/baseTypes/{contentType-id1}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
@@ -4542,38 +4190,6 @@
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
     "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/columns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/sharedColumns/{columnDefinition-id}/sourceColumn/$ref": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Files.yml"
-    },
-    "/users/{user-id}/drives/{drive-id}/list/contentTypes/{contentType-id}/documentSet/welcomePageColumns/{columnDefinition-id}/sourceColumn/$ref": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Files.yml"
     },
