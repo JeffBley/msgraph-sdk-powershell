@@ -1267,7 +1267,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Get ref of site from compliance
-      operationId: compliance.ediscovery.cases.custodians.siteSources_GetRefSite
+      operationId: compliance.ediscovery.cases.custodians.siteSources_GetGraphRefSite
       parameters:
         - name: case-id
           in: path
@@ -1395,7 +1395,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property site in compliance
-      operationId: compliance.ediscovery.cases.custodians.siteSources_SetRefSite
+      operationId: compliance.ediscovery.cases.custodians.siteSources_SetGraphRefSite
       parameters:
         - name: case-id
           in: path
@@ -1423,7 +1423,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -1435,7 +1437,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property site for compliance
-      operationId: compliance.ediscovery.cases.custodians.siteSources_DeleteRefSite
+      operationId: compliance.ediscovery.cases.custodians.siteSources_DeleteGraphRefSite
       parameters:
         - name: case-id
           in: path
@@ -2068,7 +2070,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Get ref of group from compliance
-      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_GetRefGroup
+      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_GetGraphRefGroup
       parameters:
         - name: case-id
           in: path
@@ -2268,7 +2270,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property group in compliance
-      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_SetRefGroup
+      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_SetGraphRefGroup
       parameters:
         - name: case-id
           in: path
@@ -2296,7 +2298,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -2308,7 +2312,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property group for compliance
-      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_DeleteRefGroup
+      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_DeleteGraphRefGroup
       parameters:
         - name: case-id
           in: path
@@ -3358,7 +3362,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Get ref of site from compliance
-      operationId: compliance.ediscovery.cases.legalHolds.siteSources_GetRefSite
+      operationId: compliance.ediscovery.cases.legalHolds.siteSources_GetGraphRefSite
       parameters:
         - name: case-id
           in: path
@@ -3486,7 +3490,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property site in compliance
-      operationId: compliance.ediscovery.cases.legalHolds.siteSources_SetRefSite
+      operationId: compliance.ediscovery.cases.legalHolds.siteSources_SetGraphRefSite
       parameters:
         - name: case-id
           in: path
@@ -3514,7 +3518,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -3526,7 +3532,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property site for compliance
-      operationId: compliance.ediscovery.cases.legalHolds.siteSources_DeleteRefSite
+      operationId: compliance.ediscovery.cases.legalHolds.siteSources_DeleteGraphRefSite
       parameters:
         - name: case-id
           in: path
@@ -5856,7 +5862,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property custodianSources for compliance
-      operationId: compliance.ediscovery.cases.sourceCollections_DeleteRefCustodianSources
+      operationId: compliance.ediscovery.cases.sourceCollections_DeleteGraphRefCustodianSources
       parameters:
         - name: case-id
           in: path
@@ -5900,7 +5906,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Get ref of custodianSources from compliance
-      operationId: compliance.ediscovery.cases.sourceCollections_ListRefCustodianSources
+      operationId: compliance.ediscovery.cases.sourceCollections_ListGraphRefCustodianSources
       parameters:
         - name: case-id
           in: path
@@ -5953,7 +5959,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Create new navigation property ref to custodianSources for compliance
-      operationId: compliance.ediscovery.cases.sourceCollections_CreateRefCustodianSources
+      operationId: compliance.ediscovery.cases.sourceCollections_CreateGraphRefCustodianSources
       parameters:
         - name: case-id
           in: path
@@ -6071,7 +6077,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Get ref of lastEstimateStatisticsOperation from compliance
-      operationId: compliance.ediscovery.cases.sourceCollections_GetRefLastEstimateStatisticsOperation
+      operationId: compliance.ediscovery.cases.sourceCollections_GetGraphRefLastEstimateStatisticsOperation
       parameters:
         - name: case-id
           in: path
@@ -6107,7 +6113,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property lastEstimateStatisticsOperation in compliance
-      operationId: compliance.ediscovery.cases.sourceCollections_SetRefLastEstimateStatisticsOperation
+      operationId: compliance.ediscovery.cases.sourceCollections_SetGraphRefLastEstimateStatisticsOperation
       parameters:
         - name: case-id
           in: path
@@ -6128,7 +6134,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -6140,7 +6148,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property lastEstimateStatisticsOperation for compliance
-      operationId: compliance.ediscovery.cases.sourceCollections_DeleteRefLastEstimateStatisticsOperation
+      operationId: compliance.ediscovery.cases.sourceCollections_DeleteGraphRefLastEstimateStatisticsOperation
       parameters:
         - name: case-id
           in: path
@@ -6293,7 +6301,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property noncustodialSources for compliance
-      operationId: compliance.ediscovery.cases.sourceCollections_DeleteRefNoncustodialSources
+      operationId: compliance.ediscovery.cases.sourceCollections_DeleteGraphRefNoncustodialSources
       parameters:
         - name: case-id
           in: path
@@ -6337,7 +6345,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Get ref of noncustodialSources from compliance
-      operationId: compliance.ediscovery.cases.sourceCollections_ListRefNoncustodialSources
+      operationId: compliance.ediscovery.cases.sourceCollections_ListGraphRefNoncustodialSources
       parameters:
         - name: case-id
           in: path
@@ -6396,7 +6404,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Create new navigation property ref to noncustodialSources for compliance
-      operationId: compliance.ediscovery.cases.sourceCollections_CreateRefNoncustodialSources
+      operationId: compliance.ediscovery.cases.sourceCollections_CreateGraphRefNoncustodialSources
       parameters:
         - name: case-id
           in: path
@@ -6782,7 +6790,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property childTags for compliance
-      operationId: compliance.ediscovery.cases.tags_DeleteRefChildTags
+      operationId: compliance.ediscovery.cases.tags_DeleteGraphRefChildTags
       parameters:
         - name: case-id
           in: path
@@ -6826,7 +6834,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Get ref of childTags from compliance
-      operationId: compliance.ediscovery.cases.tags_ListRefChildTags
+      operationId: compliance.ediscovery.cases.tags_ListGraphRefChildTags
       parameters:
         - name: case-id
           in: path
@@ -6883,7 +6891,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Create new navigation property ref to childTags for compliance
-      operationId: compliance.ediscovery.cases.tags_CreateRefChildTags
+      operationId: compliance.ediscovery.cases.tags_CreateGraphRefChildTags
       parameters:
         - name: case-id
           in: path
@@ -7000,7 +7008,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Get ref of parent from compliance
-      operationId: compliance.ediscovery.cases.tags_GetRefParent
+      operationId: compliance.ediscovery.cases.tags_GetGraphRefParent
       parameters:
         - name: case-id
           in: path
@@ -7041,7 +7049,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property parent in compliance
-      operationId: compliance.ediscovery.cases.tags_SetRefParent
+      operationId: compliance.ediscovery.cases.tags_SetGraphRefParent
       parameters:
         - name: case-id
           in: path
@@ -7062,7 +7070,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -7074,7 +7084,7 @@ paths:
       tags:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property parent for compliance
-      operationId: compliance.ediscovery.cases.tags_DeleteRefParent
+      operationId: compliance.ediscovery.cases.tags_DeleteGraphRefParent
       parameters:
         - name: case-id
           in: path
@@ -7326,16 +7336,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.onenote'
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.ediscovery.unifiedGroupSource:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.ediscovery.dataSource'

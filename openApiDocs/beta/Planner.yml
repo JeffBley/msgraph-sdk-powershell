@@ -6731,7 +6731,7 @@ paths:
       tags:
         - planner.plannerRoster
       summary: Delete ref of navigation property plans for planner
-      operationId: planner.rosters_DeleteRefPlans
+      operationId: planner.rosters_DeleteGraphRefPlans
       parameters:
         - name: plannerRoster-id
           in: path
@@ -6768,7 +6768,7 @@ paths:
       tags:
         - planner.plannerRoster
       summary: Get ref of plans from planner
-      operationId: planner.rosters_ListRefPlans
+      operationId: planner.rosters_ListGraphRefPlans
       parameters:
         - name: plannerRoster-id
           in: path
@@ -6820,7 +6820,7 @@ paths:
       tags:
         - planner.plannerRoster
       summary: Create new navigation property ref to plans for planner
-      operationId: planner.rosters_CreateRefPlans
+      operationId: planner.rosters_CreateGraphRefPlans
       parameters:
         - name: plannerRoster-id
           in: path
@@ -8039,7 +8039,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Delete ref of navigation property favoritePlans for users
-      operationId: users.planner_DeleteRefFavoritePlans
+      operationId: users.planner_DeleteGraphRefFavoritePlans
       parameters:
         - name: user-id
           in: path
@@ -8081,7 +8081,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get ref of favoritePlans from users
-      operationId: users.planner_ListRefFavoritePlans
+      operationId: users.planner_ListGraphRefFavoritePlans
       parameters:
         - name: user-id
           in: path
@@ -8138,7 +8138,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Create new navigation property ref to favoritePlans for users
-      operationId: users.planner_CreateRefFavoritePlans
+      operationId: users.planner_CreateGraphRefFavoritePlans
       parameters:
         - name: user-id
           in: path
@@ -11182,7 +11182,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Delete ref of navigation property recentPlans for users
-      operationId: users.planner_DeleteRefRecentPlans
+      operationId: users.planner_DeleteGraphRefRecentPlans
       parameters:
         - name: user-id
           in: path
@@ -11224,7 +11224,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get ref of recentPlans from users
-      operationId: users.planner_ListRefRecentPlans
+      operationId: users.planner_ListGraphRefRecentPlans
       parameters:
         - name: user-id
           in: path
@@ -11281,7 +11281,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Create new navigation property ref to recentPlans for users
-      operationId: users.planner_CreateRefRecentPlans
+      operationId: users.planner_CreateGraphRefRecentPlans
       parameters:
         - name: user-id
           in: path
@@ -11415,7 +11415,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Delete ref of navigation property rosterPlans for users
-      operationId: users.planner_DeleteRefRosterPlans
+      operationId: users.planner_DeleteGraphRefRosterPlans
       parameters:
         - name: user-id
           in: path
@@ -11457,7 +11457,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get ref of rosterPlans from users
-      operationId: users.planner_ListRefRosterPlans
+      operationId: users.planner_ListGraphRefRosterPlans
       parameters:
         - name: user-id
           in: path
@@ -11514,7 +11514,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Create new navigation property ref to rosterPlans for users
-      operationId: users.planner_CreateRefRosterPlans
+      operationId: users.planner_CreateGraphRefRosterPlans
       parameters:
         - name: user-id
           in: path

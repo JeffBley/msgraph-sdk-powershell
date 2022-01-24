@@ -3124,7 +3124,7 @@ paths:
         - deviceManagement.managedDevice
       summary: Delete ref of navigation property detectedApps for deviceManagement
       description: All applications currently installed on the device
-      operationId: deviceManagement.comanagedDevices_DeleteRefDetectedApps
+      operationId: deviceManagement.comanagedDevices_DeleteGraphRefDetectedApps
       parameters:
         - name: managedDevice-id
           in: path
@@ -3162,7 +3162,7 @@ paths:
         - deviceManagement.managedDevice
       summary: Get ref of detectedApps from deviceManagement
       description: All applications currently installed on the device
-      operationId: deviceManagement.comanagedDevices_ListRefDetectedApps
+      operationId: deviceManagement.comanagedDevices_ListGraphRefDetectedApps
       parameters:
         - name: managedDevice-id
           in: path
@@ -3211,7 +3211,7 @@ paths:
         - deviceManagement.managedDevice
       summary: Create new navigation property ref to detectedApps for deviceManagement
       description: All applications currently installed on the device
-      operationId: deviceManagement.comanagedDevices_CreateRefDetectedApps
+      operationId: deviceManagement.comanagedDevices_CreateGraphRefDetectedApps
       parameters:
         - name: managedDevice-id
           in: path
@@ -6628,7 +6628,7 @@ paths:
         - deviceManagement.detectedApp
       summary: Delete ref of navigation property managedDevices for deviceManagement
       description: The devices that have the discovered application installed
-      operationId: deviceManagement.detectedApps_DeleteRefManagedDevices
+      operationId: deviceManagement.detectedApps_DeleteGraphRefManagedDevices
       parameters:
         - name: detectedApp-id
           in: path
@@ -6666,7 +6666,7 @@ paths:
         - deviceManagement.detectedApp
       summary: Get ref of managedDevices from deviceManagement
       description: The devices that have the discovered application installed
-      operationId: deviceManagement.detectedApps_ListRefManagedDevices
+      operationId: deviceManagement.detectedApps_ListGraphRefManagedDevices
       parameters:
         - name: detectedApp-id
           in: path
@@ -6865,7 +6865,7 @@ paths:
         - deviceManagement.detectedApp
       summary: Create new navigation property ref to managedDevices for deviceManagement
       description: The devices that have the discovered application installed
-      operationId: deviceManagement.detectedApps_CreateRefManagedDevices
+      operationId: deviceManagement.detectedApps_CreateGraphRefManagedDevices
       parameters:
         - name: detectedApp-id
           in: path
@@ -11405,7 +11405,7 @@ paths:
         - deviceManagement.deviceConfiguration
       summary: Get ref of deviceConfiguration from deviceManagement
       description: The navigation link to the Device Configuration being targeted.
-      operationId: deviceManagement.deviceConfigurations.groupAssignments_GetRefDeviceConfiguration
+      operationId: deviceManagement.deviceConfigurations.groupAssignments_GetGraphRefDeviceConfiguration
       parameters:
         - name: deviceConfiguration-id
           in: path
@@ -11472,7 +11472,7 @@ paths:
         - deviceManagement.deviceConfiguration
       summary: Update the ref of navigation property deviceConfiguration in deviceManagement
       description: The navigation link to the Device Configuration being targeted.
-      operationId: deviceManagement.deviceConfigurations.groupAssignments_SetRefDeviceConfiguration
+      operationId: deviceManagement.deviceConfigurations.groupAssignments_SetGraphRefDeviceConfiguration
       parameters:
         - name: deviceConfiguration-id
           in: path
@@ -11493,7 +11493,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -11506,7 +11508,7 @@ paths:
         - deviceManagement.deviceConfiguration
       summary: Delete ref of navigation property deviceConfiguration for deviceManagement
       description: The navigation link to the Device Configuration being targeted.
-      operationId: deviceManagement.deviceConfigurations.groupAssignments_DeleteRefDeviceConfiguration
+      operationId: deviceManagement.deviceConfigurations.groupAssignments_DeleteGraphRefDeviceConfiguration
       parameters:
         - name: deviceConfiguration-id
           in: path
@@ -12955,7 +12957,7 @@ paths:
         - deviceManagement.deviceHealthScript
       summary: Get ref of managedDevice from deviceManagement
       description: The managed device on which the device health script executed
-      operationId: deviceManagement.deviceHealthScripts.deviceRunStates_GetRefManagedDevice
+      operationId: deviceManagement.deviceHealthScripts.deviceRunStates_GetGraphRefManagedDevice
       parameters:
         - name: deviceHealthScript-id
           in: path
@@ -13037,7 +13039,7 @@ paths:
         - deviceManagement.deviceHealthScript
       summary: Update the ref of navigation property managedDevice in deviceManagement
       description: The managed device on which the device health script executed
-      operationId: deviceManagement.deviceHealthScripts.deviceRunStates_SetRefManagedDevice
+      operationId: deviceManagement.deviceHealthScripts.deviceRunStates_SetGraphRefManagedDevice
       parameters:
         - name: deviceHealthScript-id
           in: path
@@ -13058,7 +13060,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -13071,7 +13075,7 @@ paths:
         - deviceManagement.deviceHealthScript
       summary: Delete ref of navigation property managedDevice for deviceManagement
       description: The managed device on which the device health script executed
-      operationId: deviceManagement.deviceHealthScripts.deviceRunStates_DeleteRefManagedDevice
+      operationId: deviceManagement.deviceHealthScripts.deviceRunStates_DeleteGraphRefManagedDevice
       parameters:
         - name: deviceHealthScript-id
           in: path
@@ -14158,7 +14162,7 @@ paths:
         - deviceManagement.deviceManagementScript
       summary: Get ref of managedDevice from deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceManagementScripts.deviceRunStates_GetRefManagedDevice
+      operationId: deviceManagement.deviceManagementScripts.deviceRunStates_GetGraphRefManagedDevice
       parameters:
         - name: deviceManagementScript-id
           in: path
@@ -14240,7 +14244,7 @@ paths:
         - deviceManagement.deviceManagementScript
       summary: Update the ref of navigation property managedDevice in deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceManagementScripts.deviceRunStates_SetRefManagedDevice
+      operationId: deviceManagement.deviceManagementScripts.deviceRunStates_SetGraphRefManagedDevice
       parameters:
         - name: deviceManagementScript-id
           in: path
@@ -14261,7 +14265,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -14274,7 +14280,7 @@ paths:
         - deviceManagement.deviceManagementScript
       summary: Delete ref of navigation property managedDevice for deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceManagementScripts.deviceRunStates_DeleteRefManagedDevice
+      operationId: deviceManagement.deviceManagementScripts.deviceRunStates_DeleteGraphRefManagedDevice
       parameters:
         - name: deviceManagementScript-id
           in: path
@@ -14583,7 +14589,7 @@ paths:
         - deviceManagement.deviceManagementScript
       summary: Get ref of runSummary from deviceManagement
       description: Run summary for device management script.
-      operationId: deviceManagement.deviceManagementScripts_GetRefRunSummary
+      operationId: deviceManagement.deviceManagementScripts_GetGraphRefRunSummary
       parameters:
         - name: deviceManagementScript-id
           in: path
@@ -14607,7 +14613,7 @@ paths:
         - deviceManagement.deviceManagementScript
       summary: Update the ref of navigation property runSummary in deviceManagement
       description: Run summary for device management script.
-      operationId: deviceManagement.deviceManagementScripts_SetRefRunSummary
+      operationId: deviceManagement.deviceManagementScripts_SetGraphRefRunSummary
       parameters:
         - name: deviceManagementScript-id
           in: path
@@ -14621,7 +14627,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -14634,7 +14642,7 @@ paths:
         - deviceManagement.deviceManagementScript
       summary: Delete ref of navigation property runSummary for deviceManagement
       description: Run summary for device management script.
-      operationId: deviceManagement.deviceManagementScripts_DeleteRefRunSummary
+      operationId: deviceManagement.deviceManagementScripts_DeleteGraphRefRunSummary
       parameters:
         - name: deviceManagementScript-id
           in: path
@@ -15409,7 +15417,7 @@ paths:
         - deviceManagement.deviceManagementScript
       summary: Get ref of managedDevice from deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceManagementScripts.userRunStates.deviceRunStates_GetRefManagedDevice
+      operationId: deviceManagement.deviceManagementScripts.userRunStates.deviceRunStates_GetGraphRefManagedDevice
       parameters:
         - name: deviceManagementScript-id
           in: path
@@ -15508,7 +15516,7 @@ paths:
         - deviceManagement.deviceManagementScript
       summary: Update the ref of navigation property managedDevice in deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceManagementScripts.userRunStates.deviceRunStates_SetRefManagedDevice
+      operationId: deviceManagement.deviceManagementScripts.userRunStates.deviceRunStates_SetGraphRefManagedDevice
       parameters:
         - name: deviceManagementScript-id
           in: path
@@ -15536,7 +15544,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -15549,7 +15559,7 @@ paths:
         - deviceManagement.deviceManagementScript
       summary: Delete ref of navigation property managedDevice for deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceManagementScripts.userRunStates.deviceRunStates_DeleteRefManagedDevice
+      operationId: deviceManagement.deviceManagementScripts.userRunStates.deviceRunStates_DeleteGraphRefManagedDevice
       parameters:
         - name: deviceManagementScript-id
           in: path
@@ -16535,7 +16545,7 @@ paths:
         - deviceManagement.deviceShellScript
       summary: Get ref of managedDevice from deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceShellScripts.deviceRunStates_GetRefManagedDevice
+      operationId: deviceManagement.deviceShellScripts.deviceRunStates_GetGraphRefManagedDevice
       parameters:
         - name: deviceShellScript-id
           in: path
@@ -16617,7 +16627,7 @@ paths:
         - deviceManagement.deviceShellScript
       summary: Update the ref of navigation property managedDevice in deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceShellScripts.deviceRunStates_SetRefManagedDevice
+      operationId: deviceManagement.deviceShellScripts.deviceRunStates_SetGraphRefManagedDevice
       parameters:
         - name: deviceShellScript-id
           in: path
@@ -16638,7 +16648,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -16651,7 +16663,7 @@ paths:
         - deviceManagement.deviceShellScript
       summary: Delete ref of navigation property managedDevice for deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceShellScripts.deviceRunStates_DeleteRefManagedDevice
+      operationId: deviceManagement.deviceShellScripts.deviceRunStates_DeleteGraphRefManagedDevice
       parameters:
         - name: deviceShellScript-id
           in: path
@@ -16960,7 +16972,7 @@ paths:
         - deviceManagement.deviceShellScript
       summary: Get ref of runSummary from deviceManagement
       description: Run summary for device management script.
-      operationId: deviceManagement.deviceShellScripts_GetRefRunSummary
+      operationId: deviceManagement.deviceShellScripts_GetGraphRefRunSummary
       parameters:
         - name: deviceShellScript-id
           in: path
@@ -16984,7 +16996,7 @@ paths:
         - deviceManagement.deviceShellScript
       summary: Update the ref of navigation property runSummary in deviceManagement
       description: Run summary for device management script.
-      operationId: deviceManagement.deviceShellScripts_SetRefRunSummary
+      operationId: deviceManagement.deviceShellScripts_SetGraphRefRunSummary
       parameters:
         - name: deviceShellScript-id
           in: path
@@ -16998,7 +17010,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -17011,7 +17025,7 @@ paths:
         - deviceManagement.deviceShellScript
       summary: Delete ref of navigation property runSummary for deviceManagement
       description: Run summary for device management script.
-      operationId: deviceManagement.deviceShellScripts_DeleteRefRunSummary
+      operationId: deviceManagement.deviceShellScripts_DeleteGraphRefRunSummary
       parameters:
         - name: deviceShellScript-id
           in: path
@@ -17786,7 +17800,7 @@ paths:
         - deviceManagement.deviceShellScript
       summary: Get ref of managedDevice from deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceShellScripts.userRunStates.deviceRunStates_GetRefManagedDevice
+      operationId: deviceManagement.deviceShellScripts.userRunStates.deviceRunStates_GetGraphRefManagedDevice
       parameters:
         - name: deviceShellScript-id
           in: path
@@ -17885,7 +17899,7 @@ paths:
         - deviceManagement.deviceShellScript
       summary: Update the ref of navigation property managedDevice in deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceShellScripts.userRunStates.deviceRunStates_SetRefManagedDevice
+      operationId: deviceManagement.deviceShellScripts.userRunStates.deviceRunStates_SetGraphRefManagedDevice
       parameters:
         - name: deviceShellScript-id
           in: path
@@ -17913,7 +17927,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -17926,7 +17942,7 @@ paths:
         - deviceManagement.deviceShellScript
       summary: Delete ref of navigation property managedDevice for deviceManagement
       description: The managed devices that executes the device management script.
-      operationId: deviceManagement.deviceShellScripts.userRunStates.deviceRunStates_DeleteRefManagedDevice
+      operationId: deviceManagement.deviceShellScripts.userRunStates.deviceRunStates_DeleteGraphRefManagedDevice
       parameters:
         - name: deviceShellScript-id
           in: path
@@ -19465,7 +19481,7 @@ paths:
         - deviceManagement.groupPolicyConfiguration
       summary: Get ref of definition from deviceManagement
       description: The associated group policy definition with the value.
-      operationId: deviceManagement.groupPolicyConfigurations.definitionValues_GetRefDefinition
+      operationId: deviceManagement.groupPolicyConfigurations.definitionValues_GetGraphRefDefinition
       parameters:
         - name: groupPolicyConfiguration-id
           in: path
@@ -19522,7 +19538,7 @@ paths:
         - deviceManagement.groupPolicyConfiguration
       summary: Update the ref of navigation property definition in deviceManagement
       description: The associated group policy definition with the value.
-      operationId: deviceManagement.groupPolicyConfigurations.definitionValues_SetRefDefinition
+      operationId: deviceManagement.groupPolicyConfigurations.definitionValues_SetGraphRefDefinition
       parameters:
         - name: groupPolicyConfiguration-id
           in: path
@@ -19543,7 +19559,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -19556,7 +19574,7 @@ paths:
         - deviceManagement.groupPolicyConfiguration
       summary: Delete ref of navigation property definition for deviceManagement
       description: The associated group policy definition with the value.
-      operationId: deviceManagement.groupPolicyConfigurations.definitionValues_DeleteRefDefinition
+      operationId: deviceManagement.groupPolicyConfigurations.definitionValues_DeleteGraphRefDefinition
       parameters:
         - name: groupPolicyConfiguration-id
           in: path
@@ -19956,7 +19974,7 @@ paths:
         - deviceManagement.groupPolicyConfiguration
       summary: Get ref of definitionValue from deviceManagement
       description: The group policy definition value associated with the presentation value.
-      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_GetRefDefinitionValue
+      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_GetGraphRefDefinitionValue
       parameters:
         - name: groupPolicyConfiguration-id
           in: path
@@ -20007,7 +20025,7 @@ paths:
         - deviceManagement.groupPolicyConfiguration
       summary: Update the ref of navigation property definitionValue in deviceManagement
       description: The group policy definition value associated with the presentation value.
-      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_SetRefDefinitionValue
+      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_SetGraphRefDefinitionValue
       parameters:
         - name: groupPolicyConfiguration-id
           in: path
@@ -20035,7 +20053,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -20048,7 +20068,7 @@ paths:
         - deviceManagement.groupPolicyConfiguration
       summary: Delete ref of navigation property definitionValue for deviceManagement
       description: The group policy definition value associated with the presentation value.
-      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_DeleteRefDefinitionValue
+      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_DeleteGraphRefDefinitionValue
       parameters:
         - name: groupPolicyConfiguration-id
           in: path
@@ -20162,7 +20182,7 @@ paths:
         - deviceManagement.groupPolicyConfiguration
       summary: Get ref of presentation from deviceManagement
       description: The group policy presentation associated with the presentation value.
-      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_GetRefPresentation
+      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_GetGraphRefPresentation
       parameters:
         - name: groupPolicyConfiguration-id
           in: path
@@ -20207,7 +20227,7 @@ paths:
         - deviceManagement.groupPolicyConfiguration
       summary: Update the ref of navigation property presentation in deviceManagement
       description: The group policy presentation associated with the presentation value.
-      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_SetRefPresentation
+      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_SetGraphRefPresentation
       parameters:
         - name: groupPolicyConfiguration-id
           in: path
@@ -20235,7 +20255,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -20248,7 +20270,7 @@ paths:
         - deviceManagement.groupPolicyConfiguration
       summary: Delete ref of navigation property presentation for deviceManagement
       description: The group policy presentation associated with the presentation value.
-      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_DeleteRefPresentation
+      operationId: deviceManagement.groupPolicyConfigurations.definitionValues.presentationValues_DeleteGraphRefPresentation
       parameters:
         - name: groupPolicyConfiguration-id
           in: path
@@ -23507,7 +23529,7 @@ paths:
         - deviceManagement.managedDeviceOverview
       summary: Get ref of managedDeviceOverview from deviceManagement
       description: Device overview
-      operationId: deviceManagement_GetRefManagedDeviceOverview
+      operationId: deviceManagement_GetGraphRefManagedDeviceOverview
       responses:
         '200':
           description: Retrieved navigation property link
@@ -23523,13 +23545,15 @@ paths:
         - deviceManagement.managedDeviceOverview
       summary: Update the ref of navigation property managedDeviceOverview in deviceManagement
       description: Device overview
-      operationId: deviceManagement_SetRefManagedDeviceOverview
+      operationId: deviceManagement_SetGraphRefManagedDeviceOverview
       requestBody:
         description: New navigation property ref values
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -23542,7 +23566,7 @@ paths:
         - deviceManagement.managedDeviceOverview
       summary: Delete ref of navigation property managedDeviceOverview for deviceManagement
       description: Device overview
-      operationId: deviceManagement_DeleteRefManagedDeviceOverview
+      operationId: deviceManagement_DeleteGraphRefManagedDeviceOverview
       parameters:
         - name: If-Match
           in: header
@@ -24444,7 +24468,7 @@ paths:
         - deviceManagement.managedDevice
       summary: Delete ref of navigation property detectedApps for deviceManagement
       description: All applications currently installed on the device
-      operationId: deviceManagement.managedDevices_DeleteRefDetectedApps
+      operationId: deviceManagement.managedDevices_DeleteGraphRefDetectedApps
       parameters:
         - name: managedDevice-id
           in: path
@@ -24482,7 +24506,7 @@ paths:
         - deviceManagement.managedDevice
       summary: Get ref of detectedApps from deviceManagement
       description: All applications currently installed on the device
-      operationId: deviceManagement.managedDevices_ListRefDetectedApps
+      operationId: deviceManagement.managedDevices_ListGraphRefDetectedApps
       parameters:
         - name: managedDevice-id
           in: path
@@ -24531,7 +24555,7 @@ paths:
         - deviceManagement.managedDevice
       summary: Create new navigation property ref to detectedApps for deviceManagement
       description: All applications currently installed on the device
-      operationId: deviceManagement.managedDevices_CreateRefDetectedApps
+      operationId: deviceManagement.managedDevices_CreateGraphRefDetectedApps
       parameters:
         - name: managedDevice-id
           in: path
@@ -27320,7 +27344,7 @@ paths:
         - deviceManagement.managementCondition
       summary: Delete ref of navigation property managementConditionStatements for deviceManagement
       description: The management condition statements associated to the management condition.
-      operationId: deviceManagement.managementConditions_DeleteRefManagementConditionStatements
+      operationId: deviceManagement.managementConditions_DeleteGraphRefManagementConditionStatements
       parameters:
         - name: managementCondition-id
           in: path
@@ -27358,7 +27382,7 @@ paths:
         - deviceManagement.managementCondition
       summary: Get ref of managementConditionStatements from deviceManagement
       description: The management condition statements associated to the management condition.
-      operationId: deviceManagement.managementConditions_ListRefManagementConditionStatements
+      operationId: deviceManagement.managementConditions_ListGraphRefManagementConditionStatements
       parameters:
         - name: managementCondition-id
           in: path
@@ -27413,7 +27437,7 @@ paths:
         - deviceManagement.managementCondition
       summary: Create new navigation property ref to managementConditionStatements for deviceManagement
       description: The management condition statements associated to the management condition.
-      operationId: deviceManagement.managementConditions_CreateRefManagementConditionStatements
+      operationId: deviceManagement.managementConditions_CreateGraphRefManagementConditionStatements
       parameters:
         - name: managementCondition-id
           in: path
@@ -27758,7 +27782,7 @@ paths:
         - deviceManagement.managementConditionStatement
       summary: Delete ref of navigation property managementConditions for deviceManagement
       description: The management conditions associated to the management condition statement.
-      operationId: deviceManagement.managementConditionStatements_DeleteRefManagementConditions
+      operationId: deviceManagement.managementConditionStatements_DeleteGraphRefManagementConditions
       parameters:
         - name: managementConditionStatement-id
           in: path
@@ -27796,7 +27820,7 @@ paths:
         - deviceManagement.managementConditionStatement
       summary: Get ref of managementConditions from deviceManagement
       description: The management conditions associated to the management condition statement.
-      operationId: deviceManagement.managementConditionStatements_ListRefManagementConditions
+      operationId: deviceManagement.managementConditionStatements_ListGraphRefManagementConditions
       parameters:
         - name: managementConditionStatement-id
           in: path
@@ -27851,7 +27875,7 @@ paths:
         - deviceManagement.managementConditionStatement
       summary: Create new navigation property ref to managementConditions for deviceManagement
       description: The management conditions associated to the management condition statement.
-      operationId: deviceManagement.managementConditionStatements_CreateRefManagementConditions
+      operationId: deviceManagement.managementConditionStatements_CreateGraphRefManagementConditions
       parameters:
         - name: managementConditionStatement-id
           in: path
@@ -30989,7 +31013,7 @@ paths:
         - deviceManagement.softwareUpdateStatusSummary
       summary: Get ref of softwareUpdateStatusSummary from deviceManagement
       description: The software update status summary.
-      operationId: deviceManagement_GetRefSoftwareUpdateStatusSummary
+      operationId: deviceManagement_GetGraphRefSoftwareUpdateStatusSummary
       responses:
         '200':
           description: Retrieved navigation property link
@@ -31005,13 +31029,15 @@ paths:
         - deviceManagement.softwareUpdateStatusSummary
       summary: Update the ref of navigation property softwareUpdateStatusSummary in deviceManagement
       description: The software update status summary.
-      operationId: deviceManagement_SetRefSoftwareUpdateStatusSummary
+      operationId: deviceManagement_SetGraphRefSoftwareUpdateStatusSummary
       requestBody:
         description: New navigation property ref values
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -31024,7 +31050,7 @@ paths:
         - deviceManagement.softwareUpdateStatusSummary
       summary: Delete ref of navigation property softwareUpdateStatusSummary for deviceManagement
       description: The software update status summary.
-      operationId: deviceManagement_DeleteRefSoftwareUpdateStatusSummary
+      operationId: deviceManagement_DeleteGraphRefSoftwareUpdateStatusSummary
       parameters:
         - name: If-Match
           in: header
@@ -35028,7 +35054,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Get ref of appHealthMetrics from deviceManagement
       description: The user experience analytics app health metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetRefAppHealthMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetGraphRefAppHealthMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35057,7 +35083,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Update the ref of navigation property appHealthMetrics in deviceManagement
       description: The user experience analytics app health metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetRefAppHealthMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetGraphRefAppHealthMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35071,7 +35097,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -35084,7 +35112,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Delete ref of navigation property appHealthMetrics for deviceManagement
       description: The user experience analytics app health metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteRefAppHealthMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteGraphRefAppHealthMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35167,7 +35195,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Get ref of batteryHealthMetrics from deviceManagement
       description: The user experience analytics battery health metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetRefBatteryHealthMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetGraphRefBatteryHealthMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35196,7 +35224,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Update the ref of navigation property batteryHealthMetrics in deviceManagement
       description: The user experience analytics battery health metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetRefBatteryHealthMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetGraphRefBatteryHealthMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35210,7 +35238,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -35223,7 +35253,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Delete ref of navigation property batteryHealthMetrics for deviceManagement
       description: The user experience analytics battery health metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteRefBatteryHealthMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteGraphRefBatteryHealthMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35306,7 +35336,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Get ref of bestPracticesMetrics from deviceManagement
       description: The user experience analytics best practices metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetRefBestPracticesMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetGraphRefBestPracticesMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35335,7 +35365,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Update the ref of navigation property bestPracticesMetrics in deviceManagement
       description: The user experience analytics best practices metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetRefBestPracticesMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetGraphRefBestPracticesMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35349,7 +35379,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -35362,7 +35394,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Delete ref of navigation property bestPracticesMetrics for deviceManagement
       description: The user experience analytics best practices metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteRefBestPracticesMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteGraphRefBestPracticesMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35445,7 +35477,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Get ref of deviceBootPerformanceMetrics from deviceManagement
       description: The user experience analytics device boot performance metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetRefDeviceBootPerformanceMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetGraphRefDeviceBootPerformanceMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35474,7 +35506,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Update the ref of navigation property deviceBootPerformanceMetrics in deviceManagement
       description: The user experience analytics device boot performance metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetRefDeviceBootPerformanceMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetGraphRefDeviceBootPerformanceMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35488,7 +35520,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -35501,7 +35535,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Delete ref of navigation property deviceBootPerformanceMetrics for deviceManagement
       description: The user experience analytics device boot performance metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteRefDeviceBootPerformanceMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteGraphRefDeviceBootPerformanceMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35584,7 +35618,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Get ref of rebootAnalyticsMetrics from deviceManagement
       description: The user experience analytics reboot analytics metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetRefRebootAnalyticsMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetGraphRefRebootAnalyticsMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35613,7 +35647,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Update the ref of navigation property rebootAnalyticsMetrics in deviceManagement
       description: The user experience analytics reboot analytics metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetRefRebootAnalyticsMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetGraphRefRebootAnalyticsMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35627,7 +35661,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -35640,7 +35676,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Delete ref of navigation property rebootAnalyticsMetrics for deviceManagement
       description: The user experience analytics reboot analytics metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteRefRebootAnalyticsMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteGraphRefRebootAnalyticsMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35723,7 +35759,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Get ref of resourcePerformanceMetrics from deviceManagement
       description: The user experience analytics resource performance metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetRefResourcePerformanceMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetGraphRefResourcePerformanceMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35752,7 +35788,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Update the ref of navigation property resourcePerformanceMetrics in deviceManagement
       description: The user experience analytics resource performance metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetRefResourcePerformanceMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetGraphRefResourcePerformanceMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35766,7 +35802,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -35779,7 +35817,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Delete ref of navigation property resourcePerformanceMetrics for deviceManagement
       description: The user experience analytics resource performance metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteRefResourcePerformanceMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteGraphRefResourcePerformanceMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35862,7 +35900,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Get ref of workFromAnywhereMetrics from deviceManagement
       description: The user experience analytics work from anywhere metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetRefWorkFromAnywhereMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_GetGraphRefWorkFromAnywhereMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35891,7 +35929,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Update the ref of navigation property workFromAnywhereMetrics in deviceManagement
       description: The user experience analytics work from anywhere metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetRefWorkFromAnywhereMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_SetGraphRefWorkFromAnywhereMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -35905,7 +35943,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -35918,7 +35958,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsBaseline
       summary: Delete ref of navigation property workFromAnywhereMetrics for deviceManagement
       description: The user experience analytics work from anywhere metrics.
-      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteRefWorkFromAnywhereMetrics
+      operationId: deviceManagement.userExperienceAnalyticsBaselines_DeleteGraphRefWorkFromAnywhereMetrics
       parameters:
         - name: userExperienceAnalyticsBaseline-id
           in: path
@@ -38026,7 +38066,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsMetricHistory
       summary: Get ref of userExperienceAnalyticsMetric from deviceManagement
       description: User experience analytics metric.
-      operationId: deviceManagement.userExperienceAnalyticsDeviceMetricHistory_GetRefUserExperienceAnalyticsMetric
+      operationId: deviceManagement.userExperienceAnalyticsDeviceMetricHistory_GetGraphRefUserExperienceAnalyticsMetric
       parameters:
         - name: userExperienceAnalyticsMetricHistory-id
           in: path
@@ -38050,7 +38090,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsMetricHistory
       summary: Update the ref of navigation property userExperienceAnalyticsMetric in deviceManagement
       description: User experience analytics metric.
-      operationId: deviceManagement.userExperienceAnalyticsDeviceMetricHistory_SetRefUserExperienceAnalyticsMetric
+      operationId: deviceManagement.userExperienceAnalyticsDeviceMetricHistory_SetGraphRefUserExperienceAnalyticsMetric
       parameters:
         - name: userExperienceAnalyticsMetricHistory-id
           in: path
@@ -38064,7 +38104,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -38077,7 +38119,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsMetricHistory
       summary: Delete ref of navigation property userExperienceAnalyticsMetric for deviceManagement
       description: User experience analytics metric.
-      operationId: deviceManagement.userExperienceAnalyticsDeviceMetricHistory_DeleteRefUserExperienceAnalyticsMetric
+      operationId: deviceManagement.userExperienceAnalyticsDeviceMetricHistory_DeleteGraphRefUserExperienceAnalyticsMetric
       parameters:
         - name: userExperienceAnalyticsMetricHistory-id
           in: path
@@ -39899,7 +39941,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsMetricHistory
       summary: Get ref of userExperienceAnalyticsMetric from deviceManagement
       description: User experience analytics metric.
-      operationId: deviceManagement.userExperienceAnalyticsMetricHistory_GetRefUserExperienceAnalyticsMetric
+      operationId: deviceManagement.userExperienceAnalyticsMetricHistory_GetGraphRefUserExperienceAnalyticsMetric
       parameters:
         - name: userExperienceAnalyticsMetricHistory-id
           in: path
@@ -39923,7 +39965,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsMetricHistory
       summary: Update the ref of navigation property userExperienceAnalyticsMetric in deviceManagement
       description: User experience analytics metric.
-      operationId: deviceManagement.userExperienceAnalyticsMetricHistory_SetRefUserExperienceAnalyticsMetric
+      operationId: deviceManagement.userExperienceAnalyticsMetricHistory_SetGraphRefUserExperienceAnalyticsMetric
       parameters:
         - name: userExperienceAnalyticsMetricHistory-id
           in: path
@@ -39937,7 +39979,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -39950,7 +39994,7 @@ paths:
         - deviceManagement.userExperienceAnalyticsMetricHistory
       summary: Delete ref of navigation property userExperienceAnalyticsMetric for deviceManagement
       description: User experience analytics metric.
-      operationId: deviceManagement.userExperienceAnalyticsMetricHistory_DeleteRefUserExperienceAnalyticsMetric
+      operationId: deviceManagement.userExperienceAnalyticsMetricHistory_DeleteGraphRefUserExperienceAnalyticsMetric
       parameters:
         - name: userExperienceAnalyticsMetricHistory-id
           in: path
@@ -46086,16 +46130,6 @@ components:
           additionalProperties:
             type: object
           description: Device configuration group assignment.
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.deviceConfigurationUserStatus:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

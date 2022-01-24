@@ -494,7 +494,7 @@ paths:
       tags:
         - applications.appManagementPolicy
       summary: Delete ref of navigation property appManagementPolicies for applications
-      operationId: applications_DeleteRefAppManagementPolicies
+      operationId: applications_DeleteGraphRefAppManagementPolicies
       parameters:
         - name: application-id
           in: path
@@ -531,7 +531,7 @@ paths:
       tags:
         - applications.appManagementPolicy
       summary: Get ref of appManagementPolicies from applications
-      operationId: applications_ListRefAppManagementPolicies
+      operationId: applications_ListGraphRefAppManagementPolicies
       parameters:
         - name: application-id
           in: path
@@ -581,7 +581,7 @@ paths:
       tags:
         - applications.appManagementPolicy
       summary: Create new navigation property ref to appManagementPolicies for applications
-      operationId: applications_CreateRefAppManagementPolicies
+      operationId: applications_CreateGraphRefAppManagementPolicies
       parameters:
         - name: application-id
           in: path
@@ -681,7 +681,7 @@ paths:
       tags:
         - applications.connectorGroup
       summary: Get ref of connectorGroup from applications
-      operationId: applications_GetRefConnectorGroup
+      operationId: applications_GetGraphRefConnectorGroup
       parameters:
         - name: application-id
           in: path
@@ -713,7 +713,7 @@ paths:
       tags:
         - applications.connectorGroup
       summary: Update the ref of navigation property connectorGroup in applications
-      operationId: applications_SetRefConnectorGroup
+      operationId: applications_SetGraphRefConnectorGroup
       parameters:
         - name: application-id
           in: path
@@ -727,7 +727,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -739,7 +741,7 @@ paths:
       tags:
         - applications.connectorGroup
       summary: Delete ref of navigation property connectorGroup for applications
-      operationId: applications_DeleteRefConnectorGroup
+      operationId: applications_DeleteGraphRefConnectorGroup
       parameters:
         - name: application-id
           in: path
@@ -813,7 +815,7 @@ paths:
       tags:
         - applications.directoryObject
       summary: Get ref of createdOnBehalfOf from applications
-      operationId: applications_GetRefCreatedOnBehalfOf
+      operationId: applications_GetGraphRefCreatedOnBehalfOf
       parameters:
         - name: application-id
           in: path
@@ -836,7 +838,7 @@ paths:
       tags:
         - applications.directoryObject
       summary: Update the ref of navigation property createdOnBehalfOf in applications
-      operationId: applications_SetRefCreatedOnBehalfOf
+      operationId: applications_SetGraphRefCreatedOnBehalfOf
       parameters:
         - name: application-id
           in: path
@@ -850,7 +852,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -862,7 +866,7 @@ paths:
       tags:
         - applications.directoryObject
       summary: Delete ref of navigation property createdOnBehalfOf for applications
-      operationId: applications_DeleteRefCreatedOnBehalfOf
+      operationId: applications_DeleteGraphRefCreatedOnBehalfOf
       parameters:
         - name: application-id
           in: path
@@ -1441,7 +1445,7 @@ paths:
       tags:
         - applications.homeRealmDiscoveryPolicy
       summary: Delete ref of navigation property homeRealmDiscoveryPolicies for applications
-      operationId: applications_DeleteRefHomeRealmDiscoveryPolicies
+      operationId: applications_DeleteGraphRefHomeRealmDiscoveryPolicies
       parameters:
         - name: application-id
           in: path
@@ -1478,7 +1482,7 @@ paths:
       tags:
         - applications.homeRealmDiscoveryPolicy
       summary: Get ref of homeRealmDiscoveryPolicies from applications
-      operationId: applications_ListRefHomeRealmDiscoveryPolicies
+      operationId: applications_ListGraphRefHomeRealmDiscoveryPolicies
       parameters:
         - name: application-id
           in: path
@@ -1528,7 +1532,7 @@ paths:
       tags:
         - applications.homeRealmDiscoveryPolicy
       summary: Create new navigation property ref to homeRealmDiscoveryPolicies for applications
-      operationId: applications_CreateRefHomeRealmDiscoveryPolicies
+      operationId: applications_CreateGraphRefHomeRealmDiscoveryPolicies
       parameters:
         - name: application-id
           in: path
@@ -2089,7 +2093,7 @@ paths:
       tags:
         - applications.directoryObject
       summary: Delete ref of navigation property owners for applications
-      operationId: applications_DeleteRefOwners
+      operationId: applications_DeleteGraphRefOwners
       parameters:
         - name: application-id
           in: path
@@ -2126,7 +2130,7 @@ paths:
       tags:
         - applications.directoryObject
       summary: Get ref of owners from applications
-      operationId: applications_ListRefOwners
+      operationId: applications_ListGraphRefOwners
       parameters:
         - name: application-id
           in: path
@@ -2168,7 +2172,7 @@ paths:
       tags:
         - applications.directoryObject
       summary: Create new navigation property ref to owners for applications
-      operationId: applications_CreateRefOwners
+      operationId: applications_CreateGraphRefOwners
       parameters:
         - name: application-id
           in: path
@@ -4341,7 +4345,7 @@ paths:
       tags:
         - applications.tokenIssuancePolicy
       summary: Delete ref of navigation property tokenIssuancePolicies for applications
-      operationId: applications_DeleteRefTokenIssuancePolicies
+      operationId: applications_DeleteGraphRefTokenIssuancePolicies
       parameters:
         - name: application-id
           in: path
@@ -4378,7 +4382,7 @@ paths:
       tags:
         - applications.tokenIssuancePolicy
       summary: Get ref of tokenIssuancePolicies from applications
-      operationId: applications_ListRefTokenIssuancePolicies
+      operationId: applications_ListGraphRefTokenIssuancePolicies
       parameters:
         - name: application-id
           in: path
@@ -4428,7 +4432,7 @@ paths:
       tags:
         - applications.tokenIssuancePolicy
       summary: Create new navigation property ref to tokenIssuancePolicies for applications
-      operationId: applications_CreateRefTokenIssuancePolicies
+      operationId: applications_CreateGraphRefTokenIssuancePolicies
       parameters:
         - name: application-id
           in: path
@@ -4545,7 +4549,7 @@ paths:
       tags:
         - applications.tokenLifetimePolicy
       summary: Delete ref of navigation property tokenLifetimePolicies for applications
-      operationId: applications_DeleteRefTokenLifetimePolicies
+      operationId: applications_DeleteGraphRefTokenLifetimePolicies
       parameters:
         - name: application-id
           in: path
@@ -4582,7 +4586,7 @@ paths:
       tags:
         - applications.tokenLifetimePolicy
       summary: Get ref of tokenLifetimePolicies from applications
-      operationId: applications_ListRefTokenLifetimePolicies
+      operationId: applications_ListGraphRefTokenLifetimePolicies
       parameters:
         - name: application-id
           in: path
@@ -4632,7 +4636,7 @@ paths:
       tags:
         - applications.tokenLifetimePolicy
       summary: Create new navigation property ref to tokenLifetimePolicies for applications
-      operationId: applications_CreateRefTokenLifetimePolicies
+      operationId: applications_CreateGraphRefTokenLifetimePolicies
       parameters:
         - name: application-id
           in: path
@@ -8881,7 +8885,7 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Delete ref of navigation property applications for onPremisesPublishingProfiles
-      operationId: onPremisesPublishingProfiles.connectorGroups_DeleteRefApplications
+      operationId: onPremisesPublishingProfiles.connectorGroups_DeleteGraphRefApplications
       parameters:
         - name: onPremisesPublishingProfile-id
           in: path
@@ -9005,7 +9009,7 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get ref of applications from onPremisesPublishingProfiles
-      operationId: onPremisesPublishingProfiles.connectorGroups_ListRefApplications
+      operationId: onPremisesPublishingProfiles.connectorGroups_ListGraphRefApplications
       parameters:
         - name: onPremisesPublishingProfile-id
           in: path
@@ -9114,7 +9118,7 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Create new navigation property ref to applications for onPremisesPublishingProfiles
-      operationId: onPremisesPublishingProfiles.connectorGroups_CreateRefApplications
+      operationId: onPremisesPublishingProfiles.connectorGroups_CreateGraphRefApplications
       parameters:
         - name: onPremisesPublishingProfile-id
           in: path
@@ -10465,7 +10469,7 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Delete ref of navigation property applications for onPremisesPublishingProfiles
-      operationId: onPremisesPublishingProfiles.connectors.memberOf_DeleteRefApplications
+      operationId: onPremisesPublishingProfiles.connectors.memberOf_DeleteGraphRefApplications
       parameters:
         - name: onPremisesPublishingProfile-id
           in: path
@@ -10610,7 +10614,7 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Get ref of applications from onPremisesPublishingProfiles
-      operationId: onPremisesPublishingProfiles.connectors.memberOf_ListRefApplications
+      operationId: onPremisesPublishingProfiles.connectors.memberOf_ListGraphRefApplications
       parameters:
         - name: onPremisesPublishingProfile-id
           in: path
@@ -10726,7 +10730,7 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Create new navigation property ref to applications for onPremisesPublishingProfiles
-      operationId: onPremisesPublishingProfiles.connectors.memberOf_CreateRefApplications
+      operationId: onPremisesPublishingProfiles.connectors.memberOf_CreateGraphRefApplications
       parameters:
         - name: onPremisesPublishingProfile-id
           in: path
@@ -13148,7 +13152,7 @@ paths:
       tags:
         - servicePrincipals.appManagementPolicy
       summary: Delete ref of navigation property appManagementPolicies for servicePrincipals
-      operationId: servicePrincipals_DeleteRefAppManagementPolicies
+      operationId: servicePrincipals_DeleteGraphRefAppManagementPolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -13185,7 +13189,7 @@ paths:
       tags:
         - servicePrincipals.appManagementPolicy
       summary: Get ref of appManagementPolicies from servicePrincipals
-      operationId: servicePrincipals_ListRefAppManagementPolicies
+      operationId: servicePrincipals_ListGraphRefAppManagementPolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -13235,7 +13239,7 @@ paths:
       tags:
         - servicePrincipals.appManagementPolicy
       summary: Create new navigation property ref to appManagementPolicies for servicePrincipals
-      operationId: servicePrincipals_CreateRefAppManagementPolicies
+      operationId: servicePrincipals_CreateGraphRefAppManagementPolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -13836,7 +13840,7 @@ paths:
       tags:
         - servicePrincipals.claimsMappingPolicy
       summary: Delete ref of navigation property claimsMappingPolicies for servicePrincipals
-      operationId: servicePrincipals_DeleteRefClaimsMappingPolicies
+      operationId: servicePrincipals_DeleteGraphRefClaimsMappingPolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -13873,7 +13877,7 @@ paths:
       tags:
         - servicePrincipals.claimsMappingPolicy
       summary: Get ref of claimsMappingPolicies from servicePrincipals
-      operationId: servicePrincipals_ListRefClaimsMappingPolicies
+      operationId: servicePrincipals_ListGraphRefClaimsMappingPolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -13923,7 +13927,7 @@ paths:
       tags:
         - servicePrincipals.claimsMappingPolicy
       summary: Create new navigation property ref to claimsMappingPolicies for servicePrincipals
-      operationId: servicePrincipals_CreateRefClaimsMappingPolicies
+      operationId: servicePrincipals_CreateGraphRefClaimsMappingPolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -14026,7 +14030,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Delete ref of navigation property createdObjects for servicePrincipals
-      operationId: servicePrincipals_DeleteRefCreatedObjects
+      operationId: servicePrincipals_DeleteGraphRefCreatedObjects
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -14063,7 +14067,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get ref of createdObjects from servicePrincipals
-      operationId: servicePrincipals_ListRefCreatedObjects
+      operationId: servicePrincipals_ListGraphRefCreatedObjects
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -14105,7 +14109,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Create new navigation property ref to createdObjects for servicePrincipals
-      operationId: servicePrincipals_CreateRefCreatedObjects
+      operationId: servicePrincipals_CreateGraphRefCreatedObjects
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -14920,7 +14924,7 @@ paths:
       tags:
         - servicePrincipals.homeRealmDiscoveryPolicy
       summary: Delete ref of navigation property homeRealmDiscoveryPolicies for servicePrincipals
-      operationId: servicePrincipals_DeleteRefHomeRealmDiscoveryPolicies
+      operationId: servicePrincipals_DeleteGraphRefHomeRealmDiscoveryPolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -14957,7 +14961,7 @@ paths:
       tags:
         - servicePrincipals.homeRealmDiscoveryPolicy
       summary: Get ref of homeRealmDiscoveryPolicies from servicePrincipals
-      operationId: servicePrincipals_ListRefHomeRealmDiscoveryPolicies
+      operationId: servicePrincipals_ListGraphRefHomeRealmDiscoveryPolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -15007,7 +15011,7 @@ paths:
       tags:
         - servicePrincipals.homeRealmDiscoveryPolicy
       summary: Create new navigation property ref to homeRealmDiscoveryPolicies for servicePrincipals
-      operationId: servicePrincipals_CreateRefHomeRealmDiscoveryPolicies
+      operationId: servicePrincipals_CreateGraphRefHomeRealmDiscoveryPolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -15336,7 +15340,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Delete ref of navigation property memberOf for servicePrincipals
-      operationId: servicePrincipals_DeleteRefMemberOf
+      operationId: servicePrincipals_DeleteGraphRefMemberOf
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -15373,7 +15377,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get ref of memberOf from servicePrincipals
-      operationId: servicePrincipals_ListRefMemberOf
+      operationId: servicePrincipals_ListGraphRefMemberOf
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -15415,7 +15419,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Create new navigation property ref to memberOf for servicePrincipals
-      operationId: servicePrincipals_CreateRefMemberOf
+      operationId: servicePrincipals_CreateGraphRefMemberOf
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -15930,7 +15934,7 @@ paths:
       tags:
         - servicePrincipals.oAuth2PermissionGrant
       summary: Delete ref of navigation property oauth2PermissionGrants for servicePrincipals
-      operationId: servicePrincipals_DeleteRefOauth2PermissionGrants
+      operationId: servicePrincipals_DeleteGraphRefOauth2PermissionGrants
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -15967,7 +15971,7 @@ paths:
       tags:
         - servicePrincipals.oAuth2PermissionGrant
       summary: Get ref of oauth2PermissionGrants from servicePrincipals
-      operationId: servicePrincipals_ListRefOauth2PermissionGrants
+      operationId: servicePrincipals_ListGraphRefOauth2PermissionGrants
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16021,7 +16025,7 @@ paths:
       tags:
         - servicePrincipals.oAuth2PermissionGrant
       summary: Create new navigation property ref to oauth2PermissionGrants for servicePrincipals
-      operationId: servicePrincipals_CreateRefOauth2PermissionGrants
+      operationId: servicePrincipals_CreateGraphRefOauth2PermissionGrants
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16124,7 +16128,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Delete ref of navigation property ownedObjects for servicePrincipals
-      operationId: servicePrincipals_DeleteRefOwnedObjects
+      operationId: servicePrincipals_DeleteGraphRefOwnedObjects
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16161,7 +16165,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get ref of ownedObjects from servicePrincipals
-      operationId: servicePrincipals_ListRefOwnedObjects
+      operationId: servicePrincipals_ListGraphRefOwnedObjects
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16203,7 +16207,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Create new navigation property ref to ownedObjects for servicePrincipals
-      operationId: servicePrincipals_CreateRefOwnedObjects
+      operationId: servicePrincipals_CreateGraphRefOwnedObjects
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16306,7 +16310,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Delete ref of navigation property owners for servicePrincipals
-      operationId: servicePrincipals_DeleteRefOwners
+      operationId: servicePrincipals_DeleteGraphRefOwners
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16343,7 +16347,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get ref of owners from servicePrincipals
-      operationId: servicePrincipals_ListRefOwners
+      operationId: servicePrincipals_ListGraphRefOwners
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16385,7 +16389,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Create new navigation property ref to owners for servicePrincipals
-      operationId: servicePrincipals_CreateRefOwners
+      operationId: servicePrincipals_CreateGraphRefOwners
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -18558,7 +18562,7 @@ paths:
       tags:
         - servicePrincipals.tokenIssuancePolicy
       summary: Delete ref of navigation property tokenIssuancePolicies for servicePrincipals
-      operationId: servicePrincipals_DeleteRefTokenIssuancePolicies
+      operationId: servicePrincipals_DeleteGraphRefTokenIssuancePolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -18595,7 +18599,7 @@ paths:
       tags:
         - servicePrincipals.tokenIssuancePolicy
       summary: Get ref of tokenIssuancePolicies from servicePrincipals
-      operationId: servicePrincipals_ListRefTokenIssuancePolicies
+      operationId: servicePrincipals_ListGraphRefTokenIssuancePolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -18645,7 +18649,7 @@ paths:
       tags:
         - servicePrincipals.tokenIssuancePolicy
       summary: Create new navigation property ref to tokenIssuancePolicies for servicePrincipals
-      operationId: servicePrincipals_CreateRefTokenIssuancePolicies
+      operationId: servicePrincipals_CreateGraphRefTokenIssuancePolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -18762,7 +18766,7 @@ paths:
       tags:
         - servicePrincipals.tokenLifetimePolicy
       summary: Delete ref of navigation property tokenLifetimePolicies for servicePrincipals
-      operationId: servicePrincipals_DeleteRefTokenLifetimePolicies
+      operationId: servicePrincipals_DeleteGraphRefTokenLifetimePolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -18799,7 +18803,7 @@ paths:
       tags:
         - servicePrincipals.tokenLifetimePolicy
       summary: Get ref of tokenLifetimePolicies from servicePrincipals
-      operationId: servicePrincipals_ListRefTokenLifetimePolicies
+      operationId: servicePrincipals_ListGraphRefTokenLifetimePolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -18849,7 +18853,7 @@ paths:
       tags:
         - servicePrincipals.tokenLifetimePolicy
       summary: Create new navigation property ref to tokenLifetimePolicies for servicePrincipals
-      operationId: servicePrincipals_CreateRefTokenLifetimePolicies
+      operationId: servicePrincipals_CreateGraphRefTokenLifetimePolicies
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -18952,7 +18956,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Delete ref of navigation property transitiveMemberOf for servicePrincipals
-      operationId: servicePrincipals_DeleteRefTransitiveMemberOf
+      operationId: servicePrincipals_DeleteGraphRefTransitiveMemberOf
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -18989,7 +18993,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get ref of transitiveMemberOf from servicePrincipals
-      operationId: servicePrincipals_ListRefTransitiveMemberOf
+      operationId: servicePrincipals_ListGraphRefTransitiveMemberOf
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -19031,7 +19035,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Create new navigation property ref to transitiveMemberOf for servicePrincipals
-      operationId: servicePrincipals_CreateRefTransitiveMemberOf
+      operationId: servicePrincipals_CreateGraphRefTransitiveMemberOf
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -19622,16 +19626,6 @@ components:
                 $ref: '#/components/schemas/microsoft.graph.connector'
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.directoryObject:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

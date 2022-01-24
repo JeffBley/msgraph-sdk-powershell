@@ -6499,7 +6499,7 @@ paths:
       tags:
         - users.agreementAcceptance
       summary: Delete ref of navigation property agreementAcceptances for users
-      operationId: users_DeleteRefAgreementAcceptances
+      operationId: users_DeleteGraphRefAgreementAcceptances
       parameters:
         - name: user-id
           in: path
@@ -6536,7 +6536,7 @@ paths:
       tags:
         - users.agreementAcceptance
       summary: Get ref of agreementAcceptances from users
-      operationId: users_ListRefAgreementAcceptances
+      operationId: users_ListGraphRefAgreementAcceptances
       parameters:
         - name: user-id
           in: path
@@ -6602,7 +6602,7 @@ paths:
       tags:
         - users.agreementAcceptance
       summary: Create new navigation property ref to agreementAcceptances for users
-      operationId: users_CreateRefAgreementAcceptances
+      operationId: users_CreateGraphRefAgreementAcceptances
       parameters:
         - name: user-id
           in: path

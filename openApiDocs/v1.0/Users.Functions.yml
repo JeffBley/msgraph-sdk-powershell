@@ -1421,7 +1421,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.bundles.listItem_getActivitiesByInterval-96b0
+      operationId: users.drives.bundles.listItem_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -1467,7 +1467,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.bundles.listItem_getActivitiesByInterval-53ee
+      operationId: users.drives.bundles.listItem_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -1534,7 +1534,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.following.listItem_getActivitiesByInterval-96b0
+      operationId: users.drives.following.listItem_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -1580,7 +1580,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.following.listItem_getActivitiesByInterval-53ee
+      operationId: users.drives.following.listItem_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -1647,7 +1647,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.items.listItem_getActivitiesByInterval-96b0
+      operationId: users.drives.items.listItem_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -1693,7 +1693,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.items.listItem_getActivitiesByInterval-53ee
+      operationId: users.drives.items.listItem_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -1804,7 +1804,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.list.items_getActivitiesByInterval-96b0
+      operationId: users.drives.list.items_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -1850,7 +1850,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.list.items_getActivitiesByInterval-53ee
+      operationId: users.drives.list.items_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -1917,7 +1917,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.root.listItem_getActivitiesByInterval-96b0
+      operationId: users.drives.root.listItem_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -1956,7 +1956,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.root.listItem_getActivitiesByInterval-53ee
+      operationId: users.drives.root.listItem_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -2016,7 +2016,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.special.listItem_getActivitiesByInterval-96b0
+      operationId: users.drives.special.listItem_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -2062,7 +2062,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: users.drives.special.listItem_getActivitiesByInterval-53ee
+      operationId: users.drives.special.listItem_getActivitiesByInterval
       parameters:
         - name: user-id
           in: path
@@ -3119,7 +3119,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function supportedTimeZones
-      operationId: users.outlook_supportedTimeZones-ee48
+      operationId: users.outlook_supportedTimeZones
       parameters:
         - name: user-id
           in: path
@@ -3151,7 +3151,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function supportedTimeZones
-      operationId: users.outlook_supportedTimeZones-51c6
+      operationId: users.outlook_supportedTimeZones
       parameters:
         - name: user-id
           in: path

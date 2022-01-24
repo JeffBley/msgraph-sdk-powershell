@@ -924,7 +924,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Delete ref of navigation property createdObjects for users
-      operationId: users_DeleteRefCreatedObjects
+      operationId: users_DeleteGraphRefCreatedObjects
       parameters:
         - name: user-id
           in: path
@@ -961,7 +961,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get ref of createdObjects from users
-      operationId: users_ListRefCreatedObjects
+      operationId: users_ListGraphRefCreatedObjects
       parameters:
         - name: user-id
           in: path
@@ -1003,7 +1003,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Create new navigation property ref to createdObjects for users
-      operationId: users_CreateRefCreatedObjects
+      operationId: users_CreateGraphRefCreatedObjects
       parameters:
         - name: user-id
           in: path
@@ -1106,7 +1106,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Delete ref of navigation property directReports for users
-      operationId: users_DeleteRefDirectReports
+      operationId: users_DeleteGraphRefDirectReports
       parameters:
         - name: user-id
           in: path
@@ -1143,7 +1143,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get ref of directReports from users
-      operationId: users_ListRefDirectReports
+      operationId: users_ListGraphRefDirectReports
       parameters:
         - name: user-id
           in: path
@@ -1185,7 +1185,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Create new navigation property ref to directReports for users
-      operationId: users_CreateRefDirectReports
+      operationId: users_CreateGraphRefDirectReports
       parameters:
         - name: user-id
           in: path
@@ -1709,7 +1709,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get ref of manager from users
-      operationId: users_GetRefManager
+      operationId: users_GetGraphRefManager
       parameters:
         - name: user-id
           in: path
@@ -1732,7 +1732,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Update the ref of navigation property manager in users
-      operationId: users_SetRefManager
+      operationId: users_SetGraphRefManager
       parameters:
         - name: user-id
           in: path
@@ -1746,7 +1746,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -1758,7 +1760,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Delete ref of navigation property manager for users
-      operationId: users_DeleteRefManager
+      operationId: users_DeleteGraphRefManager
       parameters:
         - name: user-id
           in: path
@@ -1851,7 +1853,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Delete ref of navigation property memberOf for users
-      operationId: users_DeleteRefMemberOf
+      operationId: users_DeleteGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -1888,7 +1890,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get ref of memberOf from users
-      operationId: users_ListRefMemberOf
+      operationId: users_ListGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -1930,7 +1932,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Create new navigation property ref to memberOf for users
-      operationId: users_CreateRefMemberOf
+      operationId: users_CreateGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -2045,7 +2047,7 @@ paths:
       tags:
         - users.oAuth2PermissionGrant
       summary: Delete ref of navigation property oauth2PermissionGrants for users
-      operationId: users_DeleteRefOauth2PermissionGrants
+      operationId: users_DeleteGraphRefOauth2PermissionGrants
       parameters:
         - name: user-id
           in: path
@@ -2082,7 +2084,7 @@ paths:
       tags:
         - users.oAuth2PermissionGrant
       summary: Get ref of oauth2PermissionGrants from users
-      operationId: users_ListRefOauth2PermissionGrants
+      operationId: users_ListGraphRefOauth2PermissionGrants
       parameters:
         - name: user-id
           in: path
@@ -2132,7 +2134,7 @@ paths:
       tags:
         - users.oAuth2PermissionGrant
       summary: Create new navigation property ref to oauth2PermissionGrants for users
-      operationId: users_CreateRefOauth2PermissionGrants
+      operationId: users_CreateGraphRefOauth2PermissionGrants
       parameters:
         - name: user-id
           in: path
@@ -2524,7 +2526,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Delete ref of navigation property ownedDevices for users
-      operationId: users_DeleteRefOwnedDevices
+      operationId: users_DeleteGraphRefOwnedDevices
       parameters:
         - name: user-id
           in: path
@@ -2561,7 +2563,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get ref of ownedDevices from users
-      operationId: users_ListRefOwnedDevices
+      operationId: users_ListGraphRefOwnedDevices
       parameters:
         - name: user-id
           in: path
@@ -2603,7 +2605,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Create new navigation property ref to ownedDevices for users
-      operationId: users_CreateRefOwnedDevices
+      operationId: users_CreateGraphRefOwnedDevices
       parameters:
         - name: user-id
           in: path
@@ -2706,7 +2708,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Delete ref of navigation property ownedObjects for users
-      operationId: users_DeleteRefOwnedObjects
+      operationId: users_DeleteGraphRefOwnedObjects
       parameters:
         - name: user-id
           in: path
@@ -2743,7 +2745,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get ref of ownedObjects from users
-      operationId: users_ListRefOwnedObjects
+      operationId: users_ListGraphRefOwnedObjects
       parameters:
         - name: user-id
           in: path
@@ -2785,7 +2787,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Create new navigation property ref to ownedObjects for users
-      operationId: users_CreateRefOwnedObjects
+      operationId: users_CreateGraphRefOwnedObjects
       parameters:
         - name: user-id
           in: path
@@ -3291,7 +3293,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Delete ref of navigation property registeredDevices for users
-      operationId: users_DeleteRefRegisteredDevices
+      operationId: users_DeleteGraphRefRegisteredDevices
       parameters:
         - name: user-id
           in: path
@@ -3328,7 +3330,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get ref of registeredDevices from users
-      operationId: users_ListRefRegisteredDevices
+      operationId: users_ListGraphRefRegisteredDevices
       parameters:
         - name: user-id
           in: path
@@ -3370,7 +3372,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Create new navigation property ref to registeredDevices for users
-      operationId: users_CreateRefRegisteredDevices
+      operationId: users_CreateGraphRefRegisteredDevices
       parameters:
         - name: user-id
           in: path
@@ -5187,7 +5189,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Delete ref of navigation property transitiveMemberOf for users
-      operationId: users_DeleteRefTransitiveMemberOf
+      operationId: users_DeleteGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -5224,7 +5226,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get ref of transitiveMemberOf from users
-      operationId: users_ListRefTransitiveMemberOf
+      operationId: users_ListGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -5266,7 +5268,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Create new navigation property ref to transitiveMemberOf for users
-      operationId: users_CreateRefTransitiveMemberOf
+      operationId: users_CreateGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -5746,16 +5748,6 @@ components:
               nullable: true
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.outlookUser:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

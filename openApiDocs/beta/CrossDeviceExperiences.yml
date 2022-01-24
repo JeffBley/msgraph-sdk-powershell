@@ -718,7 +718,7 @@ paths:
       tags:
         - users.userActivity
       summary: Get ref of activity from users
-      operationId: users.activities.historyItems_GetRefActivity
+      operationId: users.activities.historyItems_GetGraphRefActivity
       parameters:
         - name: user-id
           in: path
@@ -767,7 +767,7 @@ paths:
       tags:
         - users.userActivity
       summary: Update the ref of navigation property activity in users
-      operationId: users.activities.historyItems_SetRefActivity
+      operationId: users.activities.historyItems_SetGraphRefActivity
       parameters:
         - name: user-id
           in: path
@@ -795,7 +795,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -812,7 +814,7 @@ paths:
       tags:
         - users.userActivity
       summary: Delete ref of navigation property activity for users
-      operationId: users.activities.historyItems_DeleteRefActivity
+      operationId: users.activities.historyItems_DeleteGraphRefActivity
       parameters:
         - name: user-id
           in: path
@@ -1683,7 +1685,7 @@ paths:
       tags:
         - users.device
       summary: Get ref of responsepayload from users
-      operationId: users.devices.commands_GetRefResponsepayload
+      operationId: users.devices.commands_GetGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -1725,7 +1727,7 @@ paths:
       tags:
         - users.device
       summary: Update the ref of navigation property responsepayload in users
-      operationId: users.devices.commands_SetRefResponsepayload
+      operationId: users.devices.commands_SetGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -1753,7 +1755,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -1770,7 +1774,7 @@ paths:
       tags:
         - users.device
       summary: Delete ref of navigation property responsepayload for users
-      operationId: users.devices.commands_DeleteRefResponsepayload
+      operationId: users.devices.commands_DeleteGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -2168,7 +2172,7 @@ paths:
       tags:
         - users.device
       summary: Delete ref of navigation property memberOf for users
-      operationId: users.devices_DeleteRefMemberOf
+      operationId: users.devices_DeleteGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -2217,7 +2221,7 @@ paths:
       tags:
         - users.device
       summary: Get ref of memberOf from users
-      operationId: users.devices_ListRefMemberOf
+      operationId: users.devices_ListGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -2271,7 +2275,7 @@ paths:
       tags:
         - users.device
       summary: Create new navigation property ref to memberOf for users
-      operationId: users.devices_CreateRefMemberOf
+      operationId: users.devices_CreateGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -2398,7 +2402,7 @@ paths:
       tags:
         - users.device
       summary: Delete ref of navigation property registeredOwners for users
-      operationId: users.devices_DeleteRefRegisteredOwners
+      operationId: users.devices_DeleteGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -2447,7 +2451,7 @@ paths:
       tags:
         - users.device
       summary: Get ref of registeredOwners from users
-      operationId: users.devices_ListRefRegisteredOwners
+      operationId: users.devices_ListGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -2501,7 +2505,7 @@ paths:
       tags:
         - users.device
       summary: Create new navigation property ref to registeredOwners for users
-      operationId: users.devices_CreateRefRegisteredOwners
+      operationId: users.devices_CreateGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -2628,7 +2632,7 @@ paths:
       tags:
         - users.device
       summary: Delete ref of navigation property registeredUsers for users
-      operationId: users.devices_DeleteRefRegisteredUsers
+      operationId: users.devices_DeleteGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -2677,7 +2681,7 @@ paths:
       tags:
         - users.device
       summary: Get ref of registeredUsers from users
-      operationId: users.devices_ListRefRegisteredUsers
+      operationId: users.devices_ListGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -2731,7 +2735,7 @@ paths:
       tags:
         - users.device
       summary: Create new navigation property ref to registeredUsers for users
-      operationId: users.devices_CreateRefRegisteredUsers
+      operationId: users.devices_CreateGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -2858,7 +2862,7 @@ paths:
       tags:
         - users.device
       summary: Delete ref of navigation property transitiveMemberOf for users
-      operationId: users.devices_DeleteRefTransitiveMemberOf
+      operationId: users.devices_DeleteGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -2907,7 +2911,7 @@ paths:
       tags:
         - users.device
       summary: Get ref of transitiveMemberOf from users
-      operationId: users.devices_ListRefTransitiveMemberOf
+      operationId: users.devices_ListGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -2961,7 +2965,7 @@ paths:
       tags:
         - users.device
       summary: Create new navigation property ref to transitiveMemberOf for users
-      operationId: users.devices_CreateRefTransitiveMemberOf
+      operationId: users.devices_CreateGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -3387,16 +3391,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.userActivity'
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.device:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.directoryObject'

@@ -7373,7 +7373,7 @@ paths:
         - deviceAppManagement.managedEBook
       summary: Delete ref of navigation property categories for deviceAppManagement
       description: The list of categories for this eBook.
-      operationId: deviceAppManagement.managedEBooks_DeleteRefCategories
+      operationId: deviceAppManagement.managedEBooks_DeleteGraphRefCategories
       parameters:
         - name: managedEBook-id
           in: path
@@ -7411,7 +7411,7 @@ paths:
         - deviceAppManagement.managedEBook
       summary: Get ref of categories from deviceAppManagement
       description: The list of categories for this eBook.
-      operationId: deviceAppManagement.managedEBooks_ListRefCategories
+      operationId: deviceAppManagement.managedEBooks_ListGraphRefCategories
       parameters:
         - name: managedEBook-id
           in: path
@@ -7456,7 +7456,7 @@ paths:
         - deviceAppManagement.managedEBook
       summary: Create new navigation property ref to categories for deviceAppManagement
       description: The list of categories for this eBook.
-      operationId: deviceAppManagement.managedEBooks_CreateRefCategories
+      operationId: deviceAppManagement.managedEBooks_CreateGraphRefCategories
       parameters:
         - name: managedEBook-id
           in: path
@@ -10815,7 +10815,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Delete ref of navigation property categories for deviceAppManagement
       description: The list of categories for this app.
-      operationId: deviceAppManagement.mobileApps_DeleteRefCategories
+      operationId: deviceAppManagement.mobileApps_DeleteGraphRefCategories
       parameters:
         - name: mobileApp-id
           in: path
@@ -10853,7 +10853,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Get ref of categories from deviceAppManagement
       description: The list of categories for this app.
-      operationId: deviceAppManagement.mobileApps_ListRefCategories
+      operationId: deviceAppManagement.mobileApps_ListGraphRefCategories
       parameters:
         - name: mobileApp-id
           in: path
@@ -10898,7 +10898,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Create new navigation property ref to categories for deviceAppManagement
       description: The list of categories for this app.
-      operationId: deviceAppManagement.mobileApps_CreateRefCategories
+      operationId: deviceAppManagement.mobileApps_CreateGraphRefCategories
       parameters:
         - name: mobileApp-id
           in: path
@@ -11329,7 +11329,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Get ref of app from deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.deviceStatuses_GetRefApp
+      operationId: deviceAppManagement.mobileApps.deviceStatuses_GetGraphRefApp
       parameters:
         - name: mobileApp-id
           in: path
@@ -11391,7 +11391,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Update the ref of navigation property app in deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.deviceStatuses_SetRefApp
+      operationId: deviceAppManagement.mobileApps.deviceStatuses_SetGraphRefApp
       parameters:
         - name: mobileApp-id
           in: path
@@ -11412,7 +11412,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -11425,7 +11427,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Delete ref of navigation property app for deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.deviceStatuses_DeleteRefApp
+      operationId: deviceAppManagement.mobileApps.deviceStatuses_DeleteGraphRefApp
       parameters:
         - name: mobileApp-id
           in: path
@@ -12406,7 +12408,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Get ref of app from deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses_GetRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses_GetGraphRefApp
       parameters:
         - name: mobileApp-id
           in: path
@@ -12468,7 +12470,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Update the ref of navigation property app in deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses_SetRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses_SetGraphRefApp
       parameters:
         - name: mobileApp-id
           in: path
@@ -12489,7 +12491,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -12502,7 +12506,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Delete ref of navigation property app for deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses_DeleteRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses_DeleteGraphRefApp
       parameters:
         - name: mobileApp-id
           in: path
@@ -12979,7 +12983,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Get ref of app from deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_GetRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_GetGraphRefApp
       parameters:
         - name: mobileApp-id
           in: path
@@ -13054,7 +13058,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Update the ref of navigation property app in deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_SetRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_SetGraphRefApp
       parameters:
         - name: mobileApp-id
           in: path
@@ -13082,7 +13086,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -13095,7 +13101,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Delete ref of navigation property app for deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_DeleteRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_DeleteGraphRefApp
       parameters:
         - name: mobileApp-id
           in: path
@@ -16561,7 +16567,7 @@ paths:
         - deviceAppManagement.windowsDefenderApplicationControlSupplementalPolicy
       summary: Get ref of policy from deviceAppManagement
       description: The navigation link to the WindowsDefenderApplicationControl supplemental policy.
-      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_GetRefPolicy
+      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_GetGraphRefPolicy
       parameters:
         - name: windowsDefenderApplicationControlSupplementalPolicy-id
           in: path
@@ -16608,7 +16614,7 @@ paths:
         - deviceAppManagement.windowsDefenderApplicationControlSupplementalPolicy
       summary: Update the ref of navigation property policy in deviceAppManagement
       description: The navigation link to the WindowsDefenderApplicationControl supplemental policy.
-      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_SetRefPolicy
+      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_SetGraphRefPolicy
       parameters:
         - name: windowsDefenderApplicationControlSupplementalPolicy-id
           in: path
@@ -16629,7 +16635,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -16642,7 +16650,7 @@ paths:
         - deviceAppManagement.windowsDefenderApplicationControlSupplementalPolicy
       summary: Delete ref of navigation property policy for deviceAppManagement
       description: The navigation link to the WindowsDefenderApplicationControl supplemental policy.
-      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_DeleteRefPolicy
+      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_DeleteGraphRefPolicy
       parameters:
         - name: windowsDefenderApplicationControlSupplementalPolicy-id
           in: path
@@ -17561,7 +17569,7 @@ paths:
         - deviceAppManagement.windowsManagementApp
       summary: Get ref of windowsManagementApp from deviceAppManagement
       description: Windows management app.
-      operationId: deviceAppManagement_GetRefWindowsManagementApp
+      operationId: deviceAppManagement_GetGraphRefWindowsManagementApp
       responses:
         '200':
           description: Retrieved navigation property link
@@ -17580,13 +17588,15 @@ paths:
         - deviceAppManagement.windowsManagementApp
       summary: Update the ref of navigation property windowsManagementApp in deviceAppManagement
       description: Windows management app.
-      operationId: deviceAppManagement_SetRefWindowsManagementApp
+      operationId: deviceAppManagement_SetGraphRefWindowsManagementApp
       requestBody:
         description: New navigation property ref values
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -17599,7 +17609,7 @@ paths:
         - deviceAppManagement.windowsManagementApp
       summary: Delete ref of navigation property windowsManagementApp for deviceAppManagement
       description: Windows management app.
-      operationId: deviceAppManagement_DeleteRefWindowsManagementApp
+      operationId: deviceAppManagement_DeleteGraphRefWindowsManagementApp
       parameters:
         - name: If-Match
           in: header
@@ -19257,7 +19267,7 @@ paths:
         - users.managedAppRegistration
       summary: Delete ref of navigation property managedAppRegistrations for users
       description: Zero or more managed app registrations that belong to the user.
-      operationId: users_DeleteRefManagedAppRegistrations
+      operationId: users_DeleteGraphRefManagedAppRegistrations
       parameters:
         - name: user-id
           in: path
@@ -19300,7 +19310,7 @@ paths:
         - users.managedAppRegistration
       summary: Get ref of managedAppRegistrations from users
       description: Zero or more managed app registrations that belong to the user.
-      operationId: users_ListRefManagedAppRegistrations
+      operationId: users_ListGraphRefManagedAppRegistrations
       parameters:
         - name: user-id
           in: path
@@ -19378,7 +19388,7 @@ paths:
         - users.managedAppRegistration
       summary: Create new navigation property ref to managedAppRegistrations for users
       description: Zero or more managed app registrations that belong to the user.
-      operationId: users_CreateRefManagedAppRegistrations
+      operationId: users_CreateGraphRefManagedAppRegistrations
       parameters:
         - name: user-id
           in: path
@@ -20445,7 +20455,7 @@ paths:
         - users.managedDevice
       summary: Delete ref of navigation property detectedApps for users
       description: All applications currently installed on the device
-      operationId: users.managedDevices_DeleteRefDetectedApps
+      operationId: users.managedDevices_DeleteGraphRefDetectedApps
       parameters:
         - name: user-id
           in: path
@@ -20495,7 +20505,7 @@ paths:
         - users.managedDevice
       summary: Get ref of detectedApps from users
       description: All applications currently installed on the device
-      operationId: users.managedDevices_ListRefDetectedApps
+      operationId: users.managedDevices_ListGraphRefDetectedApps
       parameters:
         - name: user-id
           in: path
@@ -20556,7 +20566,7 @@ paths:
         - users.managedDevice
       summary: Create new navigation property ref to detectedApps for users
       description: All applications currently installed on the device
-      operationId: users.managedDevices_CreateRefDetectedApps
+      operationId: users.managedDevices_CreateGraphRefDetectedApps
       parameters:
         - name: user-id
           in: path
@@ -24479,7 +24489,7 @@ paths:
         - users.windowsInformationProtectionDeviceRegistration
       summary: Delete ref of navigation property windowsInformationProtectionDeviceRegistrations for users
       description: Zero or more WIP device registrations that belong to the user.
-      operationId: users_DeleteRefWindowsInformationProtectionDeviceRegistrations
+      operationId: users_DeleteGraphRefWindowsInformationProtectionDeviceRegistrations
       parameters:
         - name: user-id
           in: path
@@ -24522,7 +24532,7 @@ paths:
         - users.windowsInformationProtectionDeviceRegistration
       summary: Get ref of windowsInformationProtectionDeviceRegistrations from users
       description: Zero or more WIP device registrations that belong to the user.
-      operationId: users_ListRefWindowsInformationProtectionDeviceRegistrations
+      operationId: users_ListGraphRefWindowsInformationProtectionDeviceRegistrations
       parameters:
         - name: user-id
           in: path
@@ -24580,7 +24590,7 @@ paths:
         - users.windowsInformationProtectionDeviceRegistration
       summary: Create new navigation property ref to windowsInformationProtectionDeviceRegistrations for users
       description: Zero or more WIP device registrations that belong to the user.
-      operationId: users_CreateRefWindowsInformationProtectionDeviceRegistrations
+      operationId: users_CreateGraphRefWindowsInformationProtectionDeviceRegistrations
       parameters:
         - name: user-id
           in: path
@@ -26315,16 +26325,6 @@ components:
           additionalProperties:
             type: object
           description: Contains properties for the installation state of a mobile app for a device.
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.mobileAppInstallSummary:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

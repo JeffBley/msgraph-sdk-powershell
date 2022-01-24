@@ -633,7 +633,7 @@ paths:
         - deviceManagement.detectedApp
       summary: Delete ref of navigation property managedDevices for deviceManagement
       description: The devices that have the discovered application installed
-      operationId: deviceManagement.detectedApps_DeleteRefManagedDevices
+      operationId: deviceManagement.detectedApps_DeleteGraphRefManagedDevices
       parameters:
         - name: detectedApp-id
           in: path
@@ -671,7 +671,7 @@ paths:
         - deviceManagement.detectedApp
       summary: Get ref of managedDevices from deviceManagement
       description: The devices that have the discovered application installed
-      operationId: deviceManagement.detectedApps_ListRefManagedDevices
+      operationId: deviceManagement.detectedApps_ListGraphRefManagedDevices
       parameters:
         - name: detectedApp-id
           in: path
@@ -814,7 +814,7 @@ paths:
         - deviceManagement.detectedApp
       summary: Create new navigation property ref to managedDevices for deviceManagement
       description: The devices that have the discovered application installed
-      operationId: deviceManagement.detectedApps_CreateRefManagedDevices
+      operationId: deviceManagement.detectedApps_CreateGraphRefManagedDevices
       parameters:
         - name: detectedApp-id
           in: path
@@ -5127,7 +5127,7 @@ paths:
         - deviceManagement.managedDeviceOverview
       summary: Get ref of managedDeviceOverview from deviceManagement
       description: Device overview
-      operationId: deviceManagement_GetRefManagedDeviceOverview
+      operationId: deviceManagement_GetGraphRefManagedDeviceOverview
       responses:
         '200':
           description: Retrieved navigation property link
@@ -5143,13 +5143,15 @@ paths:
         - deviceManagement.managedDeviceOverview
       summary: Update the ref of navigation property managedDeviceOverview in deviceManagement
       description: Device overview
-      operationId: deviceManagement_SetRefManagedDeviceOverview
+      operationId: deviceManagement_SetGraphRefManagedDeviceOverview
       requestBody:
         description: New navigation property ref values
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -5162,7 +5164,7 @@ paths:
         - deviceManagement.managedDeviceOverview
       summary: Delete ref of navigation property managedDeviceOverview for deviceManagement
       description: Device overview
-      operationId: deviceManagement_DeleteRefManagedDeviceOverview
+      operationId: deviceManagement_DeleteGraphRefManagedDeviceOverview
       parameters:
         - name: If-Match
           in: header
@@ -6686,7 +6688,7 @@ paths:
         - deviceManagement.softwareUpdateStatusSummary
       summary: Get ref of softwareUpdateStatusSummary from deviceManagement
       description: The software update status summary.
-      operationId: deviceManagement_GetRefSoftwareUpdateStatusSummary
+      operationId: deviceManagement_GetGraphRefSoftwareUpdateStatusSummary
       responses:
         '200':
           description: Retrieved navigation property link
@@ -6702,13 +6704,15 @@ paths:
         - deviceManagement.softwareUpdateStatusSummary
       summary: Update the ref of navigation property softwareUpdateStatusSummary in deviceManagement
       description: The software update status summary.
-      operationId: deviceManagement_SetRefSoftwareUpdateStatusSummary
+      operationId: deviceManagement_SetGraphRefSoftwareUpdateStatusSummary
       requestBody:
         description: New navigation property ref values
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -6721,7 +6725,7 @@ paths:
         - deviceManagement.softwareUpdateStatusSummary
       summary: Delete ref of navigation property softwareUpdateStatusSummary for deviceManagement
       description: The software update status summary.
-      operationId: deviceManagement_DeleteRefSoftwareUpdateStatusSummary
+      operationId: deviceManagement_DeleteGraphRefSoftwareUpdateStatusSummary
       parameters:
         - name: If-Match
           in: header
@@ -8345,16 +8349,6 @@ components:
           additionalProperties:
             type: object
           description: Summary data for managed devices
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.managedDevice:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

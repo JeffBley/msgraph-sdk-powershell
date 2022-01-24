@@ -3492,7 +3492,7 @@ paths:
       tags:
         - education.educationClass
       summary: Get ref of group from education
-      operationId: education.classes_GetRefGroup
+      operationId: education.classes_GetGraphRefGroup
       parameters:
         - name: educationClass-id
           in: path
@@ -3628,7 +3628,7 @@ paths:
       tags:
         - education.educationClass
       summary: Update the ref of navigation property group in education
-      operationId: education.classes_SetRefGroup
+      operationId: education.classes_SetGraphRefGroup
       parameters:
         - name: educationClass-id
           in: path
@@ -3642,7 +3642,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -3654,7 +3656,7 @@ paths:
       tags:
         - education.educationClass
       summary: Delete ref of navigation property group for education
-      operationId: education.classes_DeleteRefGroup
+      operationId: education.classes_DeleteGraphRefGroup
       parameters:
         - name: educationClass-id
           in: path
@@ -3852,7 +3854,7 @@ paths:
       tags:
         - education.educationClass
       summary: Delete ref of navigation property members for education
-      operationId: education.classes_DeleteRefMembers
+      operationId: education.classes_DeleteGraphRefMembers
       parameters:
         - name: educationClass-id
           in: path
@@ -3889,7 +3891,7 @@ paths:
       tags:
         - education.educationClass
       summary: Get ref of members from education
-      operationId: education.classes_ListRefMembers
+      operationId: education.classes_ListGraphRefMembers
       parameters:
         - name: educationClass-id
           in: path
@@ -3993,7 +3995,7 @@ paths:
       tags:
         - education.educationClass
       summary: Create new navigation property ref to members for education
-      operationId: education.classes_CreateRefMembers
+      operationId: education.classes_CreateGraphRefMembers
       parameters:
         - name: educationClass-id
           in: path
@@ -4144,7 +4146,7 @@ paths:
       tags:
         - education.educationClass
       summary: Delete ref of navigation property schools for education
-      operationId: education.classes_DeleteRefSchools
+      operationId: education.classes_DeleteGraphRefSchools
       parameters:
         - name: educationClass-id
           in: path
@@ -4181,7 +4183,7 @@ paths:
       tags:
         - education.educationClass
       summary: Get ref of schools from education
-      operationId: education.classes_ListRefSchools
+      operationId: education.classes_ListGraphRefSchools
       parameters:
         - name: educationClass-id
           in: path
@@ -4251,7 +4253,7 @@ paths:
       tags:
         - education.educationClass
       summary: Create new navigation property ref to schools for education
-      operationId: education.classes_CreateRefSchools
+      operationId: education.classes_CreateGraphRefSchools
       parameters:
         - name: educationClass-id
           in: path
@@ -4459,7 +4461,7 @@ paths:
       tags:
         - education.educationClass
       summary: Delete ref of navigation property teachers for education
-      operationId: education.classes_DeleteRefTeachers
+      operationId: education.classes_DeleteGraphRefTeachers
       parameters:
         - name: educationClass-id
           in: path
@@ -4496,7 +4498,7 @@ paths:
       tags:
         - education.educationClass
       summary: Get ref of teachers from education
-      operationId: education.classes_ListRefTeachers
+      operationId: education.classes_ListGraphRefTeachers
       parameters:
         - name: educationClass-id
           in: path
@@ -4600,7 +4602,7 @@ paths:
       tags:
         - education.educationClass
       summary: Create new navigation property ref to teachers for education
-      operationId: education.classes_CreateRefTeachers
+      operationId: education.classes_CreateGraphRefTeachers
       parameters:
         - name: educationClass-id
           in: path
@@ -7274,7 +7276,7 @@ paths:
       tags:
         - education.educationUser
       summary: Delete ref of navigation property classes for education
-      operationId: education.me_DeleteRefClasses
+      operationId: education.me_DeleteGraphRefClasses
       parameters:
         - name: educationClass-id
           in: path
@@ -7304,7 +7306,7 @@ paths:
       tags:
         - education.educationUser
       summary: Get ref of classes from education
-      operationId: education.me_ListRefClasses
+      operationId: education.me_ListGraphRefClasses
       parameters:
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
@@ -7361,7 +7363,7 @@ paths:
       tags:
         - education.educationUser
       summary: Create new navigation property ref to classes for education
-      operationId: education.me_CreateRefClasses
+      operationId: education.me_CreateGraphRefClasses
       requestBody:
         description: New navigation property ref value
         content:
@@ -7711,7 +7713,7 @@ paths:
       tags:
         - education.educationUser
       summary: Delete ref of navigation property schools for education
-      operationId: education.me_DeleteRefSchools
+      operationId: education.me_DeleteGraphRefSchools
       parameters:
         - name: educationSchool-id
           in: path
@@ -7741,7 +7743,7 @@ paths:
       tags:
         - education.educationUser
       summary: Get ref of schools from education
-      operationId: education.me_ListRefSchools
+      operationId: education.me_ListGraphRefSchools
       parameters:
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
@@ -7804,7 +7806,7 @@ paths:
       tags:
         - education.educationUser
       summary: Create new navigation property ref to schools for education
-      operationId: education.me_CreateRefSchools
+      operationId: education.me_CreateGraphRefSchools
       requestBody:
         description: New navigation property ref value
         content:
@@ -7941,7 +7943,7 @@ paths:
       tags:
         - education.educationUser
       summary: Delete ref of navigation property taughtClasses for education
-      operationId: education.me_DeleteRefTaughtClasses
+      operationId: education.me_DeleteGraphRefTaughtClasses
       parameters:
         - name: educationClass-id
           in: path
@@ -7971,7 +7973,7 @@ paths:
       tags:
         - education.educationUser
       summary: Get ref of taughtClasses from education
-      operationId: education.me_ListRefTaughtClasses
+      operationId: education.me_ListGraphRefTaughtClasses
       parameters:
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
@@ -8028,7 +8030,7 @@ paths:
       tags:
         - education.educationUser
       summary: Create new navigation property ref to taughtClasses for education
-      operationId: education.me_CreateRefTaughtClasses
+      operationId: education.me_CreateGraphRefTaughtClasses
       requestBody:
         description: New navigation property ref value
         content:
@@ -8421,7 +8423,7 @@ paths:
       tags:
         - education.educationUser
       summary: Get ref of user from education
-      operationId: education.me_GetRefUser
+      operationId: education.me_GetGraphRefUser
       responses:
         '200':
           description: Retrieved navigation property link
@@ -8564,13 +8566,15 @@ paths:
       tags:
         - education.educationUser
       summary: Update the ref of navigation property user in education
-      operationId: education.me_SetRefUser
+      operationId: education.me_SetGraphRefUser
       requestBody:
         description: New navigation property ref values
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -8587,7 +8591,7 @@ paths:
       tags:
         - education.educationUser
       summary: Delete ref of navigation property user for education
-      operationId: education.me_DeleteRefUser
+      operationId: education.me_DeleteGraphRefUser
       parameters:
         - name: If-Match
           in: header
@@ -8944,7 +8948,7 @@ paths:
       tags:
         - education.educationSchool
       summary: Get ref of administrativeUnit from education
-      operationId: education.schools_GetRefAdministrativeUnit
+      operationId: education.schools_GetGraphRefAdministrativeUnit
       parameters:
         - name: educationSchool-id
           in: path
@@ -8980,7 +8984,7 @@ paths:
       tags:
         - education.educationSchool
       summary: Update the ref of navigation property administrativeUnit in education
-      operationId: education.schools_SetRefAdministrativeUnit
+      operationId: education.schools_SetGraphRefAdministrativeUnit
       parameters:
         - name: educationSchool-id
           in: path
@@ -8994,7 +8998,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -9006,7 +9012,7 @@ paths:
       tags:
         - education.educationSchool
       summary: Delete ref of navigation property administrativeUnit for education
-      operationId: education.schools_DeleteRefAdministrativeUnit
+      operationId: education.schools_DeleteGraphRefAdministrativeUnit
       parameters:
         - name: educationSchool-id
           in: path
@@ -9148,7 +9154,7 @@ paths:
       tags:
         - education.educationSchool
       summary: Delete ref of navigation property classes for education
-      operationId: education.schools_DeleteRefClasses
+      operationId: education.schools_DeleteGraphRefClasses
       parameters:
         - name: educationSchool-id
           in: path
@@ -9185,7 +9191,7 @@ paths:
       tags:
         - education.educationSchool
       summary: Get ref of classes from education
-      operationId: education.schools_ListRefClasses
+      operationId: education.schools_ListGraphRefClasses
       parameters:
         - name: educationSchool-id
           in: path
@@ -9249,7 +9255,7 @@ paths:
       tags:
         - education.educationSchool
       summary: Create new navigation property ref to classes for education
-      operationId: education.schools_CreateRefClasses
+      operationId: education.schools_CreateGraphRefClasses
       parameters:
         - name: educationSchool-id
           in: path
@@ -9457,7 +9463,7 @@ paths:
       tags:
         - education.educationSchool
       summary: Delete ref of navigation property users for education
-      operationId: education.schools_DeleteRefUsers
+      operationId: education.schools_DeleteGraphRefUsers
       parameters:
         - name: educationSchool-id
           in: path
@@ -9494,7 +9500,7 @@ paths:
       tags:
         - education.educationSchool
       summary: Get ref of users from education
-      operationId: education.schools_ListRefUsers
+      operationId: education.schools_ListGraphRefUsers
       parameters:
         - name: educationSchool-id
           in: path
@@ -9598,7 +9604,7 @@ paths:
       tags:
         - education.educationSchool
       summary: Create new navigation property ref to users for education
-      operationId: education.schools_CreateRefUsers
+      operationId: education.schools_CreateGraphRefUsers
       parameters:
         - name: educationSchool-id
           in: path
@@ -13510,7 +13516,7 @@ paths:
       tags:
         - education.educationUser
       summary: Delete ref of navigation property classes for education
-      operationId: education.users_DeleteRefClasses
+      operationId: education.users_DeleteGraphRefClasses
       parameters:
         - name: educationUser-id
           in: path
@@ -13547,7 +13553,7 @@ paths:
       tags:
         - education.educationUser
       summary: Get ref of classes from education
-      operationId: education.users_ListRefClasses
+      operationId: education.users_ListGraphRefClasses
       parameters:
         - name: educationUser-id
           in: path
@@ -13611,7 +13617,7 @@ paths:
       tags:
         - education.educationUser
       summary: Create new navigation property ref to classes for education
-      operationId: education.users_CreateRefClasses
+      operationId: education.users_CreateGraphRefClasses
       parameters:
         - name: educationUser-id
           in: path
@@ -14012,7 +14018,7 @@ paths:
       tags:
         - education.educationUser
       summary: Delete ref of navigation property schools for education
-      operationId: education.users_DeleteRefSchools
+      operationId: education.users_DeleteGraphRefSchools
       parameters:
         - name: educationUser-id
           in: path
@@ -14049,7 +14055,7 @@ paths:
       tags:
         - education.educationUser
       summary: Get ref of schools from education
-      operationId: education.users_ListRefSchools
+      operationId: education.users_ListGraphRefSchools
       parameters:
         - name: educationUser-id
           in: path
@@ -14119,7 +14125,7 @@ paths:
       tags:
         - education.educationUser
       summary: Create new navigation property ref to schools for education
-      operationId: education.users_CreateRefSchools
+      operationId: education.users_CreateGraphRefSchools
       parameters:
         - name: educationUser-id
           in: path
@@ -14271,7 +14277,7 @@ paths:
       tags:
         - education.educationUser
       summary: Delete ref of navigation property taughtClasses for education
-      operationId: education.users_DeleteRefTaughtClasses
+      operationId: education.users_DeleteGraphRefTaughtClasses
       parameters:
         - name: educationUser-id
           in: path
@@ -14308,7 +14314,7 @@ paths:
       tags:
         - education.educationUser
       summary: Get ref of taughtClasses from education
-      operationId: education.users_ListRefTaughtClasses
+      operationId: education.users_ListGraphRefTaughtClasses
       parameters:
         - name: educationUser-id
           in: path
@@ -14372,7 +14378,7 @@ paths:
       tags:
         - education.educationUser
       summary: Create new navigation property ref to taughtClasses for education
-      operationId: education.users_CreateRefTaughtClasses
+      operationId: education.users_CreateGraphRefTaughtClasses
       parameters:
         - name: educationUser-id
           in: path
@@ -14902,7 +14908,7 @@ paths:
       tags:
         - education.educationUser
       summary: Get ref of user from education
-      operationId: education.users_GetRefUser
+      operationId: education.users_GetGraphRefUser
       parameters:
         - name: educationUser-id
           in: path
@@ -15175,7 +15181,7 @@ paths:
       tags:
         - education.educationUser
       summary: Update the ref of navigation property user in education
-      operationId: education.users_SetRefUser
+      operationId: education.users_SetGraphRefUser
       parameters:
         - name: educationUser-id
           in: path
@@ -15189,7 +15195,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -15206,7 +15214,7 @@ paths:
       tags:
         - education.educationUser
       summary: Delete ref of navigation property user for education
-      operationId: education.users_DeleteRefUser
+      operationId: education.users_DeleteGraphRefUser
       parameters:
         - name: educationUser-id
           in: path
@@ -15884,16 +15892,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.team'
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.educationUser:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

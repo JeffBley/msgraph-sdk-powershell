@@ -530,7 +530,7 @@ paths:
       tags:
         - administrativeUnits.directoryObject
       summary: Delete ref of navigation property members for administrativeUnits
-      operationId: administrativeUnits_DeleteRefMembers
+      operationId: administrativeUnits_DeleteGraphRefMembers
       parameters:
         - name: administrativeUnit-id
           in: path
@@ -567,7 +567,7 @@ paths:
       tags:
         - administrativeUnits.directoryObject
       summary: Get ref of members from administrativeUnits
-      operationId: administrativeUnits_ListRefMembers
+      operationId: administrativeUnits_ListGraphRefMembers
       parameters:
         - name: administrativeUnit-id
           in: path
@@ -609,7 +609,7 @@ paths:
       tags:
         - administrativeUnits.directoryObject
       summary: Create new navigation property ref to members for administrativeUnits
-      operationId: administrativeUnits_CreateRefMembers
+      operationId: administrativeUnits_CreateGraphRefMembers
       parameters:
         - name: administrativeUnit-id
           in: path
@@ -1578,7 +1578,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Delete ref of navigation property directReports for contacts
-      operationId: contacts_DeleteRefDirectReports
+      operationId: contacts_DeleteGraphRefDirectReports
       parameters:
         - name: orgContact-id
           in: path
@@ -1615,7 +1615,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Get ref of directReports from contacts
-      operationId: contacts_ListRefDirectReports
+      operationId: contacts_ListGraphRefDirectReports
       parameters:
         - name: orgContact-id
           in: path
@@ -1657,7 +1657,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Create new navigation property ref to directReports for contacts
-      operationId: contacts_CreateRefDirectReports
+      operationId: contacts_CreateGraphRefDirectReports
       parameters:
         - name: orgContact-id
           in: path
@@ -1741,7 +1741,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Get ref of manager from contacts
-      operationId: contacts_GetRefManager
+      operationId: contacts_GetGraphRefManager
       parameters:
         - name: orgContact-id
           in: path
@@ -1764,7 +1764,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Update the ref of navigation property manager in contacts
-      operationId: contacts_SetRefManager
+      operationId: contacts_SetGraphRefManager
       parameters:
         - name: orgContact-id
           in: path
@@ -1778,7 +1778,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -1790,7 +1792,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Delete ref of navigation property manager for contacts
-      operationId: contacts_DeleteRefManager
+      operationId: contacts_DeleteGraphRefManager
       parameters:
         - name: orgContact-id
           in: path
@@ -1883,7 +1885,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Delete ref of navigation property memberOf for contacts
-      operationId: contacts_DeleteRefMemberOf
+      operationId: contacts_DeleteGraphRefMemberOf
       parameters:
         - name: orgContact-id
           in: path
@@ -1920,7 +1922,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Get ref of memberOf from contacts
-      operationId: contacts_ListRefMemberOf
+      operationId: contacts_ListGraphRefMemberOf
       parameters:
         - name: orgContact-id
           in: path
@@ -1962,7 +1964,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Create new navigation property ref to memberOf for contacts
-      operationId: contacts_CreateRefMemberOf
+      operationId: contacts_CreateGraphRefMemberOf
       parameters:
         - name: orgContact-id
           in: path
@@ -2273,7 +2275,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Delete ref of navigation property transitiveMemberOf for contacts
-      operationId: contacts_DeleteRefTransitiveMemberOf
+      operationId: contacts_DeleteGraphRefTransitiveMemberOf
       parameters:
         - name: orgContact-id
           in: path
@@ -2310,7 +2312,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Get ref of transitiveMemberOf from contacts
-      operationId: contacts_ListRefTransitiveMemberOf
+      operationId: contacts_ListGraphRefTransitiveMemberOf
       parameters:
         - name: orgContact-id
           in: path
@@ -2352,7 +2354,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Create new navigation property ref to transitiveMemberOf for contacts
-      operationId: contacts_CreateRefTransitiveMemberOf
+      operationId: contacts_CreateGraphRefTransitiveMemberOf
       parameters:
         - name: orgContact-id
           in: path
@@ -2455,7 +2457,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Delete ref of navigation property transitiveReports for contacts
-      operationId: contacts_DeleteRefTransitiveReports
+      operationId: contacts_DeleteGraphRefTransitiveReports
       parameters:
         - name: orgContact-id
           in: path
@@ -2492,7 +2494,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Get ref of transitiveReports from contacts
-      operationId: contacts_ListRefTransitiveReports
+      operationId: contacts_ListGraphRefTransitiveReports
       parameters:
         - name: orgContact-id
           in: path
@@ -2534,7 +2536,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Create new navigation property ref to transitiveReports for contacts
-      operationId: contacts_CreateRefTransitiveReports
+      operationId: contacts_CreateGraphRefTransitiveReports
       parameters:
         - name: orgContact-id
           in: path
@@ -3925,7 +3927,7 @@ paths:
       tags:
         - devices.command
       summary: Get ref of responsepayload from devices
-      operationId: devices.commands_GetRefResponsepayload
+      operationId: devices.commands_GetGraphRefResponsepayload
       parameters:
         - name: device-id
           in: path
@@ -3955,7 +3957,7 @@ paths:
       tags:
         - devices.command
       summary: Update the ref of navigation property responsepayload in devices
-      operationId: devices.commands_SetRefResponsepayload
+      operationId: devices.commands_SetGraphRefResponsepayload
       parameters:
         - name: device-id
           in: path
@@ -3976,7 +3978,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -3988,7 +3992,7 @@ paths:
       tags:
         - devices.command
       summary: Delete ref of navigation property responsepayload for devices
-      operationId: devices.commands_DeleteRefResponsepayload
+      operationId: devices.commands_DeleteGraphRefResponsepayload
       parameters:
         - name: device-id
           in: path
@@ -4302,7 +4306,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Delete ref of navigation property memberOf for devices
-      operationId: devices_DeleteRefMemberOf
+      operationId: devices_DeleteGraphRefMemberOf
       parameters:
         - name: device-id
           in: path
@@ -4339,7 +4343,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get ref of memberOf from devices
-      operationId: devices_ListRefMemberOf
+      operationId: devices_ListGraphRefMemberOf
       parameters:
         - name: device-id
           in: path
@@ -4381,7 +4385,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Create new navigation property ref to memberOf for devices
-      operationId: devices_CreateRefMemberOf
+      operationId: devices_CreateGraphRefMemberOf
       parameters:
         - name: device-id
           in: path
@@ -4692,7 +4696,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Delete ref of navigation property registeredOwners for devices
-      operationId: devices_DeleteRefRegisteredOwners
+      operationId: devices_DeleteGraphRefRegisteredOwners
       parameters:
         - name: device-id
           in: path
@@ -4729,7 +4733,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get ref of registeredOwners from devices
-      operationId: devices_ListRefRegisteredOwners
+      operationId: devices_ListGraphRefRegisteredOwners
       parameters:
         - name: device-id
           in: path
@@ -4771,7 +4775,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Create new navigation property ref to registeredOwners for devices
-      operationId: devices_CreateRefRegisteredOwners
+      operationId: devices_CreateGraphRefRegisteredOwners
       parameters:
         - name: device-id
           in: path
@@ -4874,7 +4878,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Delete ref of navigation property registeredUsers for devices
-      operationId: devices_DeleteRefRegisteredUsers
+      operationId: devices_DeleteGraphRefRegisteredUsers
       parameters:
         - name: device-id
           in: path
@@ -4911,7 +4915,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get ref of registeredUsers from devices
-      operationId: devices_ListRefRegisteredUsers
+      operationId: devices_ListGraphRefRegisteredUsers
       parameters:
         - name: device-id
           in: path
@@ -4953,7 +4957,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Create new navigation property ref to registeredUsers for devices
-      operationId: devices_CreateRefRegisteredUsers
+      operationId: devices_CreateGraphRefRegisteredUsers
       parameters:
         - name: device-id
           in: path
@@ -5056,7 +5060,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Delete ref of navigation property transitiveMemberOf for devices
-      operationId: devices_DeleteRefTransitiveMemberOf
+      operationId: devices_DeleteGraphRefTransitiveMemberOf
       parameters:
         - name: device-id
           in: path
@@ -5093,7 +5097,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get ref of transitiveMemberOf from devices
-      operationId: devices_ListRefTransitiveMemberOf
+      operationId: devices_ListGraphRefTransitiveMemberOf
       parameters:
         - name: device-id
           in: path
@@ -5135,7 +5139,7 @@ paths:
       tags:
         - devices.directoryObject
       summary: Create new navigation property ref to transitiveMemberOf for devices
-      operationId: devices_CreateRefTransitiveMemberOf
+      operationId: devices_CreateGraphRefTransitiveMemberOf
       parameters:
         - name: device-id
           in: path
@@ -6088,7 +6092,7 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Delete ref of navigation property members for directory
-      operationId: directory.administrativeUnits_DeleteRefMembers
+      operationId: directory.administrativeUnits_DeleteGraphRefMembers
       parameters:
         - name: administrativeUnit-id
           in: path
@@ -6125,7 +6129,7 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Get ref of members from directory
-      operationId: directory.administrativeUnits_ListRefMembers
+      operationId: directory.administrativeUnits_ListGraphRefMembers
       parameters:
         - name: administrativeUnit-id
           in: path
@@ -6167,7 +6171,7 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Create new navigation property ref to members for directory
-      operationId: directory.administrativeUnits_CreateRefMembers
+      operationId: directory.administrativeUnits_CreateGraphRefMembers
       parameters:
         - name: administrativeUnit-id
           in: path
@@ -7762,7 +7766,7 @@ paths:
       tags:
         - directoryRoles.directoryObject
       summary: Delete ref of navigation property members for directoryRoles
-      operationId: directoryRoles_DeleteRefMembers
+      operationId: directoryRoles_DeleteGraphRefMembers
       parameters:
         - name: directoryRole-id
           in: path
@@ -7799,7 +7803,7 @@ paths:
       tags:
         - directoryRoles.directoryObject
       summary: Get ref of members from directoryRoles
-      operationId: directoryRoles_ListRefMembers
+      operationId: directoryRoles_ListGraphRefMembers
       parameters:
         - name: directoryRole-id
           in: path
@@ -7841,7 +7845,7 @@ paths:
       tags:
         - directoryRoles.directoryObject
       summary: Create new navigation property ref to members for directoryRoles
-      operationId: directoryRoles_CreateRefMembers
+      operationId: directoryRoles_CreateGraphRefMembers
       parameters:
         - name: directoryRole-id
           in: path
@@ -9789,7 +9793,7 @@ paths:
       tags:
         - domains.directoryObject
       summary: Delete ref of navigation property domainNameReferences for domains
-      operationId: domains_DeleteRefDomainNameReferences
+      operationId: domains_DeleteGraphRefDomainNameReferences
       parameters:
         - name: domain-id
           in: path
@@ -9826,7 +9830,7 @@ paths:
       tags:
         - domains.directoryObject
       summary: Get ref of domainNameReferences from domains
-      operationId: domains_ListRefDomainNameReferences
+      operationId: domains_ListGraphRefDomainNameReferences
       parameters:
         - name: domain-id
           in: path
@@ -9868,7 +9872,7 @@ paths:
       tags:
         - domains.directoryObject
       summary: Create new navigation property ref to domainNameReferences for domains
-      operationId: domains_CreateRefDomainNameReferences
+      operationId: domains_CreateGraphRefDomainNameReferences
       parameters:
         - name: domain-id
           in: path
@@ -13667,16 +13671,6 @@ components:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.contract:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.directoryObject'

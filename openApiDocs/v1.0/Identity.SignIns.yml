@@ -2351,7 +2351,7 @@ paths:
       tags:
         - invitations.user
       summary: Get ref of invitedUser from invitations
-      operationId: invitations_GetRefInvitedUser
+      operationId: invitations_GetGraphRefInvitedUser
       parameters:
         - name: invitation-id
           in: path
@@ -2559,7 +2559,7 @@ paths:
       tags:
         - invitations.user
       summary: Update the ref of navigation property invitedUser in invitations
-      operationId: invitations_SetRefInvitedUser
+      operationId: invitations_SetGraphRefInvitedUser
       parameters:
         - name: invitation-id
           in: path
@@ -2573,7 +2573,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -2585,7 +2587,7 @@ paths:
       tags:
         - invitations.user
       summary: Delete ref of navigation property invitedUser for invitations
-      operationId: invitations_DeleteRefInvitedUser
+      operationId: invitations_DeleteGraphRefInvitedUser
       parameters:
         - name: invitation-id
           in: path
@@ -2900,7 +2902,7 @@ paths:
       tags:
         - organization.certificateBasedAuthConfiguration
       summary: Delete ref of navigation property certificateBasedAuthConfiguration for organization
-      operationId: organization_DeleteRefCertificateBasedAuthConfiguration
+      operationId: organization_DeleteGraphRefCertificateBasedAuthConfiguration
       parameters:
         - name: organization-id
           in: path
@@ -2937,7 +2939,7 @@ paths:
       tags:
         - organization.certificateBasedAuthConfiguration
       summary: Get ref of certificateBasedAuthConfiguration from organization
-      operationId: organization_ListRefCertificateBasedAuthConfiguration
+      operationId: organization_ListGraphRefCertificateBasedAuthConfiguration
       parameters:
         - name: organization-id
           in: path
@@ -2979,7 +2981,7 @@ paths:
       tags:
         - organization.certificateBasedAuthConfiguration
       summary: Create new navigation property ref to certificateBasedAuthConfiguration for organization
-      operationId: organization_CreateRefCertificateBasedAuthConfiguration
+      operationId: organization_CreateGraphRefCertificateBasedAuthConfiguration
       parameters:
         - name: organization-id
           in: path
@@ -7404,7 +7406,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property memberOf for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteRefMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -7448,7 +7450,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of memberOf from users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListRefMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -7497,7 +7499,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to memberOf for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateRefMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -7614,7 +7616,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property registeredOwners for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteRefRegisteredOwners
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -7658,7 +7660,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of registeredOwners from users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListRefRegisteredOwners
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -7707,7 +7709,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to registeredOwners for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateRefRegisteredOwners
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -7824,7 +7826,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property registeredUsers for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteRefRegisteredUsers
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -7868,7 +7870,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of registeredUsers from users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListRefRegisteredUsers
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -7917,7 +7919,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to registeredUsers for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateRefRegisteredUsers
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -8034,7 +8036,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property transitiveMemberOf for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteRefTransitiveMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -8078,7 +8080,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of transitiveMemberOf from users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListRefTransitiveMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -8127,7 +8129,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to transitiveMemberOf for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateRefTransitiveMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -8904,7 +8906,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property memberOf for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteRefMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -8948,7 +8950,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of memberOf from users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListRefMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -8997,7 +8999,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to memberOf for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateRefMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -9114,7 +9116,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property registeredOwners for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteRefRegisteredOwners
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -9158,7 +9160,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of registeredOwners from users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListRefRegisteredOwners
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -9207,7 +9209,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to registeredOwners for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateRefRegisteredOwners
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -9324,7 +9326,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property registeredUsers for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteRefRegisteredUsers
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -9368,7 +9370,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of registeredUsers from users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListRefRegisteredUsers
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -9417,7 +9419,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to registeredUsers for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateRefRegisteredUsers
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -9534,7 +9536,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property transitiveMemberOf for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteRefTransitiveMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -9578,7 +9580,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of transitiveMemberOf from users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListRefTransitiveMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -9627,7 +9629,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to transitiveMemberOf for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateRefTransitiveMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -10311,16 +10313,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.todo'
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.oAuth2PermissionGrant:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

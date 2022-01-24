@@ -2913,7 +2913,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Delete ref of navigation property children for deviceManagement
       description: The children categories
-      operationId: deviceManagement.groupPolicyCategories_DeleteRefChildren
+      operationId: deviceManagement.groupPolicyCategories_DeleteGraphRefChildren
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -2951,7 +2951,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Get ref of children from deviceManagement
       description: The children categories
-      operationId: deviceManagement.groupPolicyCategories_ListRefChildren
+      operationId: deviceManagement.groupPolicyCategories_ListGraphRefChildren
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -2998,7 +2998,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Create new navigation property ref to children for deviceManagement
       description: The children categories
-      operationId: deviceManagement.groupPolicyCategories_CreateRefChildren
+      operationId: deviceManagement.groupPolicyCategories_CreateGraphRefChildren
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3098,7 +3098,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Get ref of definitionFile from deviceManagement
       description: The id of the definition file the category came from
-      operationId: deviceManagement.groupPolicyCategories_GetRefDefinitionFile
+      operationId: deviceManagement.groupPolicyCategories_GetGraphRefDefinitionFile
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3127,7 +3127,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Update the ref of navigation property definitionFile in deviceManagement
       description: The id of the definition file the category came from
-      operationId: deviceManagement.groupPolicyCategories_SetRefDefinitionFile
+      operationId: deviceManagement.groupPolicyCategories_SetGraphRefDefinitionFile
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3141,7 +3141,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -3154,7 +3156,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Delete ref of navigation property definitionFile for deviceManagement
       description: The id of the definition file the category came from
-      operationId: deviceManagement.groupPolicyCategories_DeleteRefDefinitionFile
+      operationId: deviceManagement.groupPolicyCategories_DeleteGraphRefDefinitionFile
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3292,7 +3294,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Delete ref of navigation property definitions for deviceManagement
       description: The immediate GroupPolicyDefinition children of the category
-      operationId: deviceManagement.groupPolicyCategories_DeleteRefDefinitions
+      operationId: deviceManagement.groupPolicyCategories_DeleteGraphRefDefinitions
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3330,7 +3332,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Get ref of definitions from deviceManagement
       description: The immediate GroupPolicyDefinition children of the category
-      operationId: deviceManagement.groupPolicyCategories_ListRefDefinitions
+      operationId: deviceManagement.groupPolicyCategories_ListGraphRefDefinitions
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3395,7 +3397,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Create new navigation property ref to definitions for deviceManagement
       description: The immediate GroupPolicyDefinition children of the category
-      operationId: deviceManagement.groupPolicyCategories_CreateRefDefinitions
+      operationId: deviceManagement.groupPolicyCategories_CreateGraphRefDefinitions
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3508,7 +3510,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Get ref of parent from deviceManagement
       description: The parent category
-      operationId: deviceManagement.groupPolicyCategories_GetRefParent
+      operationId: deviceManagement.groupPolicyCategories_GetGraphRefParent
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3549,7 +3551,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Update the ref of navigation property parent in deviceManagement
       description: The parent category
-      operationId: deviceManagement.groupPolicyCategories_SetRefParent
+      operationId: deviceManagement.groupPolicyCategories_SetGraphRefParent
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3563,7 +3565,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -3576,7 +3580,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Delete ref of navigation property parent for deviceManagement
       description: The parent category
-      operationId: deviceManagement.groupPolicyCategories_DeleteRefParent
+      operationId: deviceManagement.groupPolicyCategories_DeleteGraphRefParent
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3938,7 +3942,7 @@ paths:
         - deviceManagement.groupPolicyDefinitionFile
       summary: Delete ref of navigation property definitions for deviceManagement
       description: The group policy definitions associated with the file.
-      operationId: deviceManagement.groupPolicyDefinitionFiles_DeleteRefDefinitions
+      operationId: deviceManagement.groupPolicyDefinitionFiles_DeleteGraphRefDefinitions
       parameters:
         - name: groupPolicyDefinitionFile-id
           in: path
@@ -3976,7 +3980,7 @@ paths:
         - deviceManagement.groupPolicyDefinitionFile
       summary: Get ref of definitions from deviceManagement
       description: The group policy definitions associated with the file.
-      operationId: deviceManagement.groupPolicyDefinitionFiles_ListRefDefinitions
+      operationId: deviceManagement.groupPolicyDefinitionFiles_ListGraphRefDefinitions
       parameters:
         - name: groupPolicyDefinitionFile-id
           in: path
@@ -4041,7 +4045,7 @@ paths:
         - deviceManagement.groupPolicyDefinitionFile
       summary: Create new navigation property ref to definitions for deviceManagement
       description: The group policy definitions associated with the file.
-      operationId: deviceManagement.groupPolicyDefinitionFiles_CreateRefDefinitions
+      operationId: deviceManagement.groupPolicyDefinitionFiles_CreateGraphRefDefinitions
       parameters:
         - name: groupPolicyDefinitionFile-id
           in: path
@@ -4426,7 +4430,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Get ref of category from deviceManagement
       description: The group policy category associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_GetRefCategory
+      operationId: deviceManagement.groupPolicyDefinitions_GetGraphRefCategory
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -4467,7 +4471,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Update the ref of navigation property category in deviceManagement
       description: The group policy category associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_SetRefCategory
+      operationId: deviceManagement.groupPolicyDefinitions_SetGraphRefCategory
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -4481,7 +4485,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -4494,7 +4500,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Delete ref of navigation property category for deviceManagement
       description: The group policy category associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_DeleteRefCategory
+      operationId: deviceManagement.groupPolicyDefinitions_DeleteGraphRefCategory
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -4584,7 +4590,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Get ref of definitionFile from deviceManagement
       description: The group policy file associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_GetRefDefinitionFile
+      operationId: deviceManagement.groupPolicyDefinitions_GetGraphRefDefinitionFile
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -4613,7 +4619,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Update the ref of navigation property definitionFile in deviceManagement
       description: The group policy file associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_SetRefDefinitionFile
+      operationId: deviceManagement.groupPolicyDefinitions_SetGraphRefDefinitionFile
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -4627,7 +4633,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -4640,7 +4648,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Delete ref of navigation property definitionFile for deviceManagement
       description: The group policy file associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_DeleteRefDefinitionFile
+      operationId: deviceManagement.groupPolicyDefinitions_DeleteGraphRefDefinitionFile
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -5151,7 +5159,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Get ref of definition from deviceManagement
       description: The group policy definition associated with the presentation.
-      operationId: deviceManagement.groupPolicyDefinitions.presentations_GetRefDefinition
+      operationId: deviceManagement.groupPolicyDefinitions.presentations_GetGraphRefDefinition
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -5208,7 +5216,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Update the ref of navigation property definition in deviceManagement
       description: The group policy definition associated with the presentation.
-      operationId: deviceManagement.groupPolicyDefinitions.presentations_SetRefDefinition
+      operationId: deviceManagement.groupPolicyDefinitions.presentations_SetGraphRefDefinition
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -5229,7 +5237,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -5242,7 +5252,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Delete ref of navigation property definition for deviceManagement
       description: The group policy definition associated with the presentation.
-      operationId: deviceManagement.groupPolicyDefinitions.presentations_DeleteRefDefinition
+      operationId: deviceManagement.groupPolicyDefinitions.presentations_DeleteGraphRefDefinition
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -8814,7 +8824,7 @@ paths:
         - deviceManagement.deviceAndAppManagementRoleAssignment
       summary: Delete ref of navigation property roleScopeTags for deviceManagement
       description: The set of Role Scope Tags defined on the Role Assignment.
-      operationId: deviceManagement.roleAssignments_DeleteRefRoleScopeTags
+      operationId: deviceManagement.roleAssignments_DeleteGraphRefRoleScopeTags
       parameters:
         - name: deviceAndAppManagementRoleAssignment-id
           in: path
@@ -8852,7 +8862,7 @@ paths:
         - deviceManagement.deviceAndAppManagementRoleAssignment
       summary: Get ref of roleScopeTags from deviceManagement
       description: The set of Role Scope Tags defined on the Role Assignment.
-      operationId: deviceManagement.roleAssignments_ListRefRoleScopeTags
+      operationId: deviceManagement.roleAssignments_ListGraphRefRoleScopeTags
       parameters:
         - name: deviceAndAppManagementRoleAssignment-id
           in: path
@@ -8899,7 +8909,7 @@ paths:
         - deviceManagement.deviceAndAppManagementRoleAssignment
       summary: Create new navigation property ref to roleScopeTags for deviceManagement
       description: The set of Role Scope Tags defined on the Role Assignment.
-      operationId: deviceManagement.roleAssignments_CreateRefRoleScopeTags
+      operationId: deviceManagement.roleAssignments_CreateGraphRefRoleScopeTags
       parameters:
         - name: deviceAndAppManagementRoleAssignment-id
           in: path
@@ -9475,7 +9485,7 @@ paths:
         - deviceManagement.roleDefinition
       summary: Get ref of roleDefinition from deviceManagement
       description: Role definition this assignment is part of.
-      operationId: deviceManagement.roleDefinitions.roleAssignments_GetRefRoleDefinition
+      operationId: deviceManagement.roleDefinitions.roleAssignments_GetGraphRefRoleDefinition
       parameters:
         - name: roleDefinition-id
           in: path
@@ -9512,7 +9522,7 @@ paths:
         - deviceManagement.roleDefinition
       summary: Update the ref of navigation property roleDefinition in deviceManagement
       description: Role definition this assignment is part of.
-      operationId: deviceManagement.roleDefinitions.roleAssignments_SetRefRoleDefinition
+      operationId: deviceManagement.roleDefinitions.roleAssignments_SetGraphRefRoleDefinition
       parameters:
         - name: roleDefinition-id
           in: path
@@ -9533,7 +9543,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -9546,7 +9558,7 @@ paths:
         - deviceManagement.roleDefinition
       summary: Delete ref of navigation property roleDefinition for deviceManagement
       description: Role definition this assignment is part of.
-      operationId: deviceManagement.roleDefinitions.roleAssignments_DeleteRefRoleDefinition
+      operationId: deviceManagement.roleDefinitions.roleAssignments_DeleteGraphRefRoleDefinition
       parameters:
         - name: roleDefinition-id
           in: path
@@ -10790,7 +10802,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Get ref of termsAndConditions from deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_GetRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_GetGraphRefTermsAndConditions
       parameters:
         - name: termsAndConditions-id
           in: path
@@ -10837,7 +10849,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Update the ref of navigation property termsAndConditions in deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_SetRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_SetGraphRefTermsAndConditions
       parameters:
         - name: termsAndConditions-id
           in: path
@@ -10858,7 +10870,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -10871,7 +10885,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Delete ref of navigation property termsAndConditions for deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_DeleteRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_DeleteGraphRefTermsAndConditions
       parameters:
         - name: termsAndConditions-id
           in: path
@@ -11448,7 +11462,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Get ref of termsAndConditions from deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.groupAssignments_GetRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.groupAssignments_GetGraphRefTermsAndConditions
       parameters:
         - name: termsAndConditions-id
           in: path
@@ -11495,7 +11509,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Update the ref of navigation property termsAndConditions in deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.groupAssignments_SetRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.groupAssignments_SetGraphRefTermsAndConditions
       parameters:
         - name: termsAndConditions-id
           in: path
@@ -11516,7 +11530,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -11529,7 +11545,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Delete ref of navigation property termsAndConditions for deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.groupAssignments_DeleteRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.groupAssignments_DeleteGraphRefTermsAndConditions
       parameters:
         - name: termsAndConditions-id
           in: path
@@ -14907,16 +14923,6 @@ components:
           additionalProperties:
             type: object
           description: The entity represents an ADMX (Administrative Template) XML file. The ADMX file contains a collection of group policy definitions and their locations by category path. The group policy definition file also contains the languages supported as determined by the language dependent ADML (Administrative Template) language files.
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.groupPolicyDefinition:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

@@ -840,7 +840,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.notebooks.sectionGroups_GetRefParentNotebook
+      operationId: groups.onenote.notebooks.sectionGroups_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -890,7 +890,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.notebooks.sectionGroups_SetRefParentNotebook
+      operationId: groups.onenote.notebooks.sectionGroups_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -918,7 +918,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -930,7 +932,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.notebooks.sectionGroups_DeleteRefParentNotebook
+      operationId: groups.onenote.notebooks.sectionGroups_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -2470,7 +2472,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.notebooks.sectionGroups.sections.pages_GetRefParentNotebook
+      operationId: groups.onenote.notebooks.sectionGroups.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -2538,7 +2540,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.notebooks.sectionGroups.sections.pages_SetRefParentNotebook
+      operationId: groups.onenote.notebooks.sectionGroups.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -2580,7 +2582,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -2592,7 +2596,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.notebooks.sectionGroups.sections.pages_DeleteRefParentNotebook
+      operationId: groups.onenote.notebooks.sectionGroups.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -2967,7 +2971,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.notebooks.sectionGroups.sections_GetRefParentNotebook
+      operationId: groups.onenote.notebooks.sectionGroups.sections_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -3026,7 +3030,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.notebooks.sectionGroups.sections_SetRefParentNotebook
+      operationId: groups.onenote.notebooks.sectionGroups.sections_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -3061,7 +3065,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -3073,7 +3079,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.notebooks.sectionGroups.sections_DeleteRefParentNotebook
+      operationId: groups.onenote.notebooks.sectionGroups.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -4186,7 +4192,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.notebooks.sections.pages_GetRefParentNotebook
+      operationId: groups.onenote.notebooks.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -4245,7 +4251,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.notebooks.sections.pages_SetRefParentNotebook
+      operationId: groups.onenote.notebooks.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -4280,7 +4286,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -4292,7 +4300,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.notebooks.sections.pages_DeleteRefParentNotebook
+      operationId: groups.onenote.notebooks.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -4627,7 +4635,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.notebooks.sections_GetRefParentNotebook
+      operationId: groups.onenote.notebooks.sections_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -4677,7 +4685,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.notebooks.sections_SetRefParentNotebook
+      operationId: groups.onenote.notebooks.sections_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -4705,7 +4713,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -4717,7 +4727,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.notebooks.sections_DeleteRefParentNotebook
+      operationId: groups.onenote.notebooks.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -5028,7 +5038,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.notebooks.sections.parentSectionGroup_GetRefParentNotebook
+      operationId: groups.onenote.notebooks.sections.parentSectionGroup_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -5078,7 +5088,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.notebooks.sections.parentSectionGroup_SetRefParentNotebook
+      operationId: groups.onenote.notebooks.sections.parentSectionGroup_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -5106,7 +5116,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -5118,7 +5130,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.notebooks.sections.parentSectionGroup_DeleteRefParentNotebook
+      operationId: groups.onenote.notebooks.sections.parentSectionGroup_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -6720,7 +6732,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.pages_GetRefParentNotebook
+      operationId: groups.onenote.pages_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -6761,7 +6773,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.pages_SetRefParentNotebook
+      operationId: groups.onenote.pages_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -6782,7 +6794,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -6794,7 +6808,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.pages_DeleteRefParentNotebook
+      operationId: groups.onenote.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -7452,7 +7466,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.pages.parentSection_GetRefParentNotebook
+      operationId: groups.onenote.pages.parentSection_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -7493,7 +7507,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.pages.parentSection_SetRefParentNotebook
+      operationId: groups.onenote.pages.parentSection_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -7514,7 +7528,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -7526,7 +7542,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.pages.parentSection_DeleteRefParentNotebook
+      operationId: groups.onenote.pages.parentSection_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -7796,7 +7812,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.pages.parentSection.parentSectionGroup_GetRefParentNotebook
+      operationId: groups.onenote.pages.parentSection.parentSectionGroup_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -7837,7 +7853,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.pages.parentSection.parentSectionGroup_SetRefParentNotebook
+      operationId: groups.onenote.pages.parentSection.parentSectionGroup_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -7858,7 +7874,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -7870,7 +7888,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.pages.parentSection.parentSectionGroup_DeleteRefParentNotebook
+      operationId: groups.onenote.pages.parentSection.parentSectionGroup_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -9353,7 +9371,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.sectionGroups_GetRefParentNotebook
+      operationId: groups.onenote.sectionGroups_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -9394,7 +9412,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.sectionGroups_SetRefParentNotebook
+      operationId: groups.onenote.sectionGroups_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -9415,7 +9433,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -9427,7 +9447,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.sectionGroups_DeleteRefParentNotebook
+      operationId: groups.onenote.sectionGroups_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -10798,7 +10818,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.sectionGroups.sections.pages_GetRefParentNotebook
+      operationId: groups.onenote.sectionGroups.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -10857,7 +10877,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.sectionGroups.sections.pages_SetRefParentNotebook
+      operationId: groups.onenote.sectionGroups.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -10892,7 +10912,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -10904,7 +10926,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.sectionGroups.sections.pages_DeleteRefParentNotebook
+      operationId: groups.onenote.sectionGroups.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -11239,7 +11261,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.sectionGroups.sections_GetRefParentNotebook
+      operationId: groups.onenote.sectionGroups.sections_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -11289,7 +11311,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.sectionGroups.sections_SetRefParentNotebook
+      operationId: groups.onenote.sectionGroups.sections_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -11317,7 +11339,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -11329,7 +11353,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.sectionGroups.sections_DeleteRefParentNotebook
+      operationId: groups.onenote.sectionGroups.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -12312,7 +12336,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.sections.pages_GetRefParentNotebook
+      operationId: groups.onenote.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -12362,7 +12386,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.sections.pages_SetRefParentNotebook
+      operationId: groups.onenote.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -12390,7 +12414,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -12402,7 +12428,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.sections.pages_DeleteRefParentNotebook
+      operationId: groups.onenote.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -12697,7 +12723,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.sections_GetRefParentNotebook
+      operationId: groups.onenote.sections_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -12738,7 +12764,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.sections_SetRefParentNotebook
+      operationId: groups.onenote.sections_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -12759,7 +12785,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -12771,7 +12799,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.sections_DeleteRefParentNotebook
+      operationId: groups.onenote.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -13041,7 +13069,7 @@ paths:
       tags:
         - groups.onenote
       summary: Get ref of parentNotebook from groups
-      operationId: groups.onenote.sections.parentSectionGroup_GetRefParentNotebook
+      operationId: groups.onenote.sections.parentSectionGroup_GetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -13082,7 +13110,7 @@ paths:
       tags:
         - groups.onenote
       summary: Update the ref of navigation property parentNotebook in groups
-      operationId: groups.onenote.sections.parentSectionGroup_SetRefParentNotebook
+      operationId: groups.onenote.sections.parentSectionGroup_SetGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -13103,7 +13131,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -13115,7 +13145,7 @@ paths:
       tags:
         - groups.onenote
       summary: Delete ref of navigation property parentNotebook for groups
-      operationId: groups.onenote.sections.parentSectionGroup_DeleteRefParentNotebook
+      operationId: groups.onenote.sections.parentSectionGroup_DeleteGraphRefParentNotebook
       parameters:
         - name: group-id
           in: path
@@ -14770,7 +14800,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.notebooks.sectionGroups_GetRefParentNotebook
+      operationId: sites.onenote.notebooks.sectionGroups_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -14820,7 +14850,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.notebooks.sectionGroups_SetRefParentNotebook
+      operationId: sites.onenote.notebooks.sectionGroups_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -14848,7 +14878,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -14860,7 +14892,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.notebooks.sectionGroups_DeleteRefParentNotebook
+      operationId: sites.onenote.notebooks.sectionGroups_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -16400,7 +16432,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.notebooks.sectionGroups.sections.pages_GetRefParentNotebook
+      operationId: sites.onenote.notebooks.sectionGroups.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -16468,7 +16500,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.notebooks.sectionGroups.sections.pages_SetRefParentNotebook
+      operationId: sites.onenote.notebooks.sectionGroups.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -16510,7 +16542,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -16522,7 +16556,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.notebooks.sectionGroups.sections.pages_DeleteRefParentNotebook
+      operationId: sites.onenote.notebooks.sectionGroups.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -16897,7 +16931,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.notebooks.sectionGroups.sections_GetRefParentNotebook
+      operationId: sites.onenote.notebooks.sectionGroups.sections_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -16956,7 +16990,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.notebooks.sectionGroups.sections_SetRefParentNotebook
+      operationId: sites.onenote.notebooks.sectionGroups.sections_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -16991,7 +17025,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -17003,7 +17039,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.notebooks.sectionGroups.sections_DeleteRefParentNotebook
+      operationId: sites.onenote.notebooks.sectionGroups.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -18116,7 +18152,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.notebooks.sections.pages_GetRefParentNotebook
+      operationId: sites.onenote.notebooks.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -18175,7 +18211,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.notebooks.sections.pages_SetRefParentNotebook
+      operationId: sites.onenote.notebooks.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -18210,7 +18246,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -18222,7 +18260,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.notebooks.sections.pages_DeleteRefParentNotebook
+      operationId: sites.onenote.notebooks.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -18557,7 +18595,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.notebooks.sections_GetRefParentNotebook
+      operationId: sites.onenote.notebooks.sections_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -18607,7 +18645,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.notebooks.sections_SetRefParentNotebook
+      operationId: sites.onenote.notebooks.sections_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -18635,7 +18673,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -18647,7 +18687,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.notebooks.sections_DeleteRefParentNotebook
+      operationId: sites.onenote.notebooks.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -18958,7 +18998,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.notebooks.sections.parentSectionGroup_GetRefParentNotebook
+      operationId: sites.onenote.notebooks.sections.parentSectionGroup_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -19008,7 +19048,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.notebooks.sections.parentSectionGroup_SetRefParentNotebook
+      operationId: sites.onenote.notebooks.sections.parentSectionGroup_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -19036,7 +19076,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -19048,7 +19090,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.notebooks.sections.parentSectionGroup_DeleteRefParentNotebook
+      operationId: sites.onenote.notebooks.sections.parentSectionGroup_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -20650,7 +20692,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.pages_GetRefParentNotebook
+      operationId: sites.onenote.pages_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -20691,7 +20733,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.pages_SetRefParentNotebook
+      operationId: sites.onenote.pages_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -20712,7 +20754,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -20724,7 +20768,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.pages_DeleteRefParentNotebook
+      operationId: sites.onenote.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -21382,7 +21426,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.pages.parentSection_GetRefParentNotebook
+      operationId: sites.onenote.pages.parentSection_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -21423,7 +21467,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.pages.parentSection_SetRefParentNotebook
+      operationId: sites.onenote.pages.parentSection_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -21444,7 +21488,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -21456,7 +21502,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.pages.parentSection_DeleteRefParentNotebook
+      operationId: sites.onenote.pages.parentSection_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -21726,7 +21772,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.pages.parentSection.parentSectionGroup_GetRefParentNotebook
+      operationId: sites.onenote.pages.parentSection.parentSectionGroup_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -21767,7 +21813,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.pages.parentSection.parentSectionGroup_SetRefParentNotebook
+      operationId: sites.onenote.pages.parentSection.parentSectionGroup_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -21788,7 +21834,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -21800,7 +21848,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.pages.parentSection.parentSectionGroup_DeleteRefParentNotebook
+      operationId: sites.onenote.pages.parentSection.parentSectionGroup_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -23283,7 +23331,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.sectionGroups_GetRefParentNotebook
+      operationId: sites.onenote.sectionGroups_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -23324,7 +23372,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.sectionGroups_SetRefParentNotebook
+      operationId: sites.onenote.sectionGroups_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -23345,7 +23393,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -23357,7 +23407,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.sectionGroups_DeleteRefParentNotebook
+      operationId: sites.onenote.sectionGroups_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -24728,7 +24778,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.sectionGroups.sections.pages_GetRefParentNotebook
+      operationId: sites.onenote.sectionGroups.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -24787,7 +24837,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.sectionGroups.sections.pages_SetRefParentNotebook
+      operationId: sites.onenote.sectionGroups.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -24822,7 +24872,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -24834,7 +24886,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.sectionGroups.sections.pages_DeleteRefParentNotebook
+      operationId: sites.onenote.sectionGroups.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -25169,7 +25221,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.sectionGroups.sections_GetRefParentNotebook
+      operationId: sites.onenote.sectionGroups.sections_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -25219,7 +25271,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.sectionGroups.sections_SetRefParentNotebook
+      operationId: sites.onenote.sectionGroups.sections_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -25247,7 +25299,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -25259,7 +25313,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.sectionGroups.sections_DeleteRefParentNotebook
+      operationId: sites.onenote.sectionGroups.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -26242,7 +26296,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.sections.pages_GetRefParentNotebook
+      operationId: sites.onenote.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -26292,7 +26346,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.sections.pages_SetRefParentNotebook
+      operationId: sites.onenote.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -26320,7 +26374,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -26332,7 +26388,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.sections.pages_DeleteRefParentNotebook
+      operationId: sites.onenote.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -26627,7 +26683,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.sections_GetRefParentNotebook
+      operationId: sites.onenote.sections_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -26668,7 +26724,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.sections_SetRefParentNotebook
+      operationId: sites.onenote.sections_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -26689,7 +26745,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -26701,7 +26759,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.sections_DeleteRefParentNotebook
+      operationId: sites.onenote.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -26971,7 +27029,7 @@ paths:
       tags:
         - sites.onenote
       summary: Get ref of parentNotebook from sites
-      operationId: sites.onenote.sections.parentSectionGroup_GetRefParentNotebook
+      operationId: sites.onenote.sections.parentSectionGroup_GetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -27012,7 +27070,7 @@ paths:
       tags:
         - sites.onenote
       summary: Update the ref of navigation property parentNotebook in sites
-      operationId: sites.onenote.sections.parentSectionGroup_SetRefParentNotebook
+      operationId: sites.onenote.sections.parentSectionGroup_SetGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -27033,7 +27091,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -27045,7 +27105,7 @@ paths:
       tags:
         - sites.onenote
       summary: Delete ref of navigation property parentNotebook for sites
-      operationId: sites.onenote.sections.parentSectionGroup_DeleteRefParentNotebook
+      operationId: sites.onenote.sections.parentSectionGroup_DeleteGraphRefParentNotebook
       parameters:
         - name: site-id
           in: path
@@ -28700,7 +28760,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.notebooks.sectionGroups_GetRefParentNotebook
+      operationId: users.onenote.notebooks.sectionGroups_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -28750,7 +28810,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.notebooks.sectionGroups_SetRefParentNotebook
+      operationId: users.onenote.notebooks.sectionGroups_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -28778,7 +28838,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -28790,7 +28852,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.notebooks.sectionGroups_DeleteRefParentNotebook
+      operationId: users.onenote.notebooks.sectionGroups_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -30330,7 +30392,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.notebooks.sectionGroups.sections.pages_GetRefParentNotebook
+      operationId: users.onenote.notebooks.sectionGroups.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -30398,7 +30460,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.notebooks.sectionGroups.sections.pages_SetRefParentNotebook
+      operationId: users.onenote.notebooks.sectionGroups.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -30440,7 +30502,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -30452,7 +30516,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.notebooks.sectionGroups.sections.pages_DeleteRefParentNotebook
+      operationId: users.onenote.notebooks.sectionGroups.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -30827,7 +30891,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.notebooks.sectionGroups.sections_GetRefParentNotebook
+      operationId: users.onenote.notebooks.sectionGroups.sections_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -30886,7 +30950,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.notebooks.sectionGroups.sections_SetRefParentNotebook
+      operationId: users.onenote.notebooks.sectionGroups.sections_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -30921,7 +30985,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -30933,7 +30999,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.notebooks.sectionGroups.sections_DeleteRefParentNotebook
+      operationId: users.onenote.notebooks.sectionGroups.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -32046,7 +32112,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.notebooks.sections.pages_GetRefParentNotebook
+      operationId: users.onenote.notebooks.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -32105,7 +32171,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.notebooks.sections.pages_SetRefParentNotebook
+      operationId: users.onenote.notebooks.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -32140,7 +32206,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -32152,7 +32220,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.notebooks.sections.pages_DeleteRefParentNotebook
+      operationId: users.onenote.notebooks.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -32487,7 +32555,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.notebooks.sections_GetRefParentNotebook
+      operationId: users.onenote.notebooks.sections_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -32537,7 +32605,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.notebooks.sections_SetRefParentNotebook
+      operationId: users.onenote.notebooks.sections_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -32565,7 +32633,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -32577,7 +32647,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.notebooks.sections_DeleteRefParentNotebook
+      operationId: users.onenote.notebooks.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -32888,7 +32958,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.notebooks.sections.parentSectionGroup_GetRefParentNotebook
+      operationId: users.onenote.notebooks.sections.parentSectionGroup_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -32938,7 +33008,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.notebooks.sections.parentSectionGroup_SetRefParentNotebook
+      operationId: users.onenote.notebooks.sections.parentSectionGroup_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -32966,7 +33036,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -32978,7 +33050,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.notebooks.sections.parentSectionGroup_DeleteRefParentNotebook
+      operationId: users.onenote.notebooks.sections.parentSectionGroup_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -34580,7 +34652,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.pages_GetRefParentNotebook
+      operationId: users.onenote.pages_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -34621,7 +34693,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.pages_SetRefParentNotebook
+      operationId: users.onenote.pages_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -34642,7 +34714,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -34654,7 +34728,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.pages_DeleteRefParentNotebook
+      operationId: users.onenote.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -35312,7 +35386,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.pages.parentSection_GetRefParentNotebook
+      operationId: users.onenote.pages.parentSection_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -35353,7 +35427,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.pages.parentSection_SetRefParentNotebook
+      operationId: users.onenote.pages.parentSection_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -35374,7 +35448,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -35386,7 +35462,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.pages.parentSection_DeleteRefParentNotebook
+      operationId: users.onenote.pages.parentSection_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -35656,7 +35732,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.pages.parentSection.parentSectionGroup_GetRefParentNotebook
+      operationId: users.onenote.pages.parentSection.parentSectionGroup_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -35697,7 +35773,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.pages.parentSection.parentSectionGroup_SetRefParentNotebook
+      operationId: users.onenote.pages.parentSection.parentSectionGroup_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -35718,7 +35794,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -35730,7 +35808,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.pages.parentSection.parentSectionGroup_DeleteRefParentNotebook
+      operationId: users.onenote.pages.parentSection.parentSectionGroup_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -37213,7 +37291,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.sectionGroups_GetRefParentNotebook
+      operationId: users.onenote.sectionGroups_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -37254,7 +37332,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.sectionGroups_SetRefParentNotebook
+      operationId: users.onenote.sectionGroups_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -37275,7 +37353,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -37287,7 +37367,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.sectionGroups_DeleteRefParentNotebook
+      operationId: users.onenote.sectionGroups_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -38658,7 +38738,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.sectionGroups.sections.pages_GetRefParentNotebook
+      operationId: users.onenote.sectionGroups.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -38717,7 +38797,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.sectionGroups.sections.pages_SetRefParentNotebook
+      operationId: users.onenote.sectionGroups.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -38752,7 +38832,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -38764,7 +38846,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.sectionGroups.sections.pages_DeleteRefParentNotebook
+      operationId: users.onenote.sectionGroups.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -39099,7 +39181,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.sectionGroups.sections_GetRefParentNotebook
+      operationId: users.onenote.sectionGroups.sections_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -39149,7 +39231,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.sectionGroups.sections_SetRefParentNotebook
+      operationId: users.onenote.sectionGroups.sections_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -39177,7 +39259,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -39189,7 +39273,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.sectionGroups.sections_DeleteRefParentNotebook
+      operationId: users.onenote.sectionGroups.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -40172,7 +40256,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.sections.pages_GetRefParentNotebook
+      operationId: users.onenote.sections.pages_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -40222,7 +40306,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.sections.pages_SetRefParentNotebook
+      operationId: users.onenote.sections.pages_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -40250,7 +40334,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -40262,7 +40348,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.sections.pages_DeleteRefParentNotebook
+      operationId: users.onenote.sections.pages_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -40557,7 +40643,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.sections_GetRefParentNotebook
+      operationId: users.onenote.sections_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -40598,7 +40684,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.sections_SetRefParentNotebook
+      operationId: users.onenote.sections_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -40619,7 +40705,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -40631,7 +40719,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.sections_DeleteRefParentNotebook
+      operationId: users.onenote.sections_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -40901,7 +40989,7 @@ paths:
       tags:
         - users.onenote
       summary: Get ref of parentNotebook from users
-      operationId: users.onenote.sections.parentSectionGroup_GetRefParentNotebook
+      operationId: users.onenote.sections.parentSectionGroup_GetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -40942,7 +41030,7 @@ paths:
       tags:
         - users.onenote
       summary: Update the ref of navigation property parentNotebook in users
-      operationId: users.onenote.sections.parentSectionGroup_SetRefParentNotebook
+      operationId: users.onenote.sections.parentSectionGroup_SetGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -40963,7 +41051,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -40975,7 +41065,7 @@ paths:
       tags:
         - users.onenote
       summary: Delete ref of navigation property parentNotebook for users
-      operationId: users.onenote.sections.parentSectionGroup_DeleteRefParentNotebook
+      operationId: users.onenote.sections.parentSectionGroup_DeleteGraphRefParentNotebook
       parameters:
         - name: user-id
           in: path
@@ -41888,16 +41978,6 @@ components:
                 $ref: '#/components/schemas/microsoft.graph.onenoteSection'
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.onenoteSection:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.onenoteEntityHierarchyModel'

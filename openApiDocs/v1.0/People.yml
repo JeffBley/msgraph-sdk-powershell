@@ -432,7 +432,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Get ref of lastSharedMethod from users
-      operationId: users.insights.shared_GetRefLastSharedMethod
+      operationId: users.insights.shared_GetGraphRefLastSharedMethod
       parameters:
         - name: user-id
           in: path
@@ -462,7 +462,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Update the ref of navigation property lastSharedMethod in users
-      operationId: users.insights.shared_SetRefLastSharedMethod
+      operationId: users.insights.shared_SetGraphRefLastSharedMethod
       parameters:
         - name: user-id
           in: path
@@ -483,7 +483,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -495,7 +497,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Delete ref of navigation property lastSharedMethod for users
-      operationId: users.insights.shared_DeleteRefLastSharedMethod
+      operationId: users.insights.shared_DeleteGraphRefLastSharedMethod
       parameters:
         - name: user-id
           in: path
@@ -582,7 +584,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Get ref of resource from users
-      operationId: users.insights.shared_GetRefResource
+      operationId: users.insights.shared_GetGraphRefResource
       parameters:
         - name: user-id
           in: path
@@ -612,7 +614,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Update the ref of navigation property resource in users
-      operationId: users.insights.shared_SetRefResource
+      operationId: users.insights.shared_SetGraphRefResource
       parameters:
         - name: user-id
           in: path
@@ -633,7 +635,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -645,7 +649,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Delete ref of navigation property resource for users
-      operationId: users.insights.shared_DeleteRefResource
+      operationId: users.insights.shared_DeleteGraphRefResource
       parameters:
         - name: user-id
           in: path
@@ -972,7 +976,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Get ref of resource from users
-      operationId: users.insights.trending_GetRefResource
+      operationId: users.insights.trending_GetGraphRefResource
       parameters:
         - name: user-id
           in: path
@@ -1002,7 +1006,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Update the ref of navigation property resource in users
-      operationId: users.insights.trending_SetRefResource
+      operationId: users.insights.trending_SetGraphRefResource
       parameters:
         - name: user-id
           in: path
@@ -1023,7 +1027,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -1035,7 +1041,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Delete ref of navigation property resource for users
-      operationId: users.insights.trending_DeleteRefResource
+      operationId: users.insights.trending_DeleteGraphRefResource
       parameters:
         - name: user-id
           in: path
@@ -1358,7 +1364,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Get ref of resource from users
-      operationId: users.insights.used_GetRefResource
+      operationId: users.insights.used_GetGraphRefResource
       parameters:
         - name: user-id
           in: path
@@ -1388,7 +1394,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Update the ref of navigation property resource in users
-      operationId: users.insights.used_SetRefResource
+      operationId: users.insights.used_SetGraphRefResource
       parameters:
         - name: user-id
           in: path
@@ -1409,7 +1415,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -1421,7 +1429,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Delete ref of navigation property resource for users
-      operationId: users.insights.used_DeleteRefResource
+      operationId: users.insights.used_DeleteGraphRefResource
       parameters:
         - name: user-id
           in: path
@@ -1764,16 +1772,6 @@ components:
       properties:
         id:
           type: string
-      additionalProperties:
-        type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
       additionalProperties:
         type: object
     microsoft.graph.trending:

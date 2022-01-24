@@ -1929,7 +1929,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Get ref of defaultIosEnrollmentProfile from deviceManagement
       description: Default iOS Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_GetRefDefaultIosEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_GetGraphRefDefaultIosEnrollmentProfile
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -1953,7 +1953,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Update the ref of navigation property defaultIosEnrollmentProfile in deviceManagement
       description: Default iOS Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_SetRefDefaultIosEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_SetGraphRefDefaultIosEnrollmentProfile
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -1967,7 +1967,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -1980,7 +1982,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Delete ref of navigation property defaultIosEnrollmentProfile for deviceManagement
       description: Default iOS Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_DeleteRefDefaultIosEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_DeleteGraphRefDefaultIosEnrollmentProfile
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -2088,7 +2090,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Get ref of defaultMacOsEnrollmentProfile from deviceManagement
       description: Default MacOs Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_GetRefDefaultMacOsEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_GetGraphRefDefaultMacOsEnrollmentProfile
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -2112,7 +2114,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Update the ref of navigation property defaultMacOsEnrollmentProfile in deviceManagement
       description: Default MacOs Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_SetRefDefaultMacOsEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_SetGraphRefDefaultMacOsEnrollmentProfile
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -2126,7 +2128,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -2139,7 +2143,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Delete ref of navigation property defaultMacOsEnrollmentProfile for deviceManagement
       description: Default MacOs Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_DeleteRefDefaultMacOsEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_DeleteGraphRefDefaultMacOsEnrollmentProfile
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -4421,7 +4425,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Get ref of deploymentProfile from deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_GetRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_GetGraphRefDeploymentProfile
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -4463,7 +4467,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Update the ref of navigation property deploymentProfile in deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_SetRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_SetGraphRefDeploymentProfile
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -4484,7 +4488,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -4497,7 +4503,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Delete ref of navigation property deploymentProfile for deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_DeleteRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_DeleteGraphRefDeploymentProfile
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -4614,7 +4620,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Get ref of intendedDeploymentProfile from deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_GetRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_GetGraphRefIntendedDeploymentProfile
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -4656,7 +4662,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Update the ref of navigation property intendedDeploymentProfile in deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_SetRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_SetGraphRefIntendedDeploymentProfile
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -4677,7 +4683,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -4690,7 +4698,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Delete ref of navigation property intendedDeploymentProfile for deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_DeleteRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_DeleteGraphRefIntendedDeploymentProfile
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -5309,7 +5317,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Get ref of deploymentProfile from deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_GetRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_GetGraphRefDeploymentProfile
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -5342,7 +5350,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Update the ref of navigation property deploymentProfile in deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_SetRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_SetGraphRefDeploymentProfile
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -5356,7 +5364,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -5369,7 +5379,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Delete ref of navigation property deploymentProfile for deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_DeleteRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_DeleteGraphRefDeploymentProfile
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -5470,7 +5480,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Get ref of intendedDeploymentProfile from deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_GetRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_GetGraphRefIntendedDeploymentProfile
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -5503,7 +5513,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Update the ref of navigation property intendedDeploymentProfile in deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_SetRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_SetGraphRefIntendedDeploymentProfile
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -5517,7 +5527,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -5530,7 +5542,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Delete ref of navigation property intendedDeploymentProfile for deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_DeleteRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_DeleteGraphRefIntendedDeploymentProfile
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -7375,7 +7387,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Delete ref of navigation property directoryScopes for roleManagement
-      operationId: roleManagement.cloudPC.roleAssignments_DeleteRefDirectoryScopes
+      operationId: roleManagement.cloudPC.roleAssignments_DeleteGraphRefDirectoryScopes
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -7412,7 +7424,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of directoryScopes from roleManagement
-      operationId: roleManagement.cloudPC.roleAssignments_ListRefDirectoryScopes
+      operationId: roleManagement.cloudPC.roleAssignments_ListGraphRefDirectoryScopes
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -7454,7 +7466,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Create new navigation property ref to directoryScopes for roleManagement
-      operationId: roleManagement.cloudPC.roleAssignments_CreateRefDirectoryScopes
+      operationId: roleManagement.cloudPC.roleAssignments_CreateGraphRefDirectoryScopes
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -7557,7 +7569,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Delete ref of navigation property principals for roleManagement
-      operationId: roleManagement.cloudPC.roleAssignments_DeleteRefPrincipals
+      operationId: roleManagement.cloudPC.roleAssignments_DeleteGraphRefPrincipals
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -7594,7 +7606,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of principals from roleManagement
-      operationId: roleManagement.cloudPC.roleAssignments_ListRefPrincipals
+      operationId: roleManagement.cloudPC.roleAssignments_ListGraphRefPrincipals
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -7636,7 +7648,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Create new navigation property ref to principals for roleManagement
-      operationId: roleManagement.cloudPC.roleAssignments_CreateRefPrincipals
+      operationId: roleManagement.cloudPC.roleAssignments_CreateGraphRefPrincipals
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -7734,7 +7746,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of roleDefinition from roleManagement
-      operationId: roleManagement.cloudPC.roleAssignments_GetRefRoleDefinition
+      operationId: roleManagement.cloudPC.roleAssignments_GetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -7762,7 +7774,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Update the ref of navigation property roleDefinition in roleManagement
-      operationId: roleManagement.cloudPC.roleAssignments_SetRefRoleDefinition
+      operationId: roleManagement.cloudPC.roleAssignments_SetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -7776,7 +7788,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -7788,7 +7802,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Delete ref of navigation property roleDefinition for roleManagement
-      operationId: roleManagement.cloudPC.roleAssignments_DeleteRefRoleDefinition
+      operationId: roleManagement.cloudPC.roleAssignments_DeleteGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -9503,7 +9517,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Delete ref of navigation property directoryScopes for roleManagement
-      operationId: roleManagement.deviceManagement.roleAssignments_DeleteRefDirectoryScopes
+      operationId: roleManagement.deviceManagement.roleAssignments_DeleteGraphRefDirectoryScopes
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -9540,7 +9554,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of directoryScopes from roleManagement
-      operationId: roleManagement.deviceManagement.roleAssignments_ListRefDirectoryScopes
+      operationId: roleManagement.deviceManagement.roleAssignments_ListGraphRefDirectoryScopes
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -9582,7 +9596,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Create new navigation property ref to directoryScopes for roleManagement
-      operationId: roleManagement.deviceManagement.roleAssignments_CreateRefDirectoryScopes
+      operationId: roleManagement.deviceManagement.roleAssignments_CreateGraphRefDirectoryScopes
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -9685,7 +9699,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Delete ref of navigation property principals for roleManagement
-      operationId: roleManagement.deviceManagement.roleAssignments_DeleteRefPrincipals
+      operationId: roleManagement.deviceManagement.roleAssignments_DeleteGraphRefPrincipals
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -9722,7 +9736,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of principals from roleManagement
-      operationId: roleManagement.deviceManagement.roleAssignments_ListRefPrincipals
+      operationId: roleManagement.deviceManagement.roleAssignments_ListGraphRefPrincipals
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -9764,7 +9778,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Create new navigation property ref to principals for roleManagement
-      operationId: roleManagement.deviceManagement.roleAssignments_CreateRefPrincipals
+      operationId: roleManagement.deviceManagement.roleAssignments_CreateGraphRefPrincipals
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -9862,7 +9876,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of roleDefinition from roleManagement
-      operationId: roleManagement.deviceManagement.roleAssignments_GetRefRoleDefinition
+      operationId: roleManagement.deviceManagement.roleAssignments_GetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -9890,7 +9904,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Update the ref of navigation property roleDefinition in roleManagement
-      operationId: roleManagement.deviceManagement.roleAssignments_SetRefRoleDefinition
+      operationId: roleManagement.deviceManagement.roleAssignments_SetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -9904,7 +9918,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -9916,7 +9932,7 @@ paths:
       tags:
         - roleManagement.rbacApplicationMultiple
       summary: Delete ref of navigation property roleDefinition for roleManagement
-      operationId: roleManagement.deviceManagement.roleAssignments_DeleteRefRoleDefinition
+      operationId: roleManagement.deviceManagement.roleAssignments_DeleteGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -12081,7 +12097,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
-      operationId: roleManagement.directory.roleAssignments_GetRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignments_GetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12104,7 +12120,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
-      operationId: roleManagement.directory.roleAssignments_SetRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignments_SetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12118,7 +12134,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -12130,7 +12148,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
-      operationId: roleManagement.directory.roleAssignments_DeleteRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignments_DeleteGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12204,7 +12222,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
-      operationId: roleManagement.directory.roleAssignments_GetRefPrincipal
+      operationId: roleManagement.directory.roleAssignments_GetGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12227,7 +12245,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
-      operationId: roleManagement.directory.roleAssignments_SetRefPrincipal
+      operationId: roleManagement.directory.roleAssignments_SetGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12241,7 +12259,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -12253,7 +12273,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
-      operationId: roleManagement.directory.roleAssignments_DeleteRefPrincipal
+      operationId: roleManagement.directory.roleAssignments_DeleteGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12341,7 +12361,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
-      operationId: roleManagement.directory.roleAssignments_GetRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignments_GetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12369,7 +12389,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
-      operationId: roleManagement.directory.roleAssignments_SetRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignments_SetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12383,7 +12403,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -12395,7 +12417,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
-      operationId: roleManagement.directory.roleAssignments_DeleteRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignments_DeleteGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12760,7 +12782,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleInstances_GetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleInstances_GetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -12800,7 +12822,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleInstances_SetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleInstances_SetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -12814,7 +12836,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -12826,7 +12850,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleInstances_DeleteRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleInstances_DeleteGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -13256,7 +13280,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13296,7 +13320,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13310,7 +13334,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -13322,7 +13348,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13397,7 +13423,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of appScope from roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefAppScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetGraphRefAppScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13420,7 +13446,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property appScope in roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefAppScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetGraphRefAppScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13434,7 +13460,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -13446,7 +13474,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property appScope for roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefAppScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteGraphRefAppScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13520,7 +13548,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13543,7 +13571,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13557,7 +13585,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -13569,7 +13599,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13663,7 +13693,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefPrincipal
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13686,7 +13716,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefPrincipal
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13700,7 +13730,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -13712,7 +13744,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefPrincipal
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13800,7 +13832,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13828,7 +13860,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13842,7 +13874,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -13854,7 +13888,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -13969,7 +14003,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of targetSchedule from roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefTargetSchedule
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14013,7 +14047,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property targetSchedule in roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefTargetSchedule
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14027,7 +14061,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -14039,7 +14075,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property targetSchedule for roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefTargetSchedule
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14441,7 +14477,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
-      operationId: roleManagement.directory.roleAssignmentSchedules_GetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentSchedules_GetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -14481,7 +14517,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
-      operationId: roleManagement.directory.roleAssignmentSchedules_SetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentSchedules_SetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -14495,7 +14531,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -14507,7 +14545,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
-      operationId: roleManagement.directory.roleAssignmentSchedules_DeleteRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentSchedules_DeleteGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -15645,7 +15683,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of appScope from roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetRefAppScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetGraphRefAppScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -15668,7 +15706,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property appScope in roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetRefAppScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetGraphRefAppScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -15682,7 +15720,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -15694,7 +15734,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property appScope for roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteRefAppScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteGraphRefAppScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -15768,7 +15808,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetRefDirectoryScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -15791,7 +15831,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetRefDirectoryScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -15805,7 +15845,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -15817,7 +15859,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteRefDirectoryScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -15911,7 +15953,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetRefPrincipal
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetGraphRefPrincipal
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -15934,7 +15976,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetRefPrincipal
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetGraphRefPrincipal
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -15948,7 +15990,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -15960,7 +16004,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteRefPrincipal
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteGraphRefPrincipal
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16048,7 +16092,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetRefRoleDefinition
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16076,7 +16120,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetRefRoleDefinition
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16090,7 +16134,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -16102,7 +16148,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteRefRoleDefinition
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16210,7 +16256,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of targetSchedule from roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetRefTargetSchedule
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16250,7 +16296,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property targetSchedule in roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetRefTargetSchedule
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16264,7 +16310,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -16276,7 +16324,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property targetSchedule for roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteRefTargetSchedule
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -18282,7 +18330,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignments_GetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignments_GetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -18305,7 +18353,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignments_SetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignments_SetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -18319,7 +18367,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -18331,7 +18381,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignments_DeleteRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignments_DeleteGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -18405,7 +18455,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignments_GetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignments_GetGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -18428,7 +18478,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignments_SetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignments_SetGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -18442,7 +18492,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -18454,7 +18506,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignments_DeleteRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignments_DeleteGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -18542,7 +18594,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignments_GetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignments_GetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -18570,7 +18622,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignments_SetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignments_SetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -18584,7 +18636,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -18596,7 +18650,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignments_DeleteRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignments_DeleteGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -18961,7 +19015,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_GetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_GetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -19001,7 +19055,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_SetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_SetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -19015,7 +19069,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -19027,7 +19083,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_DeleteRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_DeleteGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -19457,7 +19513,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -19497,7 +19553,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -19511,7 +19567,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -19523,7 +19581,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -19598,7 +19656,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of appScope from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefAppScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetGraphRefAppScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -19621,7 +19679,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property appScope in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefAppScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetGraphRefAppScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -19635,7 +19693,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -19647,7 +19707,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property appScope for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefAppScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteGraphRefAppScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -19721,7 +19781,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -19744,7 +19804,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -19758,7 +19818,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -19770,7 +19832,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -19864,7 +19926,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -19887,7 +19949,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -19901,7 +19963,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -19913,7 +19977,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteGraphRefPrincipal
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20001,7 +20065,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20029,7 +20093,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20043,7 +20107,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -20055,7 +20121,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20170,7 +20236,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of targetSchedule from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20214,7 +20280,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property targetSchedule in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20228,7 +20294,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -20240,7 +20308,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property targetSchedule for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20642,7 +20710,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_GetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_GetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -20682,7 +20750,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_SetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_SetGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -20696,7 +20764,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -20708,7 +20778,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_DeleteRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_DeleteGraphRefActivatedUsing
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -21846,7 +21916,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of appScope from roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetRefAppScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetGraphRefAppScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -21869,7 +21939,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property appScope in roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetRefAppScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetGraphRefAppScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -21883,7 +21953,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -21895,7 +21967,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property appScope for roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteRefAppScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteGraphRefAppScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -21969,7 +22041,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -21992,7 +22064,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -22006,7 +22078,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -22018,7 +22092,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteGraphRefDirectoryScope
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -22112,7 +22186,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetGraphRefPrincipal
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -22135,7 +22209,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetGraphRefPrincipal
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -22149,7 +22223,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -22161,7 +22237,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteGraphRefPrincipal
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -22249,7 +22325,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -22277,7 +22353,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -22291,7 +22367,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -22303,7 +22381,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteGraphRefRoleDefinition
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -22411,7 +22489,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of targetSchedule from roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -22451,7 +22529,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property targetSchedule in roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -22465,7 +22543,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -22477,7 +22557,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property targetSchedule for roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteGraphRefTargetSchedule
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23376,16 +23456,6 @@ components:
           additionalProperties:
             type: object
           description: The DepIOSEnrollmentProfile resource represents an Apple Device Enrollment Program (DEP) enrollment profile specific to iOS configuration. This type of profile must be assigned to Apple DEP serial numbers before the corresponding devices can enroll via DEP.
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.depMacOSEnrollmentProfile:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.depEnrollmentBaseProfile'

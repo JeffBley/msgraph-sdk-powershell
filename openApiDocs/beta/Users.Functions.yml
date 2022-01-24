@@ -4100,7 +4100,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function exportDeviceAndAppManagementData
-      operationId: users_exportDeviceAndAppManagementData-d390
+      operationId: users_exportDeviceAndAppManagementData
       parameters:
         - name: user-id
           in: path
@@ -4129,7 +4129,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function exportDeviceAndAppManagementData
-      operationId: users_exportDeviceAndAppManagementData-623c
+      operationId: users_exportDeviceAndAppManagementData
       parameters:
         - name: user-id
           in: path
@@ -4213,7 +4213,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function findRooms
-      operationId: users_findRooms-d266
+      operationId: users_findRooms
       parameters:
         - name: user-id
           in: path
@@ -4250,7 +4250,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function findRooms
-      operationId: users_findRooms-ac49
+      operationId: users_findRooms
       parameters:
         - name: user-id
           in: path
@@ -4966,7 +4966,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function supportedTimeZones
-      operationId: users.outlook_supportedTimeZones-ee48
+      operationId: users.outlook_supportedTimeZones
       parameters:
         - name: user-id
           in: path
@@ -5003,7 +5003,7 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function supportedTimeZones
-      operationId: users.outlook_supportedTimeZones-51c6
+      operationId: users.outlook_supportedTimeZones
       parameters:
         - name: user-id
           in: path

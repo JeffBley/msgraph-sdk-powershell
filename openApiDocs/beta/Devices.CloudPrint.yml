@@ -863,7 +863,7 @@ paths:
       tags:
         - print.printer
       summary: Delete ref of navigation property connectors for print
-      operationId: print.printers_DeleteRefConnectors
+      operationId: print.printers_DeleteGraphRefConnectors
       parameters:
         - name: printer-id
           in: path
@@ -900,7 +900,7 @@ paths:
       tags:
         - print.printer
       summary: Get ref of connectors from print
-      operationId: print.printers_ListRefConnectors
+      operationId: print.printers_ListGraphRefConnectors
       parameters:
         - name: printer-id
           in: path
@@ -956,7 +956,7 @@ paths:
       tags:
         - print.printer
       summary: Create new navigation property ref to connectors for print
-      operationId: print.printers_CreateRefConnectors
+      operationId: print.printers_CreateGraphRefConnectors
       parameters:
         - name: printer-id
           in: path
@@ -1139,7 +1139,7 @@ paths:
       tags:
         - print.printer
       summary: Get ref of share from print
-      operationId: print.printers_GetRefShare
+      operationId: print.printers_GetGraphRefShare
       parameters:
         - name: printer-id
           in: path
@@ -1179,7 +1179,7 @@ paths:
       tags:
         - print.printer
       summary: Update the ref of navigation property share in print
-      operationId: print.printers_SetRefShare
+      operationId: print.printers_SetGraphRefShare
       parameters:
         - name: printer-id
           in: path
@@ -1193,7 +1193,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -1205,7 +1207,7 @@ paths:
       tags:
         - print.printer
       summary: Delete ref of navigation property share for print
-      operationId: print.printers_DeleteRefShare
+      operationId: print.printers_DeleteGraphRefShare
       parameters:
         - name: printer-id
           in: path
@@ -1336,7 +1338,7 @@ paths:
       tags:
         - print.printer
       summary: Delete ref of navigation property shares for print
-      operationId: print.printers_DeleteRefShares
+      operationId: print.printers_DeleteGraphRefShares
       parameters:
         - name: printer-id
           in: path
@@ -1373,7 +1375,7 @@ paths:
       tags:
         - print.printer
       summary: Get ref of shares from print
-      operationId: print.printers_ListRefShares
+      operationId: print.printers_ListGraphRefShares
       parameters:
         - name: printer-id
           in: path
@@ -1435,7 +1437,7 @@ paths:
       tags:
         - print.printer
       summary: Create new navigation property ref to shares for print
-      operationId: print.printers_CreateRefShares
+      operationId: print.printers_CreateGraphRefShares
       parameters:
         - name: printer-id
           in: path
@@ -1763,7 +1765,7 @@ paths:
       tags:
         - print.printer
       summary: Get ref of definition from print
-      operationId: print.printers.taskTriggers_GetRefDefinition
+      operationId: print.printers.taskTriggers_GetGraphRefDefinition
       parameters:
         - name: printer-id
           in: path
@@ -1799,7 +1801,7 @@ paths:
       tags:
         - print.printer
       summary: Update the ref of navigation property definition in print
-      operationId: print.printers.taskTriggers_SetRefDefinition
+      operationId: print.printers.taskTriggers_SetGraphRefDefinition
       parameters:
         - name: printer-id
           in: path
@@ -1820,7 +1822,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -1832,7 +1836,7 @@ paths:
       tags:
         - print.printer
       summary: Delete ref of navigation property definition for print
-      operationId: print.printers.taskTriggers_DeleteRefDefinition
+      operationId: print.printers.taskTriggers_DeleteGraphRefDefinition
       parameters:
         - name: printer-id
           in: path
@@ -2430,7 +2434,7 @@ paths:
       tags:
         - print.printerShare
       summary: Delete ref of navigation property allowedGroups for print
-      operationId: print.printerShares_DeleteRefAllowedGroups
+      operationId: print.printerShares_DeleteGraphRefAllowedGroups
       parameters:
         - name: printerShare-id
           in: path
@@ -2467,7 +2471,7 @@ paths:
       tags:
         - print.printerShare
       summary: Get ref of allowedGroups from print
-      operationId: print.printerShares_ListRefAllowedGroups
+      operationId: print.printerShares_ListGraphRefAllowedGroups
       parameters:
         - name: printerShare-id
           in: path
@@ -2607,7 +2611,7 @@ paths:
       tags:
         - print.printerShare
       summary: Create new navigation property ref to allowedGroups for print
-      operationId: print.printerShares_CreateRefAllowedGroups
+      operationId: print.printerShares_CreateGraphRefAllowedGroups
       parameters:
         - name: printerShare-id
           in: path
@@ -3059,7 +3063,7 @@ paths:
       tags:
         - print.printerShare
       summary: Delete ref of navigation property allowedUsers for print
-      operationId: print.printerShares_DeleteRefAllowedUsers
+      operationId: print.printerShares_DeleteGraphRefAllowedUsers
       parameters:
         - name: printerShare-id
           in: path
@@ -3101,7 +3105,7 @@ paths:
       tags:
         - print.printerShare
       summary: Get ref of allowedUsers from print
-      operationId: print.printerShares_ListRefAllowedUsers
+      operationId: print.printerShares_ListGraphRefAllowedUsers
       parameters:
         - name: printerShare-id
           in: path
@@ -3296,7 +3300,7 @@ paths:
       tags:
         - print.printerShare
       summary: Create new navigation property ref to allowedUsers for print
-      operationId: print.printerShares_CreateRefAllowedUsers
+      operationId: print.printerShares_CreateGraphRefAllowedUsers
       parameters:
         - name: printerShare-id
           in: path
@@ -3429,7 +3433,7 @@ paths:
       tags:
         - print.printerShare
       summary: Get ref of printer from print
-      operationId: print.printerShares_GetRefPrinter
+      operationId: print.printerShares_GetGraphRefPrinter
       parameters:
         - name: printerShare-id
           in: path
@@ -3473,7 +3477,7 @@ paths:
       tags:
         - print.printerShare
       summary: Update the ref of navigation property printer in print
-      operationId: print.printerShares_SetRefPrinter
+      operationId: print.printerShares_SetGraphRefPrinter
       parameters:
         - name: printerShare-id
           in: path
@@ -3487,7 +3491,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -3499,7 +3505,7 @@ paths:
       tags:
         - print.printerShare
       summary: Delete ref of navigation property printer for print
-      operationId: print.printerShares_DeleteRefPrinter
+      operationId: print.printerShares_DeleteGraphRefPrinter
       parameters:
         - name: printerShare-id
           in: path
@@ -3923,7 +3929,7 @@ paths:
       tags:
         - print.Functions
       summary: Invoke function usersRegisteredByFeature
-      operationId: print.reports.authenticationMethods_usersRegisteredByFeature-1b6a
+      operationId: print.reports.authenticationMethods_usersRegisteredByFeature
       responses:
         '200':
           description: Success
@@ -3939,7 +3945,7 @@ paths:
       tags:
         - print.Functions
       summary: Invoke function usersRegisteredByFeature
-      operationId: print.reports.authenticationMethods_usersRegisteredByFeature-46d7
+      operationId: print.reports.authenticationMethods_usersRegisteredByFeature
       parameters:
         - name: includedUserTypes
           in: path
@@ -3968,7 +3974,7 @@ paths:
       tags:
         - print.Functions
       summary: Invoke function usersRegisteredByMethod
-      operationId: print.reports.authenticationMethods_usersRegisteredByMethod-c68e
+      operationId: print.reports.authenticationMethods_usersRegisteredByMethod
       responses:
         '200':
           description: Success
@@ -3984,7 +3990,7 @@ paths:
       tags:
         - print.Functions
       summary: Invoke function usersRegisteredByMethod
-      operationId: print.reports.authenticationMethods_usersRegisteredByMethod-8cf1
+      operationId: print.reports.authenticationMethods_usersRegisteredByMethod
       parameters:
         - name: includedUserTypes
           in: path
@@ -6944,7 +6950,7 @@ paths:
       tags:
         - print.printerShare
       summary: Delete ref of navigation property allowedGroups for print
-      operationId: print.shares_DeleteRefAllowedGroups
+      operationId: print.shares_DeleteGraphRefAllowedGroups
       parameters:
         - name: printerShare-id
           in: path
@@ -6981,7 +6987,7 @@ paths:
       tags:
         - print.printerShare
       summary: Get ref of allowedGroups from print
-      operationId: print.shares_ListRefAllowedGroups
+      operationId: print.shares_ListGraphRefAllowedGroups
       parameters:
         - name: printerShare-id
           in: path
@@ -7121,7 +7127,7 @@ paths:
       tags:
         - print.printerShare
       summary: Create new navigation property ref to allowedGroups for print
-      operationId: print.shares_CreateRefAllowedGroups
+      operationId: print.shares_CreateGraphRefAllowedGroups
       parameters:
         - name: printerShare-id
           in: path
@@ -7573,7 +7579,7 @@ paths:
       tags:
         - print.printerShare
       summary: Delete ref of navigation property allowedUsers for print
-      operationId: print.shares_DeleteRefAllowedUsers
+      operationId: print.shares_DeleteGraphRefAllowedUsers
       parameters:
         - name: printerShare-id
           in: path
@@ -7615,7 +7621,7 @@ paths:
       tags:
         - print.printerShare
       summary: Get ref of allowedUsers from print
-      operationId: print.shares_ListRefAllowedUsers
+      operationId: print.shares_ListGraphRefAllowedUsers
       parameters:
         - name: printerShare-id
           in: path
@@ -7810,7 +7816,7 @@ paths:
       tags:
         - print.printerShare
       summary: Create new navigation property ref to allowedUsers for print
-      operationId: print.shares_CreateRefAllowedUsers
+      operationId: print.shares_CreateGraphRefAllowedUsers
       parameters:
         - name: printerShare-id
           in: path
@@ -7943,7 +7949,7 @@ paths:
       tags:
         - print.printerShare
       summary: Get ref of printer from print
-      operationId: print.shares_GetRefPrinter
+      operationId: print.shares_GetGraphRefPrinter
       parameters:
         - name: printerShare-id
           in: path
@@ -7987,7 +7993,7 @@ paths:
       tags:
         - print.printerShare
       summary: Update the ref of navigation property printer in print
-      operationId: print.shares_SetRefPrinter
+      operationId: print.shares_SetGraphRefPrinter
       parameters:
         - name: printerShare-id
           in: path
@@ -8001,7 +8007,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -8013,7 +8021,7 @@ paths:
       tags:
         - print.printerShare
       summary: Delete ref of navigation property printer for print
-      operationId: print.shares_DeleteRefPrinter
+      operationId: print.shares_DeleteGraphRefPrinter
       parameters:
         - name: printerShare-id
           in: path
@@ -8539,7 +8547,7 @@ paths:
       tags:
         - print.printTaskDefinition
       summary: Get ref of definition from print
-      operationId: print.taskDefinitions.tasks_GetRefDefinition
+      operationId: print.taskDefinitions.tasks_GetGraphRefDefinition
       parameters:
         - name: printTaskDefinition-id
           in: path
@@ -8575,7 +8583,7 @@ paths:
       tags:
         - print.printTaskDefinition
       summary: Update the ref of navigation property definition in print
-      operationId: print.taskDefinitions.tasks_SetRefDefinition
+      operationId: print.taskDefinitions.tasks_SetGraphRefDefinition
       parameters:
         - name: printTaskDefinition-id
           in: path
@@ -8596,7 +8604,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -8608,7 +8618,7 @@ paths:
       tags:
         - print.printTaskDefinition
       summary: Delete ref of navigation property definition for print
-      operationId: print.taskDefinitions.tasks_DeleteRefDefinition
+      operationId: print.taskDefinitions.tasks_DeleteGraphRefDefinition
       parameters:
         - name: printTaskDefinition-id
           in: path
@@ -8704,7 +8714,7 @@ paths:
       tags:
         - print.printTaskDefinition
       summary: Get ref of trigger from print
-      operationId: print.taskDefinitions.tasks_GetRefTrigger
+      operationId: print.taskDefinitions.tasks_GetGraphRefTrigger
       parameters:
         - name: printTaskDefinition-id
           in: path
@@ -8740,7 +8750,7 @@ paths:
       tags:
         - print.printTaskDefinition
       summary: Update the ref of navigation property trigger in print
-      operationId: print.taskDefinitions.tasks_SetRefTrigger
+      operationId: print.taskDefinitions.tasks_SetGraphRefTrigger
       parameters:
         - name: printTaskDefinition-id
           in: path
@@ -8761,7 +8771,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -8773,7 +8785,7 @@ paths:
       tags:
         - print.printTaskDefinition
       summary: Delete ref of navigation property trigger for print
-      operationId: print.taskDefinitions.tasks_DeleteRefTrigger
+      operationId: print.taskDefinitions.tasks_DeleteGraphRefTrigger
       parameters:
         - name: printTaskDefinition-id
           in: path
@@ -9133,16 +9145,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.printer'
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.printTaskTrigger:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

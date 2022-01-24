@@ -1138,7 +1138,7 @@ paths:
       tags:
         - chats.teamsAppInstallation
       summary: Get ref of teamsApp from chats
-      operationId: chats.installedApps_GetRefTeamsApp
+      operationId: chats.installedApps_GetGraphRefTeamsApp
       parameters:
         - name: chat-id
           in: path
@@ -1174,7 +1174,7 @@ paths:
       tags:
         - chats.teamsAppInstallation
       summary: Update the ref of navigation property teamsApp in chats
-      operationId: chats.installedApps_SetRefTeamsApp
+      operationId: chats.installedApps_SetGraphRefTeamsApp
       parameters:
         - name: chat-id
           in: path
@@ -1195,7 +1195,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -1207,7 +1209,7 @@ paths:
       tags:
         - chats.teamsAppInstallation
       summary: Delete ref of navigation property teamsApp for chats
-      operationId: chats.installedApps_DeleteRefTeamsApp
+      operationId: chats.installedApps_DeleteGraphRefTeamsApp
       parameters:
         - name: chat-id
           in: path
@@ -1310,7 +1312,7 @@ paths:
       tags:
         - chats.teamsAppInstallation
       summary: Get ref of teamsAppDefinition from chats
-      operationId: chats.installedApps_GetRefTeamsAppDefinition
+      operationId: chats.installedApps_GetGraphRefTeamsAppDefinition
       parameters:
         - name: chat-id
           in: path
@@ -1346,7 +1348,7 @@ paths:
       tags:
         - chats.teamsAppInstallation
       summary: Update the ref of navigation property teamsAppDefinition in chats
-      operationId: chats.installedApps_SetRefTeamsAppDefinition
+      operationId: chats.installedApps_SetGraphRefTeamsAppDefinition
       parameters:
         - name: chat-id
           in: path
@@ -1367,7 +1369,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -1379,7 +1383,7 @@ paths:
       tags:
         - chats.teamsAppInstallation
       summary: Delete ref of navigation property teamsAppDefinition for chats
-      operationId: chats.installedApps_DeleteRefTeamsAppDefinition
+      operationId: chats.installedApps_DeleteGraphRefTeamsAppDefinition
       parameters:
         - name: chat-id
           in: path
@@ -3023,7 +3027,7 @@ paths:
       tags:
         - chats.teamsTab
       summary: Get ref of teamsApp from chats
-      operationId: chats.tabs_GetRefTeamsApp
+      operationId: chats.tabs_GetGraphRefTeamsApp
       parameters:
         - name: chat-id
           in: path
@@ -3059,7 +3063,7 @@ paths:
       tags:
         - chats.teamsTab
       summary: Update the ref of navigation property teamsApp in chats
-      operationId: chats.tabs_SetRefTeamsApp
+      operationId: chats.tabs_SetGraphRefTeamsApp
       parameters:
         - name: chat-id
           in: path
@@ -3080,7 +3084,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -3092,7 +3098,7 @@ paths:
       tags:
         - chats.teamsTab
       summary: Delete ref of navigation property teamsApp for chats
-      operationId: chats.tabs_DeleteRefTeamsApp
+      operationId: chats.tabs_DeleteGraphRefTeamsApp
       parameters:
         - name: chat-id
           in: path
@@ -3746,7 +3752,7 @@ paths:
       tags:
         - groups.team
       summary: Get ref of filesFolder from groups
-      operationId: groups.team.channels_GetRefFilesFolder
+      operationId: groups.team.channels_GetGraphRefFilesFolder
       parameters:
         - name: group-id
           in: path
@@ -3827,7 +3833,7 @@ paths:
       tags:
         - groups.team
       summary: Update the ref of navigation property filesFolder in groups
-      operationId: groups.team.channels_SetRefFilesFolder
+      operationId: groups.team.channels_SetGraphRefFilesFolder
       parameters:
         - name: group-id
           in: path
@@ -3848,7 +3854,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -3860,7 +3868,7 @@ paths:
       tags:
         - groups.team
       summary: Delete ref of navigation property filesFolder for groups
-      operationId: groups.team.channels_DeleteRefFilesFolder
+      operationId: groups.team.channels_DeleteGraphRefFilesFolder
       parameters:
         - name: group-id
           in: path
@@ -5594,7 +5602,7 @@ paths:
       tags:
         - groups.team
       summary: Get ref of teamsApp from groups
-      operationId: groups.team.channels.tabs_GetRefTeamsApp
+      operationId: groups.team.channels.tabs_GetGraphRefTeamsApp
       parameters:
         - name: group-id
           in: path
@@ -5638,7 +5646,7 @@ paths:
       tags:
         - groups.team
       summary: Update the ref of navigation property teamsApp in groups
-      operationId: groups.team.channels.tabs_SetRefTeamsApp
+      operationId: groups.team.channels.tabs_SetGraphRefTeamsApp
       parameters:
         - name: group-id
           in: path
@@ -5666,7 +5674,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -5678,7 +5688,7 @@ paths:
       tags:
         - groups.team
       summary: Delete ref of navigation property teamsApp for groups
-      operationId: groups.team.channels.tabs_DeleteRefTeamsApp
+      operationId: groups.team.channels.tabs_DeleteGraphRefTeamsApp
       parameters:
         - name: group-id
           in: path
@@ -5967,7 +5977,7 @@ paths:
       tags:
         - groups.team
       summary: Get ref of group from groups
-      operationId: groups.team_GetRefGroup
+      operationId: groups.team_GetGraphRefGroup
       parameters:
         - name: group-id
           in: path
@@ -6099,7 +6109,7 @@ paths:
       tags:
         - groups.team
       summary: Update the ref of navigation property group in groups
-      operationId: groups.team_SetRefGroup
+      operationId: groups.team_SetGraphRefGroup
       parameters:
         - name: group-id
           in: path
@@ -6113,7 +6123,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -6125,7 +6137,7 @@ paths:
       tags:
         - groups.team
       summary: Delete ref of navigation property group for groups
-      operationId: groups.team_DeleteRefGroup
+      operationId: groups.team_DeleteGraphRefGroup
       parameters:
         - name: group-id
           in: path
@@ -6449,7 +6461,7 @@ paths:
       tags:
         - groups.team
       summary: Get ref of teamsApp from groups
-      operationId: groups.team.installedApps_GetRefTeamsApp
+      operationId: groups.team.installedApps_GetGraphRefTeamsApp
       parameters:
         - name: group-id
           in: path
@@ -6485,7 +6497,7 @@ paths:
       tags:
         - groups.team
       summary: Update the ref of navigation property teamsApp in groups
-      operationId: groups.team.installedApps_SetRefTeamsApp
+      operationId: groups.team.installedApps_SetGraphRefTeamsApp
       parameters:
         - name: group-id
           in: path
@@ -6506,7 +6518,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -6518,7 +6532,7 @@ paths:
       tags:
         - groups.team
       summary: Delete ref of navigation property teamsApp for groups
-      operationId: groups.team.installedApps_DeleteRefTeamsApp
+      operationId: groups.team.installedApps_DeleteGraphRefTeamsApp
       parameters:
         - name: group-id
           in: path
@@ -6621,7 +6635,7 @@ paths:
       tags:
         - groups.team
       summary: Get ref of teamsAppDefinition from groups
-      operationId: groups.team.installedApps_GetRefTeamsAppDefinition
+      operationId: groups.team.installedApps_GetGraphRefTeamsAppDefinition
       parameters:
         - name: group-id
           in: path
@@ -6657,7 +6671,7 @@ paths:
       tags:
         - groups.team
       summary: Update the ref of navigation property teamsAppDefinition in groups
-      operationId: groups.team.installedApps_SetRefTeamsAppDefinition
+      operationId: groups.team.installedApps_SetGraphRefTeamsAppDefinition
       parameters:
         - name: group-id
           in: path
@@ -6678,7 +6692,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -6690,7 +6706,7 @@ paths:
       tags:
         - groups.team
       summary: Delete ref of navigation property teamsAppDefinition for groups
-      operationId: groups.team.installedApps_DeleteRefTeamsAppDefinition
+      operationId: groups.team.installedApps_DeleteGraphRefTeamsAppDefinition
       parameters:
         - name: group-id
           in: path
@@ -7466,7 +7482,7 @@ paths:
       tags:
         - groups.team
       summary: Get ref of filesFolder from groups
-      operationId: groups.team.primaryChannel_GetRefFilesFolder
+      operationId: groups.team.primaryChannel_GetGraphRefFilesFolder
       parameters:
         - name: group-id
           in: path
@@ -7530,7 +7546,7 @@ paths:
       tags:
         - groups.team
       summary: Update the ref of navigation property filesFolder in groups
-      operationId: groups.team.primaryChannel_SetRefFilesFolder
+      operationId: groups.team.primaryChannel_SetGraphRefFilesFolder
       parameters:
         - name: group-id
           in: path
@@ -7544,7 +7560,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -7556,7 +7574,7 @@ paths:
       tags:
         - groups.team
       summary: Delete ref of navigation property filesFolder for groups
-      operationId: groups.team.primaryChannel_DeleteRefFilesFolder
+      operationId: groups.team.primaryChannel_DeleteGraphRefFilesFolder
       parameters:
         - name: group-id
           in: path
@@ -9081,7 +9099,7 @@ paths:
       tags:
         - groups.team
       summary: Get ref of teamsApp from groups
-      operationId: groups.team.primaryChannel.tabs_GetRefTeamsApp
+      operationId: groups.team.primaryChannel.tabs_GetGraphRefTeamsApp
       parameters:
         - name: group-id
           in: path
@@ -9117,7 +9135,7 @@ paths:
       tags:
         - groups.team
       summary: Update the ref of navigation property teamsApp in groups
-      operationId: groups.team.primaryChannel.tabs_SetRefTeamsApp
+      operationId: groups.team.primaryChannel.tabs_SetGraphRefTeamsApp
       parameters:
         - name: group-id
           in: path
@@ -9138,7 +9156,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -9150,7 +9170,7 @@ paths:
       tags:
         - groups.team
       summary: Delete ref of navigation property teamsApp for groups
-      operationId: groups.team.primaryChannel.tabs_DeleteRefTeamsApp
+      operationId: groups.team.primaryChannel.tabs_DeleteGraphRefTeamsApp
       parameters:
         - name: group-id
           in: path
@@ -11551,7 +11571,7 @@ paths:
       tags:
         - groups.team
       summary: Get ref of template from groups
-      operationId: groups.team_GetRefTemplate
+      operationId: groups.team_GetGraphRefTemplate
       parameters:
         - name: group-id
           in: path
@@ -11574,7 +11594,7 @@ paths:
       tags:
         - groups.team
       summary: Update the ref of navigation property template in groups
-      operationId: groups.team_SetRefTemplate
+      operationId: groups.team_SetGraphRefTemplate
       parameters:
         - name: group-id
           in: path
@@ -11588,7 +11608,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -11600,7 +11622,7 @@ paths:
       tags:
         - groups.team
       summary: Delete ref of navigation property template for groups
-      operationId: groups.team_DeleteRefTemplate
+      operationId: groups.team_DeleteGraphRefTemplate
       parameters:
         - name: group-id
           in: path
@@ -12358,7 +12380,7 @@ paths:
       tags:
         - teams.channel
       summary: Get ref of filesFolder from teams
-      operationId: teams.channels_GetRefFilesFolder
+      operationId: teams.channels_GetGraphRefFilesFolder
       parameters:
         - name: team-id
           in: path
@@ -12439,7 +12461,7 @@ paths:
       tags:
         - teams.channel
       summary: Update the ref of navigation property filesFolder in teams
-      operationId: teams.channels_SetRefFilesFolder
+      operationId: teams.channels_SetGraphRefFilesFolder
       parameters:
         - name: team-id
           in: path
@@ -12460,7 +12482,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -12472,7 +12496,7 @@ paths:
       tags:
         - teams.channel
       summary: Delete ref of navigation property filesFolder for teams
-      operationId: teams.channels_DeleteRefFilesFolder
+      operationId: teams.channels_DeleteGraphRefFilesFolder
       parameters:
         - name: team-id
           in: path
@@ -14429,7 +14453,7 @@ paths:
       tags:
         - teams.channel
       summary: Get ref of teamsApp from teams
-      operationId: teams.channels.tabs_GetRefTeamsApp
+      operationId: teams.channels.tabs_GetGraphRefTeamsApp
       parameters:
         - name: team-id
           in: path
@@ -14473,7 +14497,7 @@ paths:
       tags:
         - teams.channel
       summary: Update the ref of navigation property teamsApp in teams
-      operationId: teams.channels.tabs_SetRefTeamsApp
+      operationId: teams.channels.tabs_SetGraphRefTeamsApp
       parameters:
         - name: team-id
           in: path
@@ -14501,7 +14525,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -14513,7 +14539,7 @@ paths:
       tags:
         - teams.channel
       summary: Delete ref of navigation property teamsApp for teams
-      operationId: teams.channels.tabs_DeleteRefTeamsApp
+      operationId: teams.channels.tabs_DeleteGraphRefTeamsApp
       parameters:
         - name: team-id
           in: path
@@ -14834,7 +14860,7 @@ paths:
       tags:
         - teams.group
       summary: Get ref of group from teams
-      operationId: teams_GetRefGroup
+      operationId: teams_GetGraphRefGroup
       parameters:
         - name: team-id
           in: path
@@ -14966,7 +14992,7 @@ paths:
       tags:
         - teams.group
       summary: Update the ref of navigation property group in teams
-      operationId: teams_SetRefGroup
+      operationId: teams_SetGraphRefGroup
       parameters:
         - name: team-id
           in: path
@@ -14980,7 +15006,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -14992,7 +15020,7 @@ paths:
       tags:
         - teams.group
       summary: Delete ref of navigation property group for teams
-      operationId: teams_DeleteRefGroup
+      operationId: teams_DeleteGraphRefGroup
       parameters:
         - name: team-id
           in: path
@@ -15343,7 +15371,7 @@ paths:
       tags:
         - teams.teamsAppInstallation
       summary: Get ref of teamsApp from teams
-      operationId: teams.installedApps_GetRefTeamsApp
+      operationId: teams.installedApps_GetGraphRefTeamsApp
       parameters:
         - name: team-id
           in: path
@@ -15379,7 +15407,7 @@ paths:
       tags:
         - teams.teamsAppInstallation
       summary: Update the ref of navigation property teamsApp in teams
-      operationId: teams.installedApps_SetRefTeamsApp
+      operationId: teams.installedApps_SetGraphRefTeamsApp
       parameters:
         - name: team-id
           in: path
@@ -15400,7 +15428,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -15412,7 +15442,7 @@ paths:
       tags:
         - teams.teamsAppInstallation
       summary: Delete ref of navigation property teamsApp for teams
-      operationId: teams.installedApps_DeleteRefTeamsApp
+      operationId: teams.installedApps_DeleteGraphRefTeamsApp
       parameters:
         - name: team-id
           in: path
@@ -15515,7 +15545,7 @@ paths:
       tags:
         - teams.teamsAppInstallation
       summary: Get ref of teamsAppDefinition from teams
-      operationId: teams.installedApps_GetRefTeamsAppDefinition
+      operationId: teams.installedApps_GetGraphRefTeamsAppDefinition
       parameters:
         - name: team-id
           in: path
@@ -15551,7 +15581,7 @@ paths:
       tags:
         - teams.teamsAppInstallation
       summary: Update the ref of navigation property teamsAppDefinition in teams
-      operationId: teams.installedApps_SetRefTeamsAppDefinition
+      operationId: teams.installedApps_SetGraphRefTeamsAppDefinition
       parameters:
         - name: team-id
           in: path
@@ -15572,7 +15602,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -15584,7 +15616,7 @@ paths:
       tags:
         - teams.teamsAppInstallation
       summary: Delete ref of navigation property teamsAppDefinition for teams
-      operationId: teams.installedApps_DeleteRefTeamsAppDefinition
+      operationId: teams.installedApps_DeleteGraphRefTeamsAppDefinition
       parameters:
         - name: team-id
           in: path
@@ -16573,7 +16605,7 @@ paths:
       tags:
         - teams.channel
       summary: Get ref of filesFolder from teams
-      operationId: teams.primaryChannel_GetRefFilesFolder
+      operationId: teams.primaryChannel_GetGraphRefFilesFolder
       parameters:
         - name: team-id
           in: path
@@ -16637,7 +16669,7 @@ paths:
       tags:
         - teams.channel
       summary: Update the ref of navigation property filesFolder in teams
-      operationId: teams.primaryChannel_SetRefFilesFolder
+      operationId: teams.primaryChannel_SetGraphRefFilesFolder
       parameters:
         - name: team-id
           in: path
@@ -16651,7 +16683,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -16663,7 +16697,7 @@ paths:
       tags:
         - teams.channel
       summary: Delete ref of navigation property filesFolder for teams
-      operationId: teams.primaryChannel_DeleteRefFilesFolder
+      operationId: teams.primaryChannel_DeleteGraphRefFilesFolder
       parameters:
         - name: team-id
           in: path
@@ -18369,7 +18403,7 @@ paths:
       tags:
         - teams.channel
       summary: Get ref of teamsApp from teams
-      operationId: teams.primaryChannel.tabs_GetRefTeamsApp
+      operationId: teams.primaryChannel.tabs_GetGraphRefTeamsApp
       parameters:
         - name: team-id
           in: path
@@ -18405,7 +18439,7 @@ paths:
       tags:
         - teams.channel
       summary: Update the ref of navigation property teamsApp in teams
-      operationId: teams.primaryChannel.tabs_SetRefTeamsApp
+      operationId: teams.primaryChannel.tabs_SetGraphRefTeamsApp
       parameters:
         - name: team-id
           in: path
@@ -18426,7 +18460,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -18438,7 +18474,7 @@ paths:
       tags:
         - teams.channel
       summary: Delete ref of navigation property teamsApp for teams
-      operationId: teams.primaryChannel.tabs_DeleteRefTeamsApp
+      operationId: teams.primaryChannel.tabs_DeleteGraphRefTeamsApp
       parameters:
         - name: team-id
           in: path
@@ -20883,7 +20919,7 @@ paths:
       tags:
         - teams.teamsTemplate
       summary: Get ref of template from teams
-      operationId: teams_GetRefTemplate
+      operationId: teams_GetGraphRefTemplate
       parameters:
         - name: team-id
           in: path
@@ -20906,7 +20942,7 @@ paths:
       tags:
         - teams.teamsTemplate
       summary: Update the ref of navigation property template in teams
-      operationId: teams_SetRefTemplate
+      operationId: teams_SetGraphRefTemplate
       parameters:
         - name: team-id
           in: path
@@ -20920,7 +20956,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -20932,7 +20970,7 @@ paths:
       tags:
         - teams.teamsTemplate
       summary: Delete ref of navigation property template for teams
-      operationId: teams_DeleteRefTemplate
+      operationId: teams_DeleteGraphRefTemplate
       parameters:
         - name: team-id
           in: path
@@ -21870,7 +21908,7 @@ paths:
       tags:
         - users.chat
       summary: Get ref of teamsApp from users
-      operationId: users.chats.installedApps_GetRefTeamsApp
+      operationId: users.chats.installedApps_GetGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -21914,7 +21952,7 @@ paths:
       tags:
         - users.chat
       summary: Update the ref of navigation property teamsApp in users
-      operationId: users.chats.installedApps_SetRefTeamsApp
+      operationId: users.chats.installedApps_SetGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -21942,7 +21980,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -21954,7 +21994,7 @@ paths:
       tags:
         - users.chat
       summary: Delete ref of navigation property teamsApp for users
-      operationId: users.chats.installedApps_DeleteRefTeamsApp
+      operationId: users.chats.installedApps_DeleteGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -22072,7 +22112,7 @@ paths:
       tags:
         - users.chat
       summary: Get ref of teamsAppDefinition from users
-      operationId: users.chats.installedApps_GetRefTeamsAppDefinition
+      operationId: users.chats.installedApps_GetGraphRefTeamsAppDefinition
       parameters:
         - name: user-id
           in: path
@@ -22116,7 +22156,7 @@ paths:
       tags:
         - users.chat
       summary: Update the ref of navigation property teamsAppDefinition in users
-      operationId: users.chats.installedApps_SetRefTeamsAppDefinition
+      operationId: users.chats.installedApps_SetGraphRefTeamsAppDefinition
       parameters:
         - name: user-id
           in: path
@@ -22144,7 +22184,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -22156,7 +22198,7 @@ paths:
       tags:
         - users.chat
       summary: Delete ref of navigation property teamsAppDefinition for users
-      operationId: users.chats.installedApps_DeleteRefTeamsAppDefinition
+      operationId: users.chats.installedApps_DeleteGraphRefTeamsAppDefinition
       parameters:
         - name: user-id
           in: path
@@ -23831,7 +23873,7 @@ paths:
       tags:
         - users.chat
       summary: Get ref of teamsApp from users
-      operationId: users.chats.tabs_GetRefTeamsApp
+      operationId: users.chats.tabs_GetGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -23875,7 +23917,7 @@ paths:
       tags:
         - users.chat
       summary: Update the ref of navigation property teamsApp in users
-      operationId: users.chats.tabs_SetRefTeamsApp
+      operationId: users.chats.tabs_SetGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -23903,7 +23945,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -23915,7 +23959,7 @@ paths:
       tags:
         - users.chat
       summary: Delete ref of navigation property teamsApp for users
-      operationId: users.chats.tabs_DeleteRefTeamsApp
+      operationId: users.chats.tabs_DeleteGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -24787,7 +24831,7 @@ paths:
       tags:
         - users.team
       summary: Get ref of filesFolder from users
-      operationId: users.joinedTeams.channels_GetRefFilesFolder
+      operationId: users.joinedTeams.channels_GetGraphRefFilesFolder
       parameters:
         - name: user-id
           in: path
@@ -24885,7 +24929,7 @@ paths:
       tags:
         - users.team
       summary: Update the ref of navigation property filesFolder in users
-      operationId: users.joinedTeams.channels_SetRefFilesFolder
+      operationId: users.joinedTeams.channels_SetGraphRefFilesFolder
       parameters:
         - name: user-id
           in: path
@@ -24913,7 +24957,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -24925,7 +24971,7 @@ paths:
       tags:
         - users.team
       summary: Delete ref of navigation property filesFolder for users
-      operationId: users.joinedTeams.channels_DeleteRefFilesFolder
+      operationId: users.joinedTeams.channels_DeleteGraphRefFilesFolder
       parameters:
         - name: user-id
           in: path
@@ -26868,7 +26914,7 @@ paths:
       tags:
         - users.team
       summary: Get ref of teamsApp from users
-      operationId: users.joinedTeams.channels.tabs_GetRefTeamsApp
+      operationId: users.joinedTeams.channels.tabs_GetGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -26920,7 +26966,7 @@ paths:
       tags:
         - users.team
       summary: Update the ref of navigation property teamsApp in users
-      operationId: users.joinedTeams.channels.tabs_SetRefTeamsApp
+      operationId: users.joinedTeams.channels.tabs_SetGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -26955,7 +27001,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -26967,7 +27015,7 @@ paths:
       tags:
         - users.team
       summary: Delete ref of navigation property teamsApp for users
-      operationId: users.joinedTeams.channels.tabs_DeleteRefTeamsApp
+      operationId: users.joinedTeams.channels.tabs_DeleteGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -27297,7 +27345,7 @@ paths:
       tags:
         - users.team
       summary: Get ref of group from users
-      operationId: users.joinedTeams_GetRefGroup
+      operationId: users.joinedTeams_GetGraphRefGroup
       parameters:
         - name: user-id
           in: path
@@ -27463,7 +27511,7 @@ paths:
       tags:
         - users.team
       summary: Update the ref of navigation property group in users
-      operationId: users.joinedTeams_SetRefGroup
+      operationId: users.joinedTeams_SetGraphRefGroup
       parameters:
         - name: user-id
           in: path
@@ -27484,7 +27532,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -27496,7 +27546,7 @@ paths:
       tags:
         - users.team
       summary: Delete ref of navigation property group for users
-      operationId: users.joinedTeams_DeleteRefGroup
+      operationId: users.joinedTeams_DeleteGraphRefGroup
       parameters:
         - name: user-id
           in: path
@@ -27872,7 +27922,7 @@ paths:
       tags:
         - users.team
       summary: Get ref of teamsApp from users
-      operationId: users.joinedTeams.installedApps_GetRefTeamsApp
+      operationId: users.joinedTeams.installedApps_GetGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -27916,7 +27966,7 @@ paths:
       tags:
         - users.team
       summary: Update the ref of navigation property teamsApp in users
-      operationId: users.joinedTeams.installedApps_SetRefTeamsApp
+      operationId: users.joinedTeams.installedApps_SetGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -27944,7 +27994,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -27956,7 +28008,7 @@ paths:
       tags:
         - users.team
       summary: Delete ref of navigation property teamsApp for users
-      operationId: users.joinedTeams.installedApps_DeleteRefTeamsApp
+      operationId: users.joinedTeams.installedApps_DeleteGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -28074,7 +28126,7 @@ paths:
       tags:
         - users.team
       summary: Get ref of teamsAppDefinition from users
-      operationId: users.joinedTeams.installedApps_GetRefTeamsAppDefinition
+      operationId: users.joinedTeams.installedApps_GetGraphRefTeamsAppDefinition
       parameters:
         - name: user-id
           in: path
@@ -28118,7 +28170,7 @@ paths:
       tags:
         - users.team
       summary: Update the ref of navigation property teamsAppDefinition in users
-      operationId: users.joinedTeams.installedApps_SetRefTeamsAppDefinition
+      operationId: users.joinedTeams.installedApps_SetGraphRefTeamsAppDefinition
       parameters:
         - name: user-id
           in: path
@@ -28146,7 +28198,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -28158,7 +28212,7 @@ paths:
       tags:
         - users.team
       summary: Delete ref of navigation property teamsAppDefinition for users
-      operationId: users.joinedTeams.installedApps_DeleteRefTeamsAppDefinition
+      operationId: users.joinedTeams.installedApps_DeleteGraphRefTeamsAppDefinition
       parameters:
         - name: user-id
           in: path
@@ -29053,7 +29107,7 @@ paths:
       tags:
         - users.team
       summary: Get ref of filesFolder from users
-      operationId: users.joinedTeams.primaryChannel_GetRefFilesFolder
+      operationId: users.joinedTeams.primaryChannel_GetGraphRefFilesFolder
       parameters:
         - name: user-id
           in: path
@@ -29134,7 +29188,7 @@ paths:
       tags:
         - users.team
       summary: Update the ref of navigation property filesFolder in users
-      operationId: users.joinedTeams.primaryChannel_SetRefFilesFolder
+      operationId: users.joinedTeams.primaryChannel_SetGraphRefFilesFolder
       parameters:
         - name: user-id
           in: path
@@ -29155,7 +29209,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -29167,7 +29223,7 @@ paths:
       tags:
         - users.team
       summary: Delete ref of navigation property filesFolder for users
-      operationId: users.joinedTeams.primaryChannel_DeleteRefFilesFolder
+      operationId: users.joinedTeams.primaryChannel_DeleteGraphRefFilesFolder
       parameters:
         - name: user-id
           in: path
@@ -30901,7 +30957,7 @@ paths:
       tags:
         - users.team
       summary: Get ref of teamsApp from users
-      operationId: users.joinedTeams.primaryChannel.tabs_GetRefTeamsApp
+      operationId: users.joinedTeams.primaryChannel.tabs_GetGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -30945,7 +31001,7 @@ paths:
       tags:
         - users.team
       summary: Update the ref of navigation property teamsApp in users
-      operationId: users.joinedTeams.primaryChannel.tabs_SetRefTeamsApp
+      operationId: users.joinedTeams.primaryChannel.tabs_SetGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -30973,7 +31029,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -30985,7 +31043,7 @@ paths:
       tags:
         - users.team
       summary: Delete ref of navigation property teamsApp for users
-      operationId: users.joinedTeams.primaryChannel.tabs_DeleteRefTeamsApp
+      operationId: users.joinedTeams.primaryChannel.tabs_DeleteGraphRefTeamsApp
       parameters:
         - name: user-id
           in: path
@@ -33745,7 +33803,7 @@ paths:
       tags:
         - users.team
       summary: Get ref of template from users
-      operationId: users.joinedTeams_GetRefTemplate
+      operationId: users.joinedTeams_GetGraphRefTemplate
       parameters:
         - name: user-id
           in: path
@@ -33775,7 +33833,7 @@ paths:
       tags:
         - users.team
       summary: Update the ref of navigation property template in users
-      operationId: users.joinedTeams_SetRefTemplate
+      operationId: users.joinedTeams_SetGraphRefTemplate
       parameters:
         - name: user-id
           in: path
@@ -33796,7 +33854,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -33808,7 +33868,7 @@ paths:
       tags:
         - users.team
       summary: Delete ref of navigation property template for users
-      operationId: users.joinedTeams_DeleteRefTemplate
+      operationId: users.joinedTeams_DeleteGraphRefTemplate
       parameters:
         - name: user-id
           in: path
@@ -34275,7 +34335,7 @@ paths:
       tags:
         - users.userTeamwork
       summary: Get ref of chat from users
-      operationId: users.teamwork.installedApps_GetRefChat
+      operationId: users.teamwork.installedApps_GetGraphRefChat
       parameters:
         - name: user-id
           in: path
@@ -34326,7 +34386,7 @@ paths:
       tags:
         - users.userTeamwork
       summary: Update the ref of navigation property chat in users
-      operationId: users.teamwork.installedApps_SetRefChat
+      operationId: users.teamwork.installedApps_SetGraphRefChat
       parameters:
         - name: user-id
           in: path
@@ -34347,7 +34407,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -34359,7 +34421,7 @@ paths:
       tags:
         - users.userTeamwork
       summary: Delete ref of navigation property chat for users
-      operationId: users.teamwork.installedApps_DeleteRefChat
+      operationId: users.teamwork.installedApps_DeleteGraphRefChat
       parameters:
         - name: user-id
           in: path
@@ -34500,16 +34562,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.teamsAppDefinition'
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.conversationMember:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

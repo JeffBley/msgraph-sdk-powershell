@@ -909,7 +909,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Delete ref of navigation property acceptedSenders for groups
-      operationId: groups_DeleteRefAcceptedSenders
+      operationId: groups_DeleteGraphRefAcceptedSenders
       parameters:
         - name: group-id
           in: path
@@ -946,7 +946,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get ref of acceptedSenders from groups
-      operationId: groups_ListRefAcceptedSenders
+      operationId: groups_ListGraphRefAcceptedSenders
       parameters:
         - name: group-id
           in: path
@@ -987,7 +987,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Create new navigation property ref to acceptedSenders for groups
-      operationId: groups_CreateRefAcceptedSenders
+      operationId: groups_CreateGraphRefAcceptedSenders
       parameters:
         - name: group-id
           in: path
@@ -7188,7 +7188,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get ref of createdOnBehalfOf from groups
-      operationId: groups_GetRefCreatedOnBehalfOf
+      operationId: groups_GetGraphRefCreatedOnBehalfOf
       parameters:
         - name: group-id
           in: path
@@ -7211,7 +7211,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Update the ref of navigation property createdOnBehalfOf in groups
-      operationId: groups_SetRefCreatedOnBehalfOf
+      operationId: groups_SetGraphRefCreatedOnBehalfOf
       parameters:
         - name: group-id
           in: path
@@ -7225,7 +7225,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -7237,7 +7239,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Delete ref of navigation property createdOnBehalfOf for groups
-      operationId: groups_DeleteRefCreatedOnBehalfOf
+      operationId: groups_DeleteGraphRefCreatedOnBehalfOf
       parameters:
         - name: group-id
           in: path
@@ -7262,7 +7264,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.bundles.listItem_getActivitiesByInterval-96b0
+      operationId: groups.drives.bundles.listItem_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -7308,7 +7310,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.bundles.listItem_getActivitiesByInterval-53ee
+      operationId: groups.drives.bundles.listItem_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -7529,7 +7531,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.following.listItem_getActivitiesByInterval-96b0
+      operationId: groups.drives.following.listItem_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -7575,7 +7577,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.following.listItem_getActivitiesByInterval-53ee
+      operationId: groups.drives.following.listItem_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -7796,7 +7798,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.items.listItem_getActivitiesByInterval-96b0
+      operationId: groups.drives.items.listItem_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -7842,7 +7844,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.items.listItem_getActivitiesByInterval-53ee
+      operationId: groups.drives.items.listItem_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -8319,7 +8321,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.list.items_getActivitiesByInterval-96b0
+      operationId: groups.drives.list.items_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -8365,7 +8367,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.list.items_getActivitiesByInterval-53ee
+      operationId: groups.drives.list.items_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -8473,7 +8475,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.root.listItem_getActivitiesByInterval-96b0
+      operationId: groups.drives.root.listItem_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -8512,7 +8514,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.root.listItem_getActivitiesByInterval-53ee
+      operationId: groups.drives.root.listItem_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -8705,7 +8707,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.special.listItem_getActivitiesByInterval-96b0
+      operationId: groups.drives.special.listItem_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -8751,7 +8753,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.drives.special.listItem_getActivitiesByInterval-53ee
+      operationId: groups.drives.special.listItem_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -10846,7 +10848,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Delete ref of navigation property memberOf for groups
-      operationId: groups_DeleteRefMemberOf
+      operationId: groups_DeleteGraphRefMemberOf
       parameters:
         - name: group-id
           in: path
@@ -10883,7 +10885,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get ref of memberOf from groups
-      operationId: groups_ListRefMemberOf
+      operationId: groups_ListGraphRefMemberOf
       parameters:
         - name: group-id
           in: path
@@ -10925,7 +10927,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Create new navigation property ref to memberOf for groups
-      operationId: groups_CreateRefMemberOf
+      operationId: groups_CreateGraphRefMemberOf
       parameters:
         - name: group-id
           in: path
@@ -11028,7 +11030,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Delete ref of navigation property members for groups
-      operationId: groups_DeleteRefMembers
+      operationId: groups_DeleteGraphRefMembers
       parameters:
         - name: group-id
           in: path
@@ -11065,7 +11067,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get ref of members from groups
-      operationId: groups_ListRefMembers
+      operationId: groups_ListGraphRefMembers
       parameters:
         - name: group-id
           in: path
@@ -11107,7 +11109,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Create new navigation property ref to members for groups
-      operationId: groups_CreateRefMembers
+      operationId: groups_CreateGraphRefMembers
       parameters:
         - name: group-id
           in: path
@@ -11210,7 +11212,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Delete ref of navigation property membersWithLicenseErrors for groups
-      operationId: groups_DeleteRefMembersWithLicenseErrors
+      operationId: groups_DeleteGraphRefMembersWithLicenseErrors
       parameters:
         - name: group-id
           in: path
@@ -11247,7 +11249,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get ref of membersWithLicenseErrors from groups
-      operationId: groups_ListRefMembersWithLicenseErrors
+      operationId: groups_ListGraphRefMembersWithLicenseErrors
       parameters:
         - name: group-id
           in: path
@@ -11289,7 +11291,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Create new navigation property ref to membersWithLicenseErrors for groups
-      operationId: groups_CreateRefMembersWithLicenseErrors
+      operationId: groups_CreateGraphRefMembersWithLicenseErrors
       parameters:
         - name: group-id
           in: path
@@ -14476,7 +14478,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Delete ref of navigation property owners for groups
-      operationId: groups_DeleteRefOwners
+      operationId: groups_DeleteGraphRefOwners
       parameters:
         - name: group-id
           in: path
@@ -14513,7 +14515,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get ref of owners from groups
-      operationId: groups_ListRefOwners
+      operationId: groups_ListGraphRefOwners
       parameters:
         - name: group-id
           in: path
@@ -14555,7 +14557,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Create new navigation property ref to owners for groups
-      operationId: groups_CreateRefOwners
+      operationId: groups_CreateGraphRefOwners
       parameters:
         - name: group-id
           in: path
@@ -15286,7 +15288,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Delete ref of navigation property rejectedSenders for groups
-      operationId: groups_DeleteRefRejectedSenders
+      operationId: groups_DeleteGraphRefRejectedSenders
       parameters:
         - name: group-id
           in: path
@@ -15323,7 +15325,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get ref of rejectedSenders from groups
-      operationId: groups_ListRefRejectedSenders
+      operationId: groups_ListGraphRefRejectedSenders
       parameters:
         - name: group-id
           in: path
@@ -15364,7 +15366,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Create new navigation property ref to rejectedSenders for groups
-      operationId: groups_CreateRefRejectedSenders
+      operationId: groups_CreateGraphRefRejectedSenders
       parameters:
         - name: group-id
           in: path
@@ -15953,7 +15955,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.sites.lists.items_getActivitiesByInterval-96b0
+      operationId: groups.sites.lists.items_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -16006,7 +16008,7 @@ paths:
       tags:
         - groups.Functions
       summary: Invoke function getActivitiesByInterval
-      operationId: groups.sites.lists.items_getActivitiesByInterval-53ee
+      operationId: groups.sites.lists.items_getActivitiesByInterval
       parameters:
         - name: group-id
           in: path
@@ -21982,7 +21984,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Delete ref of navigation property transitiveMemberOf for groups
-      operationId: groups_DeleteRefTransitiveMemberOf
+      operationId: groups_DeleteGraphRefTransitiveMemberOf
       parameters:
         - name: group-id
           in: path
@@ -22019,7 +22021,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get ref of transitiveMemberOf from groups
-      operationId: groups_ListRefTransitiveMemberOf
+      operationId: groups_ListGraphRefTransitiveMemberOf
       parameters:
         - name: group-id
           in: path
@@ -22061,7 +22063,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Create new navigation property ref to transitiveMemberOf for groups
-      operationId: groups_CreateRefTransitiveMemberOf
+      operationId: groups_CreateGraphRefTransitiveMemberOf
       parameters:
         - name: group-id
           in: path
@@ -22164,7 +22166,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Delete ref of navigation property transitiveMembers for groups
-      operationId: groups_DeleteRefTransitiveMembers
+      operationId: groups_DeleteGraphRefTransitiveMembers
       parameters:
         - name: group-id
           in: path
@@ -22201,7 +22203,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get ref of transitiveMembers from groups
-      operationId: groups_ListRefTransitiveMembers
+      operationId: groups_ListGraphRefTransitiveMembers
       parameters:
         - name: group-id
           in: path
@@ -22243,7 +22245,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Create new navigation property ref to transitiveMembers for groups
-      operationId: groups_CreateRefTransitiveMembers
+      operationId: groups_CreateGraphRefTransitiveMembers
       parameters:
         - name: group-id
           in: path
@@ -23080,16 +23082,6 @@ components:
               nullable: true
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.itemActivityStat:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

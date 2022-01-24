@@ -4314,7 +4314,7 @@ paths:
       tags:
         - invitations.user
       summary: Get ref of invitedUser from invitations
-      operationId: invitations_GetRefInvitedUser
+      operationId: invitations_GetGraphRefInvitedUser
       parameters:
         - name: invitation-id
           in: path
@@ -4587,7 +4587,7 @@ paths:
       tags:
         - invitations.user
       summary: Update the ref of navigation property invitedUser in invitations
-      operationId: invitations_SetRefInvitedUser
+      operationId: invitations_SetGraphRefInvitedUser
       parameters:
         - name: invitation-id
           in: path
@@ -4601,7 +4601,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -4618,7 +4620,7 @@ paths:
       tags:
         - invitations.user
       summary: Delete ref of navigation property invitedUser for invitations
-      operationId: invitations_DeleteRefInvitedUser
+      operationId: invitations_DeleteGraphRefInvitedUser
       parameters:
         - name: invitation-id
           in: path
@@ -4946,7 +4948,7 @@ paths:
       tags:
         - organization.certificateBasedAuthConfiguration
       summary: Delete ref of navigation property certificateBasedAuthConfiguration for organization
-      operationId: organization_DeleteRefCertificateBasedAuthConfiguration
+      operationId: organization_DeleteGraphRefCertificateBasedAuthConfiguration
       parameters:
         - name: organization-id
           in: path
@@ -4983,7 +4985,7 @@ paths:
       tags:
         - organization.certificateBasedAuthConfiguration
       summary: Get ref of certificateBasedAuthConfiguration from organization
-      operationId: organization_ListRefCertificateBasedAuthConfiguration
+      operationId: organization_ListGraphRefCertificateBasedAuthConfiguration
       parameters:
         - name: organization-id
           in: path
@@ -5025,7 +5027,7 @@ paths:
       tags:
         - organization.certificateBasedAuthConfiguration
       summary: Create new navigation property ref to certificateBasedAuthConfiguration for organization
-      operationId: organization_CreateRefCertificateBasedAuthConfiguration
+      operationId: organization_CreateGraphRefCertificateBasedAuthConfiguration
       parameters:
         - name: organization-id
           in: path
@@ -5854,7 +5856,7 @@ paths:
       tags:
         - policies.appManagementPolicy
       summary: Delete ref of navigation property appliesTo for policies
-      operationId: policies.appManagementPolicies_DeleteRefAppliesTo
+      operationId: policies.appManagementPolicies_DeleteGraphRefAppliesTo
       parameters:
         - name: appManagementPolicy-id
           in: path
@@ -5891,7 +5893,7 @@ paths:
       tags:
         - policies.appManagementPolicy
       summary: Get ref of appliesTo from policies
-      operationId: policies.appManagementPolicies_ListRefAppliesTo
+      operationId: policies.appManagementPolicies_ListGraphRefAppliesTo
       parameters:
         - name: appManagementPolicy-id
           in: path
@@ -5933,7 +5935,7 @@ paths:
       tags:
         - policies.appManagementPolicy
       summary: Create new navigation property ref to appliesTo for policies
-      operationId: policies.appManagementPolicies_CreateRefAppliesTo
+      operationId: policies.appManagementPolicies_CreateGraphRefAppliesTo
       parameters:
         - name: appManagementPolicy-id
           in: path
@@ -8626,7 +8628,7 @@ paths:
       tags:
         - policies.mobilityManagementPolicy
       summary: Delete ref of navigation property includedGroups for policies
-      operationId: policies.mobileAppManagementPolicies_DeleteRefIncludedGroups
+      operationId: policies.mobileAppManagementPolicies_DeleteGraphRefIncludedGroups
       parameters:
         - name: mobilityManagementPolicy-id
           in: path
@@ -8663,7 +8665,7 @@ paths:
       tags:
         - policies.mobilityManagementPolicy
       summary: Get ref of includedGroups from policies
-      operationId: policies.mobileAppManagementPolicies_ListRefIncludedGroups
+      operationId: policies.mobileAppManagementPolicies_ListGraphRefIncludedGroups
       parameters:
         - name: mobilityManagementPolicy-id
           in: path
@@ -8803,7 +8805,7 @@ paths:
       tags:
         - policies.mobilityManagementPolicy
       summary: Create new navigation property ref to includedGroups for policies
-      operationId: policies.mobileAppManagementPolicies_CreateRefIncludedGroups
+      operationId: policies.mobileAppManagementPolicies_CreateGraphRefIncludedGroups
       parameters:
         - name: mobilityManagementPolicy-id
           in: path
@@ -9324,7 +9326,7 @@ paths:
       tags:
         - policies.mobilityManagementPolicy
       summary: Delete ref of navigation property includedGroups for policies
-      operationId: policies.mobileDeviceManagementPolicies_DeleteRefIncludedGroups
+      operationId: policies.mobileDeviceManagementPolicies_DeleteGraphRefIncludedGroups
       parameters:
         - name: mobilityManagementPolicy-id
           in: path
@@ -9361,7 +9363,7 @@ paths:
       tags:
         - policies.mobilityManagementPolicy
       summary: Get ref of includedGroups from policies
-      operationId: policies.mobileDeviceManagementPolicies_ListRefIncludedGroups
+      operationId: policies.mobileDeviceManagementPolicies_ListGraphRefIncludedGroups
       parameters:
         - name: mobilityManagementPolicy-id
           in: path
@@ -9501,7 +9503,7 @@ paths:
       tags:
         - policies.mobilityManagementPolicy
       summary: Create new navigation property ref to includedGroups for policies
-      operationId: policies.mobileDeviceManagementPolicies_CreateRefIncludedGroups
+      operationId: policies.mobileDeviceManagementPolicies_CreateGraphRefIncludedGroups
       parameters:
         - name: mobilityManagementPolicy-id
           in: path
@@ -10671,216 +10673,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/policies/roleManagementPolicies/{unifiedRoleManagementPolicy-id}/effectiveRules/{unifiedRoleManagementPolicyRule-id}/target/targetObjects':
-    get:
-      tags:
-        - policies.unifiedRoleManagementPolicy
-      summary: Get targetObjects from policies
-      operationId: policies.roleManagementPolicies.effectiveRules_ListTargetObjects
-      parameters:
-        - name: unifiedRoleManagementPolicy-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicy'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicy
-        - name: unifiedRoleManagementPolicyRule-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicyRule'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicyRule
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - deletedDateTime
-                - deletedDateTime desc
-              type: string
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - deletedDateTime
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-              type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-  '/policies/roleManagementPolicies/{unifiedRoleManagementPolicy-id}/effectiveRules/{unifiedRoleManagementPolicyRule-id}/target/targetObjects/{directoryObject-id}/$ref':
-    delete:
-      tags:
-        - policies.unifiedRoleManagementPolicy
-      summary: Delete ref of navigation property targetObjects for policies
-      operationId: policies.roleManagementPolicies.effectiveRules_DeleteRefTargetObjects
-      parameters:
-        - name: unifiedRoleManagementPolicy-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicy'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicy
-        - name: unifiedRoleManagementPolicyRule-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicyRule'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicyRule
-        - name: directoryObject-id
-          in: path
-          description: 'key: id of directoryObject'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: directoryObject
-        - name: If-Match
-          in: header
-          description: ETag
-          schema:
-            type: string
-        - name: '@id'
-          in: query
-          description: Delete Uri
-          schema:
-            type: string
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/policies/roleManagementPolicies/{unifiedRoleManagementPolicy-id}/effectiveRules/{unifiedRoleManagementPolicyRule-id}/target/targetObjects/$ref':
-    get:
-      tags:
-        - policies.unifiedRoleManagementPolicy
-      summary: Get ref of targetObjects from policies
-      operationId: policies.roleManagementPolicies.effectiveRules_ListRefTargetObjects
-      parameters:
-        - name: unifiedRoleManagementPolicy-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicy'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicy
-        - name: unifiedRoleManagementPolicyRule-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicyRule'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicyRule
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - deletedDateTime
-                - deletedDateTime desc
-              type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/StringCollectionResponse'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - policies.unifiedRoleManagementPolicy
-      summary: Create new navigation property ref to targetObjects for policies
-      operationId: policies.roleManagementPolicies.effectiveRules_CreateRefTargetObjects
-      parameters:
-        - name: unifiedRoleManagementPolicy-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicy'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicy
-        - name: unifiedRoleManagementPolicyRule-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicyRule'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicyRule
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
   '/policies/roleManagementPolicies/{unifiedRoleManagementPolicy-id}/rules':
     get:
       tags:
@@ -11096,216 +10888,6 @@ paths:
       responses:
         '204':
           description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/policies/roleManagementPolicies/{unifiedRoleManagementPolicy-id}/rules/{unifiedRoleManagementPolicyRule-id}/target/targetObjects':
-    get:
-      tags:
-        - policies.unifiedRoleManagementPolicy
-      summary: Get targetObjects from policies
-      operationId: policies.roleManagementPolicies.rules_ListTargetObjects
-      parameters:
-        - name: unifiedRoleManagementPolicy-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicy'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicy
-        - name: unifiedRoleManagementPolicyRule-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicyRule'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicyRule
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - deletedDateTime
-                - deletedDateTime desc
-              type: string
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - deletedDateTime
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-              type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-  '/policies/roleManagementPolicies/{unifiedRoleManagementPolicy-id}/rules/{unifiedRoleManagementPolicyRule-id}/target/targetObjects/{directoryObject-id}/$ref':
-    delete:
-      tags:
-        - policies.unifiedRoleManagementPolicy
-      summary: Delete ref of navigation property targetObjects for policies
-      operationId: policies.roleManagementPolicies.rules_DeleteRefTargetObjects
-      parameters:
-        - name: unifiedRoleManagementPolicy-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicy'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicy
-        - name: unifiedRoleManagementPolicyRule-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicyRule'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicyRule
-        - name: directoryObject-id
-          in: path
-          description: 'key: id of directoryObject'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: directoryObject
-        - name: If-Match
-          in: header
-          description: ETag
-          schema:
-            type: string
-        - name: '@id'
-          in: query
-          description: Delete Uri
-          schema:
-            type: string
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/policies/roleManagementPolicies/{unifiedRoleManagementPolicy-id}/rules/{unifiedRoleManagementPolicyRule-id}/target/targetObjects/$ref':
-    get:
-      tags:
-        - policies.unifiedRoleManagementPolicy
-      summary: Get ref of targetObjects from policies
-      operationId: policies.roleManagementPolicies.rules_ListRefTargetObjects
-      parameters:
-        - name: unifiedRoleManagementPolicy-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicy'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicy
-        - name: unifiedRoleManagementPolicyRule-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicyRule'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicyRule
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - deletedDateTime
-                - deletedDateTime desc
-              type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/StringCollectionResponse'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - policies.unifiedRoleManagementPolicy
-      summary: Create new navigation property ref to targetObjects for policies
-      operationId: policies.roleManagementPolicies.rules_CreateRefTargetObjects
-      parameters:
-        - name: unifiedRoleManagementPolicy-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicy'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicy
-        - name: unifiedRoleManagementPolicyRule-id
-          in: path
-          description: 'key: id of unifiedRoleManagementPolicyRule'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: unifiedRoleManagementPolicyRule
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11585,7 +11167,7 @@ paths:
       tags:
         - policies.unifiedRoleManagementPolicyAssignment
       summary: Get ref of policy from policies
-      operationId: policies.roleManagementPolicyAssignments_GetRefPolicy
+      operationId: policies.roleManagementPolicyAssignments_GetGraphRefPolicy
       parameters:
         - name: unifiedRoleManagementPolicyAssignment-id
           in: path
@@ -11617,7 +11199,7 @@ paths:
       tags:
         - policies.unifiedRoleManagementPolicyAssignment
       summary: Update the ref of navigation property policy in policies
-      operationId: policies.roleManagementPolicyAssignments_SetRefPolicy
+      operationId: policies.roleManagementPolicyAssignments_SetGraphRefPolicy
       parameters:
         - name: unifiedRoleManagementPolicyAssignment-id
           in: path
@@ -11631,7 +11213,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -11643,7 +11227,7 @@ paths:
       tags:
         - policies.unifiedRoleManagementPolicyAssignment
       summary: Delete ref of navigation property policy for policies
-      operationId: policies.roleManagementPolicyAssignments_DeleteRefPolicy
+      operationId: policies.roleManagementPolicyAssignments_DeleteGraphRefPolicy
       parameters:
         - name: unifiedRoleManagementPolicyAssignment-id
           in: path
@@ -16023,7 +15607,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of responsepayload from users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device.commands_GetRefResponsepayload
+      operationId: users.authentication.microsoftAuthenticatorMethods.device.commands_GetGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -16065,7 +15649,7 @@ paths:
       tags:
         - users.authentication
       summary: Update the ref of navigation property responsepayload in users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device.commands_SetRefResponsepayload
+      operationId: users.authentication.microsoftAuthenticatorMethods.device.commands_SetGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -16093,7 +15677,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -16110,7 +15696,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property responsepayload for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device.commands_DeleteRefResponsepayload
+      operationId: users.authentication.microsoftAuthenticatorMethods.device.commands_DeleteGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -16508,7 +16094,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property memberOf for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteRefMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -16557,7 +16143,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of memberOf from users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListRefMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -16611,7 +16197,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to memberOf for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateRefMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -16738,7 +16324,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property registeredOwners for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteRefRegisteredOwners
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -16787,7 +16373,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of registeredOwners from users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListRefRegisteredOwners
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -16841,7 +16427,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to registeredOwners for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateRefRegisteredOwners
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -16968,7 +16554,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property registeredUsers for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteRefRegisteredUsers
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -17017,7 +16603,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of registeredUsers from users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListRefRegisteredUsers
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -17071,7 +16657,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to registeredUsers for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateRefRegisteredUsers
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -17198,7 +16784,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property transitiveMemberOf for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteRefTransitiveMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -17247,7 +16833,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of transitiveMemberOf from users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListRefTransitiveMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -17301,7 +16887,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to transitiveMemberOf for users
-      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateRefTransitiveMemberOf
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -18757,7 +18343,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of responsepayload from users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device.commands_GetRefResponsepayload
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device.commands_GetGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -18799,7 +18385,7 @@ paths:
       tags:
         - users.authentication
       summary: Update the ref of navigation property responsepayload in users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device.commands_SetRefResponsepayload
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device.commands_SetGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -18827,7 +18413,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -18844,7 +18432,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property responsepayload for users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device.commands_DeleteRefResponsepayload
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device.commands_DeleteGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -19242,7 +18830,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property memberOf for users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_DeleteRefMemberOf
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_DeleteGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -19291,7 +18879,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of memberOf from users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_ListRefMemberOf
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_ListGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -19345,7 +18933,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to memberOf for users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_CreateRefMemberOf
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_CreateGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -19472,7 +19060,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property registeredOwners for users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_DeleteRefRegisteredOwners
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_DeleteGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -19521,7 +19109,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of registeredOwners from users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_ListRefRegisteredOwners
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_ListGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -19575,7 +19163,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to registeredOwners for users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_CreateRefRegisteredOwners
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_CreateGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -19702,7 +19290,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property registeredUsers for users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_DeleteRefRegisteredUsers
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_DeleteGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -19751,7 +19339,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of registeredUsers from users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_ListRefRegisteredUsers
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_ListGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -19805,7 +19393,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to registeredUsers for users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_CreateRefRegisteredUsers
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_CreateGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -19932,7 +19520,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property transitiveMemberOf for users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_DeleteRefTransitiveMemberOf
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_DeleteGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -19981,7 +19569,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of transitiveMemberOf from users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_ListRefTransitiveMemberOf
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_ListGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -20035,7 +19623,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to transitiveMemberOf for users
-      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_CreateRefTransitiveMemberOf
+      operationId: users.authentication.passwordlessMicrosoftAuthenticatorMethods.device_CreateGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -22244,7 +21832,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of responsepayload from users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device.commands_GetRefResponsepayload
+      operationId: users.authentication.windowsHelloForBusinessMethods.device.commands_GetGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -22286,7 +21874,7 @@ paths:
       tags:
         - users.authentication
       summary: Update the ref of navigation property responsepayload in users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device.commands_SetRefResponsepayload
+      operationId: users.authentication.windowsHelloForBusinessMethods.device.commands_SetGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -22314,7 +21902,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ReferenceUpdateSchema'
+              type: object
+              additionalProperties:
+                type: object
         required: true
       responses:
         '204':
@@ -22331,7 +21921,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property responsepayload for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device.commands_DeleteRefResponsepayload
+      operationId: users.authentication.windowsHelloForBusinessMethods.device.commands_DeleteGraphRefResponsepayload
       parameters:
         - name: user-id
           in: path
@@ -22729,7 +22319,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property memberOf for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteRefMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -22778,7 +22368,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of memberOf from users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListRefMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -22832,7 +22422,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to memberOf for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateRefMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateGraphRefMemberOf
       parameters:
         - name: user-id
           in: path
@@ -22959,7 +22549,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property registeredOwners for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteRefRegisteredOwners
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -23008,7 +22598,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of registeredOwners from users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListRefRegisteredOwners
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -23062,7 +22652,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to registeredOwners for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateRefRegisteredOwners
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateGraphRefRegisteredOwners
       parameters:
         - name: user-id
           in: path
@@ -23189,7 +22779,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property registeredUsers for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteRefRegisteredUsers
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -23238,7 +22828,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of registeredUsers from users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListRefRegisteredUsers
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -23292,7 +22882,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to registeredUsers for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateRefRegisteredUsers
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateGraphRefRegisteredUsers
       parameters:
         - name: user-id
           in: path
@@ -23419,7 +23009,7 @@ paths:
       tags:
         - users.authentication
       summary: Delete ref of navigation property transitiveMemberOf for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteRefTransitiveMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -23468,7 +23058,7 @@ paths:
       tags:
         - users.authentication
       summary: Get ref of transitiveMemberOf from users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListRefTransitiveMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -23522,7 +23112,7 @@ paths:
       tags:
         - users.authentication
       summary: Create new navigation property ref to transitiveMemberOf for users
-      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateRefTransitiveMemberOf
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateGraphRefTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -27416,16 +27006,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.todo'
           additionalProperties:
             type: object
-    ReferenceUpdateSchema:
-      type: object
-      properties:
-        '@odata.id':
-          type: string
-        '@odata.type':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.oAuth2PermissionGrant:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
