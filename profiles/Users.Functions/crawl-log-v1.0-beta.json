@@ -217,6 +217,10 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },
+    "/users/{user-id}/managedDevices/{managedDevice-id}/microsoft.graph.getOemWarranty()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
     "/users/{user-id}/messages/microsoft.graph.delta()": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
@@ -326,6 +330,14 @@
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },
     "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/decisions/microsoft.graph.filterByCurrentUser(on={on})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/stages/{accessReviewStage-id}/decisions/microsoft.graph.filterByCurrentUser(on={on})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/stages/microsoft.graph.filterByCurrentUser(on={on})": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },

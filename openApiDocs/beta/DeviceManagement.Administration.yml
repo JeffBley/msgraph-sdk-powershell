@@ -3200,6 +3200,7 @@ paths:
                 - id
                 - description
                 - displayName
+                - fileName
                 - languageCodes
                 - lastModifiedDateTime
                 - policyType
@@ -3763,6 +3764,8 @@ paths:
                 - description desc
                 - displayName
                 - displayName desc
+                - fileName
+                - fileName desc
                 - languageCodes
                 - languageCodes desc
                 - lastModifiedDateTime
@@ -3789,6 +3792,7 @@ paths:
                 - id
                 - description
                 - displayName
+                - fileName
                 - languageCodes
                 - lastModifiedDateTime
                 - policyType
@@ -3884,6 +3888,7 @@ paths:
                 - id
                 - description
                 - displayName
+                - fileName
                 - languageCodes
                 - lastModifiedDateTime
                 - policyType
@@ -4700,6 +4705,7 @@ paths:
                 - id
                 - description
                 - displayName
+                - fileName
                 - languageCodes
                 - lastModifiedDateTime
                 - policyType
@@ -6659,6 +6665,8 @@ paths:
                 - description desc
                 - displayName
                 - displayName desc
+                - fileName
+                - fileName desc
                 - languageCodes
                 - languageCodes desc
                 - lastModifiedDateTime
@@ -6675,8 +6683,6 @@ paths:
                 - content desc
                 - defaultLanguageCode
                 - defaultLanguageCode desc
-                - fileName
-                - fileName desc
                 - groupPolicyUploadedLanguageFiles
                 - groupPolicyUploadedLanguageFiles desc
                 - status
@@ -6697,6 +6703,7 @@ paths:
                 - id
                 - description
                 - displayName
+                - fileName
                 - languageCodes
                 - lastModifiedDateTime
                 - policyType
@@ -6705,7 +6712,6 @@ paths:
                 - targetPrefix
                 - content
                 - defaultLanguageCode
-                - fileName
                 - groupPolicyUploadedLanguageFiles
                 - status
                 - uploadDateTime
@@ -6800,6 +6806,7 @@ paths:
                 - id
                 - description
                 - displayName
+                - fileName
                 - languageCodes
                 - lastModifiedDateTime
                 - policyType
@@ -6808,7 +6815,6 @@ paths:
                 - targetPrefix
                 - content
                 - defaultLanguageCode
-                - fileName
                 - groupPolicyUploadedLanguageFiles
                 - status
                 - uploadDateTime
@@ -15929,6 +15935,10 @@ components:
               type: string
               description: The localized friendly name of the ADMX file.
               nullable: true
+            fileName:
+              type: string
+              description: 'The file name of the ADMX file without the path. For example: edge.admx'
+              nullable: true
             languageCodes:
               type: array
               items:
@@ -16279,10 +16289,6 @@ components:
             defaultLanguageCode:
               type: string
               description: The default language of the uploaded ADMX file.
-              nullable: true
-            fileName:
-              type: string
-              description: The file name of the uploaded ADML file.
               nullable: true
             groupPolicyUploadedLanguageFiles:
               type: array

@@ -1745,6 +1745,38 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },
+    "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/stages/{accessReviewStage-id}/decisions/{accessReviewInstanceDecisionItem-id}/instance/microsoft.graph.acceptRecommendations": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/stages/{accessReviewStage-id}/decisions/{accessReviewInstanceDecisionItem-id}/instance/microsoft.graph.applyDecisions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/stages/{accessReviewStage-id}/decisions/{accessReviewInstanceDecisionItem-id}/instance/microsoft.graph.batchRecordDecisions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/stages/{accessReviewStage-id}/decisions/{accessReviewInstanceDecisionItem-id}/instance/microsoft.graph.resetDecisions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/stages/{accessReviewStage-id}/decisions/{accessReviewInstanceDecisionItem-id}/instance/microsoft.graph.sendReminder": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/stages/{accessReviewStage-id}/decisions/{accessReviewInstanceDecisionItem-id}/instance/microsoft.graph.stop": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/stages/{accessReviewStage-id}/decisions/microsoft.graph.recordAllDecisions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/pendingAccessReviewInstances/{accessReviewInstance-id}/stages/{accessReviewStage-id}/microsoft.graph.stop": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
     "/users/{user-id}/presence/microsoft.graph.clearPresence": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
